@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>cookie</title>
+</head>
+
+<body>
+
+    <script>
+        window.onload = function () {
+            document.cookie = 'username = word';
+            document.cookie = 'password = 123456';
+            console.log(document.cookie)
+        }
+        var time = new Date();
+        var settime = time.getDate();
+        console.log(settime);
+    </script>
+</body>
+
+</html>

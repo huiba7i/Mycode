@@ -1,0 +1,33 @@
+body{
+    margin: 0;
+}
+.foot_all{
+    width: 1000px;
+    height: 160px;
+    font-size: 13px;
+}
+ul{
+    padding: 0;
+    margin: 0 auto;
+    list-style-type: none;
+    width: 800px;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+.ul_div{
+    height: 30px;
+    border-bottom: 1px solid black;
+}
+.foot_date{
+    width: 1000px;
+    height: 120px;
+    text-align: center;
+}
+p{
+    margin: 7px 0;
+}
+a{
+    text-decoration: none;
+    color: black;
+}

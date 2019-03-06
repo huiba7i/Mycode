@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body{
+            /* display: flex;
+            flex-wrap: wrap; */
+            margin: 0;
+            padding: 0;
+        }
+        div{
+            width: 250px;
+            height: 150px;
+            margin-left: 20px;
+            background:-webkit-linear-gradient(right,red,blue,green)
+        }
+        div:nth-of-type(2){
+            width:270px;
+            height: 165px;
+            background: radial-gradient(#cccccc,black,white);
+        }
+        div:nth-of-type(3){
+            border-radius:50%; 
+            background:radial-gradient(65% 30%, rgb(120, 120, 231),rgb(190, 190, 185),rgb(204, 204, 155));
+            border: 2px dashed;
+        }
+        img{
+            -webkit-mask-image:-webkit-radial-gradient(black  -165px,rgba(255, 255, 255, 0) 130px);
+            /* -webkit-mask-image: -webkit-radial-gradient(black -160px,rgba(0,0,0,0) 130px); */
+        }
+        ul{
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        ul li{
+            float: left;
+            list-style-type: none;
+            margin-right: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <div></div>
+    <div></div>
+    <img src="../imgs/fruit.jpg" alt="">
+    <ul>
+        <li>777</li>
+        <li>777</li>
+        <li>777</li>
+        <li>777</li>
+    </ul>
+</body>
+</html>

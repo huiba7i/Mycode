@@ -1,0 +1,31 @@
+.one,.two{
+    width: 100px;
+    height: 100px;
+    border: 1px solid #f00;
+    background-color: green;
+    color: #fff;
+    perspective: 600px;
+    transition: all 2s;
+}
+.one:hover{
+    /* 2d旋转 */
+    transform: rotate(360deg);
+}
+.two:hover{
+    /* 3d旋转 */
+    transform: rotateY(360deg);
+}
+.three{
+    width:400px;height: 500px;
+    border: 1px solid red;
+    /* 设置视点到画面的距离(父元素上设置) */
+    perspective: 600px;
+    /* perspective-origin: 100% 0%; */
+}
+img{
+    transition: all 2s;
+}
+img:hover{
+    transform: rotateX(360deg);
+    /*backface-visibility: hidden; */    /*背面元素不可见*/
+}

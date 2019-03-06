@@ -1,0 +1,18 @@
+.all{
+    width: 500px;
+    height: 400px;
+    border: 1px solid black;
+    display: flex;
+     /* flex-direction: column;  垂直为主轴 */
+     /* flex-direction: row;   水平为主轴 */
+     /* column-reverse   row-reverse   起点再其轴线的终点  */
+    /* flex-wrap: wrap;   换行  no-wrap 不换行   wrap-reverse 换行，第一行在下方 */
+     
+    flex-flow: row wrap;
+
+}
+.all div{
+    border: 1px dashed black;
+    width: 100px;
+    height: 100px;
+}

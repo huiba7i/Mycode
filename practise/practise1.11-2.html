@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            overflow-x: hidden;
+        }
+        .header,.footer{
+            width: 100%;
+            height: 77px;
+            background: olive;
+        }
+        .content{
+            width: 100%;
+            height: 450px;
+            display: flex;
+        }
+        .content div:first-child{
+            width:200px;
+            height: 100%;
+            flex: 0 0 auto;
+            background: blue;
+        }
+        .content div:nth-of-type(2){
+            min-width: 200px;;
+            height: 100%;
+            flex: 1;
+            background: red;
+        }
+        .content div:last-child{
+            width: 150px;
+            height: 100%;
+            flex: 0 0 auto;
+            background: aqua;
+        }
+    </style>
+</head>
+<body>
+    <div class="header"></div>
+    <div class="content"> 
+        <div>左侧</div>
+        <div>中间自适应</div>
+        <div>右侧</div>
+    </div>
+    <div class="footer"></div>
+</body>
+</html>

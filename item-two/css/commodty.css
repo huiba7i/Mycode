@@ -1,0 +1,226 @@
+body{
+    margin:0px;
+    padding:0px;
+    font-size:12px;
+    line-height:20px;
+    color:#333;
+}
+.header{
+    width: 960px;
+    margin: 0 auto;
+}
+ul,li,ol,h1,dl,dd{
+    list-style:none;
+    margin:0px;
+    padding:0px;
+}
+a{
+    color:#333333;
+    text-decoration: none;
+}
+a:hover{
+    color:#333333;
+    text-decoration:underline;
+}
+img{
+    border:0px;
+}
+.blue{
+    color:#1965b3;
+    text-decoration:none;
+}
+.blue:hover{
+    color:#1965b3;
+    text-decoration:underline;
+}
+#header,#main{
+    width:960px;
+    margin:0px auto 0px auto;
+    clear:both;
+    float:none;
+}
+#main{
+    height: 1140px;
+}
+.current_place{
+    padding-left:10px;
+    clear:both;
+    height:30px;
+}
+#product_left{
+    width:180px;
+    float:left;
+}
+#product_catList{
+    border:solid 1px #d3d3d3;
+    background-color:#fff4d7;
+}
+.product_catList_top{
+    color:#FFF;
+    height:23px;
+    font-size:14px;
+    padding-left:10px;
+    background-image:url(../images/product_left_top_bg.gif);
+    background-repeat:repeat-x;
+    line-height:28px;
+    margin-bottom:10px;
+}
+#product_catList_class li{
+    height:25px;
+    padding-left:10px;
+}
+#product_catList_class li a{
+    color: rgb(107, 107, 235);
+    cursor: pointer;
+}
+.product_catList_end{
+    border:solid 1px #d3d3d3;
+    margin:10px 0px 10px 0px;
+    text-align:center;
+}
+#product_storyList{
+    border:solid 1px #a1a1a1;
+    float:right;
+    width:770px;
+    margin-bottom:20px;
+
+}
+#product_storyList_top{
+    background-color:#f9d8a9;
+    border-bottom:solid 1px #a1a1a1;
+    height:30px;
+}
+#product_storyList_top li{
+    float:left;
+    line-height:28px;
+    padding-left:5px;
+}
+#product_storyList_top img{
+    padding-top:5px;
+}
+.product_storyList_content{
+    margin:20px 10px 20px 10px;
+}
+.product_storyList_content .big_img_list{
+    width:25%;
+    height:240px;
+    background:#fff;
+    float:left;
+    overflow:hidden;
+    text-align:left;
+    margin:10px auto;
+    position:relative;
+}
+.product_storyList_content .big_img_list.over{
+    overflow:visible;
+    z-index:99;
+}
+.product_storyList_content .big_img_list ul{
+    background:#fff;
+    padding:0 5px 5px;
+}
+.product_storyList_content .big_img_list ul.over{
+    border:2px solid #F96;
+    position:absolute;
+    z-index:99;
+}
+.product_storyList_content .big_img_list li{
+    padding:2px 5px;
+    font-size:12px;
+}
+.product_storyList_content .big_img_list li a{
+    padding:2px 10px;
+    font-size:12px;
+}
+.product_storyList_content .big_img_list .bookImg img{
+    width:150px;
+    height:150px;
+}
+.product_storyList_content .big_img_list dl{
+    width:100%;
+    overflow:hidden;
+}
+.product_storyList_content .big_img_list dl dd{
+    float:left;
+    margin-left:10px;
+}
+.product_storyList_content_bottom{
+    border-bottom:1px solid #666;
+    clear:both;
+    margin-bottom:20px;
+}
+.product_storyList_content_left{
+    width:100px;
+    text-align:center;
+    float:left;
+}
+.product_storyList_content_right{
+    float:left;
+    width:640px;
+}
+.product_storyList_content_dash{
+    border-bottom:dashed 1px #666;
+}
+.blue_14{
+    color:#1965b3;
+    font-size:14px;
+    text-decoration:none;
+}
+.blue_14:hover{
+    color:#1965b3;
+    text-decoration:underline;
+    font-size:14px;
+}
+.product_content_dd dd{
+    float:right;
+    padding-right:10px;
+}
+.product_content_delete{
+    text-decoration:line-through;
+}
+#product_page li{
+    float:left;
+}
+.product_page{
+    width:16px;
+    height:15px;
+    text-decoration:none;
+    float:left;
+    display: block;
+    background-color:#FC6;
+    margin:0px 3px 1px 0px;
+    text-align:center;
+
+}
+.product_page:hover{
+    width:16px;
+    height:15px;
+    text-decoration:none;
+    float:left;
+    display: block;
+    background-color:#900;
+    margin:0px 3px 1px 0px;
+    color:#FFF;
+}
+.footer{
+    width: 980px;
+    margin: 0 auto;
+    font-size: 13px;
+}
+.footer ul{
+    width: 365px;
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 12px auto;
+    margin: 5px auto;
+}
+.footer li{
+    margin: 0 5px;
+    color: rgb(148, 56, 23);
+    text-align: center;
+}
+.footer_iframe{
+    width: 850px;
+    margin: 0 auto;
+}

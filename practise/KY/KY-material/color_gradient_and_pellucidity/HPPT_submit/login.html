@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        提交方式,默认是get
+        get方式:提交的数据暴露在地址栏中,不安全的提交方式,长度有限制
+        post方式:提交的数据是放在请求体中,相对安全的提交方式,长度没有限制
+    -->
+    <form action="index.html" method="POST">
+        <input type="text" placeholder="账号" name="account">
+        <input type="password" placeholder="密码" name="pwd">
+        <input type="submit" value="登录"/>
+    </form>
+</body>
+</html>

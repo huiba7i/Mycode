@@ -1,0 +1,77 @@
+body{
+	margin: 0;
+}
+.all{
+    width: 100%;
+    height: 760px;
+    background: url(../imgs/未标题-1.jpg) no-repeat ;
+    background-size: 100%;
+	margin: 0 auto;
+}
+@font-face{
+    font-family:STXingkai;
+    src: url("STXINGKA.TTF");
+}
+h1{
+	margin: 0px;
+	letter-spacing: 10px;
+	text-align: center;
+    color: ghostwhite;
+    font-size: 55px;
+	text-shadow: -3px -5px 9px black;
+	font-family: STXingkai;
+	position: relative;
+	top: 30px;
+}
+.land{
+	width: 400px;
+	height: 250px;
+    position: absolute;
+    left: 55%;
+    top: 30%;
+	border-radius: 10px;
+	padding: 10px;
+	background:-webkit-linear-gradient(top,#81B3DC 60%,#ffffff);
+}
+.land .tab1{
+	width: 260px;
+	background-color: #F8F8FF;
+	margin-top: 42px;
+	margin-left: 67px;
+	border-radius: 5px;
+}
+.land .tab2{
+	width: 260px;
+	background-color: #F8F8FF;
+	margin-top: 10px;
+	margin-left: 67px;
+	border-radius: 5px;
+}
+.inp{
+	border: 0px;
+}
+img{
+	width: 32px;
+}
+.sx{
+	color: gainsboro;
+}
+.zc{
+	width: 252px;
+	margin-left: 71px;
+	font-size: 14px;
+}
+.zc:first-of-type{
+	color: blue;
+}
+.zc bh:last-child{
+	float: right;
+}
+.dl{
+	width: 250px;
+	height: 35px;
+	margin:7px 0 0 74px;
+	border-radius: 4px;
+	background-color: #4793CF;
+	border: 0px;
+}

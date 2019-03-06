@@ -1,0 +1,93 @@
+body{
+	margin: 0;
+}
+.all{
+	width: 1000px;
+	display: flex;
+	flex-direction:column;
+	flex-wrap: wrap;
+	margin: 0 auto;
+}
+.header{
+    height: 130px;
+}
+iframe{
+    width: 100%;
+    height: 100%;
+}
+
+.center{
+	width: 980px;
+	height: 555px;
+	display: flex;
+	flex-direction: row;
+}
+.left{
+	width: 200px;
+	height: 555px;
+	background: url(../img/customer.jpg) no-repeat ;
+	margin-left: 23px;
+	position: relative;
+}
+.zc{
+	width: 160px;
+	position: absolute;
+	top: 170px;
+	left: 12px;
+	text-align: center;	
+}
+.right{
+	width: 760px;
+	height: 546px;
+	margin-left: -10px;
+	border: 1px solid darksalmon;
+	position: relative;
+}
+h2{
+	margin: 10px 0px;
+	margin-top: 20px;
+	position: absolute;
+	top: 20px;
+	left: 15px;
+}
+.wt{
+	position: absolute;
+	top: 95px;
+	left: 10px;
+}
+.right p{
+	position: absolute;
+	top: 115px;
+	left: 10px;
+}
+.step{
+	position: absolute;
+	left: 15px;
+	top: 185px;
+}
+.right ul{
+	position: absolute;
+	top: 230px;
+	list-style-image: url(../img/list_icon.gif);
+}
+ul li{
+	cursor: pointer;
+	height: 25px;
+}
+.ts img{
+	cursor: pointer;
+}
+.ts p{
+	margin: 10px;
+	color: #FE7212;
+	font-size: 14px;
+	font-weight: 700;
+	display: none;
+	cursor: pointer;
+}
+.ts:hover p{
+	display: block;
+}
+.zcx{
+	text-decoration: none;
+}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>拖放</title>
+
+  <style>
+  .one, .two{
+    width: 500px;height: 400px;
+    float: left;border: 1px solid #ccc;
+  }
+  .one{
+    margin-right: 150px;
+  }
+  </style>
+</head>
+<body>
+  <div class="one" >
+    <!-- 设置元素可以被拖动 draggable="true" -->
+    <img src="img/rlsz.png" alt="" id="pic" draggable="true" ondragstart="dragStart(event)" ondrag="drag()" ondragend="dragEnd()" >
+  </div>
+
+  <div class="two" ondragenter="dragEnter()" ondragover="dragover(event)" ondrop="drop(event)" ondragleave="dragLeave()"></div>
+
+  <script src="js/drag.js"></script>
+</body>
+</html>

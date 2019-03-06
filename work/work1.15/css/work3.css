@@ -1,0 +1,27 @@
+div{
+    width: 77px;
+    height: 77px;
+    border: 2px solid black;
+    background: rgb(71, 76, 80);
+    text-align: center;
+    position: relative;
+    left: 50%;
+    top: 300px;
+    /* transition: all 1.5s; */
+}
+div:hover{
+    animation: animation_a 3s ease-out infinite both;
+}
+/* div:hover{
+    background: red;
+    transform: rotate(3600deg) scale(0.1);
+} */
+@keyframes animation_a{
+    from{
+        background: rgb(71, 76, 80);
+    }
+    to{
+        background: red;
+        transform: rotate(3600deg) scale(0.1);
+    }
+}

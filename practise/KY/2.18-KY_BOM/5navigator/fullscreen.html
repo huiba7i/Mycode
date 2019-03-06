@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+  <style>
+    
+  </style>
+</head>
+<body>
+  <h2>全屏显示的页面</h2>
+  <button onclick="full()">全屏显示</button>
+
+  <script>
+  function full(){
+    console.log(document.documentElement); // 文档的根标签
+    // document.documentElement.requestFullscreen();
+    // chrome,safari - webkit, firefox - moz, ie - ms
+    // document.documentElement.webkitRequestFullscreen(); // chrome
+    var root = document.documentElement
+    if(root.mozRequstFullscreen){
+      console.log('firefox');
+      root.mozRequstFullscreen(); // firefox
+    }
+    else if(root.requestFullscreen){
+      console.log('normal');
+      root.requestFullscreen();
+    }
+    else if(root.webkitRequestFullscreen){
+      console.log('chrome/safari');
+      root.webkitRequestFullscreen();
+    }
+    else if(root.msRequestFullscreen){
+      console.log('ie');
+      root.msRequestFullscreen();
+    }
+  }
+  </script>
+</body>
+</html>

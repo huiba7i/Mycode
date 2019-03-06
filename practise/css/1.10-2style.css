@@ -1,0 +1,94 @@
+body{
+    margin: 0;
+}
+.logn{
+    width: 250px;   
+    text-align: right;
+    margin-bottom: 3px;
+}
+.header{
+    height: 77px;
+    background: orange;
+}
+/* .horizontal{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    overflow: hidden;
+}
+.horizontal li{
+    width: 80px;
+    line-height: 30px;
+    float: left;
+    text-align: center;
+    background: darkgoldenrod;
+    margin-right: 5px;
+} */
+
+a{
+    text-decoration:none; 
+    color: black;
+}
+a:hover{
+    text-decoration: underline;
+}
+/* .vertical{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    margin-top: 15px;
+}
+.vertical li{
+    width: 80px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    background: darkgoldenrod;
+    margin-bottom: 3px;
+} */
+
+.horizontal{
+    width: 530px;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    /* overflow: hidden; */
+    display: flex;
+    justify-content: space-around;
+
+}
+.horizontal li{
+    /* width: 77px;
+    line-height: 25px; */
+    background: darkgoldenrod;
+    flex: 0;
+    text-align: center;
+}
+.horizontal li a{
+    display: block;
+    width: 77px;
+    line-height: 25px;
+}
+.vertical{
+    height: 200px;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    margin-top: 15px;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+}
+.vertical li{
+    width: 77px;
+    text-align: center;
+    line-height: 25px;
+    flex: 0;
+    background: darkgoldenrod;
+}
+.vertical li:hover{
+    background: red;
+}
+li:hover{
+    background: red;
+}

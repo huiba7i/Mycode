@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+        }
+        .header{
+            height: 100px;
+            background: red;
+        }
+        .conten{
+            height: 550px;
+        }
+        .conten_left{
+            width: 150px;
+            height: 100%;
+            background: fuchsia;
+            float: left;
+        }
+        .conten_center{
+            height: 100%;
+            background: aqua;
+            margin: 0 150px;
+        }
+        .conten_right{
+            width: 150px;
+            height: 100%;
+            background: sandybrown;
+            float: right;
+        }
+        .footer{
+            height: 100px;
+            background: green;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div class="header">头部</div>
+        <div class="conten">
+            <div class="conten_left">左侧</div>     <!--浮动元素-->
+            <div class="conten_right">右侧</div>    <!--浮动元素不占标准元素的空间-->
+            <div class="conten_center">正文</div>   <!--标准元素用左右的magin值让左右的浮动元素不被遮盖-->
+        </div>
+        <div class="footer">底部</div>
+    </div>
+</body>
+</html>

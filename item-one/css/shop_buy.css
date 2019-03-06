@@ -1,0 +1,144 @@
+body{
+	margin: 0;
+}
+.all{
+	width: 1000px;
+	display: flex;
+	flex-direction:column;
+	flex-wrap: wrap;
+	margin: 0 auto;
+}
+.header{
+    height: 120px;
+}
+iframe{
+    width: 100%;
+    height: 100%;
+}
+.center{
+	width: 1000px;
+	height: 470px;
+}
+.center h3{
+	width: 950px;
+	height: 50px;
+	margin: 10px;
+	line-height: 45px;
+	text-align: center;
+	border-bottom: 1px solid #CCC;
+	margin-left: 23px;
+}
+.box5{
+	width: 1000px;
+	height: 365px;
+	display: flex;
+}
+.box6{
+	width: 370px;
+	height: 370px;
+	margin-left: 23px;
+	margin-top: 15px;
+	display: flex;
+	flex-flow: row wrap;
+}
+.content_right{
+	height: 370px;
+	margin: 15px 0 0 15px;
+}
+.xbig{
+	width: 349px;
+	height: 266px;
+	position: relative;
+	top: -6px;
+	left: 17px;
+}
+.xb{
+	width: 55px;
+	height: 52px;
+	margin-left:17px;
+	margin-top: 13px;
+	border: 1px solid #ccc;
+}
+.xb:hover{
+	cursor: pointer;
+	border: 1px solid red;
+}
+.xb:nth-of-type(3):hover div{
+	width: 349px;
+	height: 266px;
+	background: url(../img/show2_big.jpg) no-repeat;
+	position: absolute;
+	top: 200px;
+	left: 300px;
+}
+.xb:nth-of-type(4):hover div{
+	width: 349px;
+	height: 266px;
+	background: url(../img/show3.jpg) no-repeat;
+	background-size: 349px 266px;
+	position: absolute;
+	top: 200px;
+	left: 300px;
+}
+.xb:nth-of-type(5):hover div{
+	width: 349px;
+	height: 266px;
+	background: url(../img/show4_big.jpg) no-repeat;
+	position: absolute;
+	top: 200px;
+	left: 300px;
+}
+.xb:nth-of-type(6):hover div{
+	width: 349px;
+	height: 266px;
+	background: url(../img/show5_big.jpg) no-repeat;
+	position: absolute;
+	top: 200px;
+	left: 300px;
+}
+.xb3{
+	margin-top: 5px;
+	margin-right: 80px;
+}
+.xb4{
+	margin-top: 5px;
+}
+.gm{
+	font-size: 13px;
+	line-height: 25px;
+}
+.aq{
+	width: 347px;
+	height: 40px;
+	background: #FFFFED;
+	border: 1px solid orange;
+	position: relative;
+}
+.gm1{
+	height: 80px;
+}
+.gg{
+	position: absolute;
+	top: 10px;
+}
+.aqs{
+	position:absolute;
+	left: 70px;
+	top: 4px;
+	line-height: 17px;
+}
+.kd{
+	width: 78px;
+}
+.kd2{
+	width: 95px
+}
+.kd3{
+	width: 65px;
+}
+.xx{
+	border-bottom: 1px dashed #CCC;
+}
+.yf{
+	letter-spacing: 20px;
+}

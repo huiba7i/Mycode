@@ -1,0 +1,116 @@
+body{
+	margin: 0;
+}
+.all{
+	background: url(../img/fruit-midbg.png) repeat ;
+	width: 600px;
+    height: 900px;
+    margin: 0 auto;
+    border: 1px solid;
+    font-size: 13px;
+}
+.nav{
+	background: url(../img/fruit-bg.png) no-repeat;
+	width: 600px;
+	height: 60px;
+	text-align: right;
+	line-height: 35px;
+}
+.log_off{
+	margin-right: 5px;
+	width: 45px;
+	height: 25px;
+}
+.content{
+	height: 155px;
+}
+#food_menu{
+    position: relative;
+    top: -20px;
+}
+p{
+    width: 185px;
+	background: url(../img/cart.png) no-repeat ;
+	height: 50px;
+    margin: 0;
+    font-size: 11px;
+}
+p:hover{
+    cursor: pointer;
+    background: url("../img/cart_keydn.png");
+}
+.delgwc,.encgwc{
+	position: relative;
+	top: 17px;
+    left: 47px;
+    letter-spacing: 2px;
+}
+.no_shop{
+	width: 220px;
+	height: 110px;
+	margin-left: 5px;
+	margin-top: -20px;
+}
+.username{
+	position: relative;
+	top: 10px;
+}
+.shoping{
+	position: relative;
+	bottom: 72px
+}
+p{
+	position: relative;
+	bottom: 76px;
+}
+p:nth-of-type(2){
+	margin-top: -5px;
+}
+ul{
+	padding: 0;
+}
+li{
+	list-style-type: none;
+	float: left;
+}
+.food-img{
+	width: 121px;
+	height: 121px;
+	padding: 2px;
+	border: 7px solid #780000;
+	border-radius: 10px;
+	border-bottom:7px solid #CC0000;
+	border-right:7px solid #CC0000 ;
+	margin-left: 45px;
+}
+.food-img img{
+	margin-top: 2px;
+}
+.food_ul{
+    width: 600px;
+    height: 25px;
+    justify-content: space-evenly;
+    display: flex;
+}
+.food_ul li{
+    width: 134px;
+    height: 25px;
+    text-align: center;
+    line-height: 25px;
+}
+div:nth-last-of-type(3){
+	margin-top: 30px;
+}
+.red_str{
+    color: red;
+    position: relative;
+    top: 15px;
+}
+.food_div{
+	height: 200px;
+}
+.foot{
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}

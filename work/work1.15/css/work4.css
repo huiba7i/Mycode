@@ -1,0 +1,110 @@
+.feeler_1,.feeler_2,.header,.health,.hand_left,.hand_right,.footer_left,.footer_right{
+    background: #A4CA39
+}
+.feeler_1,.feeler_2{
+    width: 7px;
+    height: 70px;
+    display: inline-block;
+    border-radius: 5px;
+}
+.feeler_1{
+    position: absolute;
+    left: 50px;
+    top: 20px;
+    transform: rotate(-30deg);
+}
+.feeler_2{
+    transform: rotate(30deg);
+    position: absolute;
+    left: 220px;
+    top: 20px;
+}
+.header{
+    width: 280px;
+    height: 130px;
+    border-radius: 200px 200px 0 0;
+    position: absolute;
+    top: 71px;
+}
+.eyes_1,.eyes_2{
+    width: 25px;
+    height: 25px;
+    background: white;
+    border-radius: 50%;
+}
+.eyes_1{
+    position: absolute;
+    top: 113px;
+    left: 79px;
+}
+.eyes_2{
+    position: absolute;
+    top: 113px;
+    left: 168px;
+}
+.health{
+    width: 280px;
+    height: 220px;
+    position: relative;
+    top: 97px;
+    left: 430px;
+    border-radius: 0 0 30px 30px;
+}
+.hand_left,.hand_right{
+    width: 30px;
+    height: 150px;
+    border-radius: 25px;
+    transition: all 1.5s;
+}
+.hand_left{
+    position: relative;
+    left: 380px;
+    top: -92px;
+}
+.hand_right{
+    position: relative;
+    left: 732px;
+    top: -244px;
+}
+.footer_left,.footer_right{
+    width: 45px;
+    height: 120px;
+    border-radius: 0 0 23px 23px;
+}
+.footer_left{
+    position: relative;
+    top: -230px;
+    left: 485px;
+}
+.footer_right{
+    position: relative;
+    top: -350px;
+    left: 610px;
+}
+.header_all{
+    width: 300px;
+    height: 200px;
+    position: relative;
+    top: 84px;
+    left: 430px;
+    transition: all 10ms;
+}
+.header_all:hover{
+    transform: rotate(-15deg);
+    transform-origin: 0 200px;
+}
+.header_all:hover .eyes_1{
+    background: blue;
+}
+.header_all:hover .eyes_2{
+    background: red;
+}
+.hand_left:hover{
+    transform: rotate(15deg);
+    transform-origin: 30px 0;
+    
+}
+.hand_right:hover{
+    transform: rotate(-15deg);
+    transform-origin: 0 30px;
+}

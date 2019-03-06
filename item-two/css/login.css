@@ -1,0 +1,221 @@
+body{
+    margin:0px;
+    padding:0px;
+    font-size:12px;
+    line-height:20px;
+    color:#333;
+}
+ul,li,ol,h1,dl,dd{
+    list-style:none;
+    margin:0px;
+    padding:0px;
+}
+a{
+    color:#333333;
+    text-decoration: none;
+}
+a:hover{
+    color:#333333;
+    text-decoration:underline;
+}
+img{
+    border:0px;
+}
+.blue{
+    color:#1965b3;
+    text-decoration:none;
+}
+.blue:hover{
+    color:#1965b3;
+    text-decoration:underline;
+}
+#header,#main{
+    width:960px;
+    margin:0px auto 0px auto;
+    clear:both;
+    float:none;
+}
+
+.login_header_left{
+    float:left;
+    margin:30px 10px 0px 100px;
+}
+.login_header_mid{
+    float:left;
+    margin:55px 0px 0px 0px;
+}
+.login_header_right{
+    float:right;
+    margin:50px 60px 0px 0px;
+}
+.login_main_left{
+    float:left;
+}
+.login_main_left img{
+    float:left;
+    border:0px;
+}
+.login_main_end{
+    margin:0px 0px 0px 30px;
+    width:540px;
+}
+
+.login_green{
+    margin:20px 0px 20px 0px;
+    float:left;
+    width:150px;
+}
+.login_green dt{
+    color:#519403;
+    font-weight:bold;
+}
+.login_green dd{
+    color:#666666;
+    line-height:25px;
+}
+.login_main_dotted{
+    float:left;
+    background-image:url(../images/shopping_dotted.gif);
+    width:1px;
+    height:90px;
+    margin:20px 15px 20px 15px;
+}
+.login_main_mid{
+    border:solid 1px #666;
+    float:left;
+    width:300px;
+    padding:10px 5px 10px 5px;
+}
+.login_main_right{
+    float:left;
+    width:74px;
+}
+.login_main_right img{
+    border:0px;
+}
+.login_content_top{
+    background-image:url(../images/login_icon_bg_01.gif);
+    background-position:-300px -30px;
+    background-repeat:no-repeat;
+    padding:10px 0px 0px 35px;
+    font-weight:bold;
+    font-size:14px;
+    color:#900;
+}
+.login_content_line{
+    background-image:url(../images/login_icon_bg_02.gif);
+    background-position:0px -195px;
+    background-repeat:repeat-x;
+    height:3px;
+    margin:0px 0px 30px 0px;
+}
+.login_content{
+    clear:both;
+    margin:10px 0px 0px 0px;
+}
+.login_content dt{
+    font-size:14px;
+    height:30px;
+    text-align:right;
+    width:150px;
+    float:left;
+}
+.login_content dd{
+    float:left;
+}
+.login_content_input{
+    width:120px;
+    height:16px;
+    border:solid 1px #999;
+}
+.login_content_input_Focus{
+    background-color:#f1ffde;
+    width:120px;
+    height:16px;
+    border:solid 1px #999;
+}
+.login_btn_out{
+    background-image:url(../images/login_icon_bg_01.gif);
+    background-position:0px -30px;
+    background-repeat:no-repeat;
+    width:77px;
+    height:26px;
+    border:0px;
+    cursor:pointer;
+}
+.login_btn_over{
+    background-image:url(../images/login_icon_bg_01.gif);
+    background-position:-78px -30px;
+    background-repeat:no-repeat;
+    width:77px;
+    height:26px;
+    border:0px;
+    cursor:pointer;
+}
+.login_content_dotted{
+    background-image:url(../images/register_dotted.gif);
+    height:1px;
+    background-repeat:repeat-x;
+    margin:60px 0px 0px 0px;
+    overflow:hidden; /*使div的高度为1px*/
+}
+.login_content_end_bg{
+    background-image:url(../images/login_icon_bg_02.gif);
+    background-repeat:repeat-x;
+    background-position:0px 0px;
+    padding:10px 20px 10px 20px;
+}
+.login_content_end_bg_top{
+    clear:both;
+}
+.login_content_bold{
+    font-weight:bold;
+    color:#333;
+}
+.login_content_end_bg_end{
+    clear:both;
+    text-align:right;
+    padding:10px;
+}
+.login_register_out{
+    background-image:url(../images/login_icon_bg_01.gif);
+    background-position:0px -3px;
+    background-repeat:no-repeat;
+    width:144px;
+    height:26px;
+    border:0px;
+    cursor:pointer;
+}
+.login_register_over{
+    background-image:url(../images/login_icon_bg_01.gif);
+    background-position:-144px -3px;
+    background-repeat:no-repeat;
+    width:144px;
+    height:26px;
+    border:0px;
+    cursor:pointer;
+}
+.footer{
+    width: 980px;
+    margin: 0 auto;
+    font-size: 13px;
+}
+.footer ul{
+    width: 365px;
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 12px auto;
+}
+.footer li{
+    margin: 0 5px;
+    color: rgb(148, 56, 23);
+    text-align: center;
+}
+.footer_iframe{
+    width: 850px;
+    margin: 0 auto;
+}
+#emailpr,#pwdpr{
+    margin-left: 5px;
+}

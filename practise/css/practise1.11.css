@@ -1,0 +1,8 @@
+div{
+    width: 55%;
+    border: 1px dashed black;
+    column-width: 177px;
+    /* column-count: 3; */
+    column-gap: 15px;
+    column-rule: 3px dashed aqua;
+}
