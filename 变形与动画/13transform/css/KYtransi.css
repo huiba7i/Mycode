@@ -1,0 +1,24 @@
+div{
+	width: 100px;
+	height: 100px;
+	background-color: green;
+	
+	/* 过渡效果:从一种样式逐渐变成另外一种样式 */
+	/* 实现过渡效果的属性名称(必填) */
+	/*transition-property: width;*/
+	/* 实现过渡效果需要的时间(必填) */
+	/*transition-duration: 3s;*/
+	/* 开始过渡效果延时(可选),必须定义在transition-duration的后面 */
+	/*transition-delay: 2s;*/
+	
+	/*transition: width 3s;*/
+	/*transition: background-color 3s;*/
+	
+	transition: transform 3s 2s,background-color 3s;
+}
+
+div:hover{
+	/*width: 1000px;*/
+	background-color: #f00;
+	transform: rotate(30deg);
+}

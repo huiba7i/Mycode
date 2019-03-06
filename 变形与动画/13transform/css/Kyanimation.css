@@ -1,0 +1,61 @@
+/*定义动画效果*/
+@keyframes run1{
+	from{
+		background-color: red;
+	}
+	to{
+		background-color: blue;
+		transform: translate(300px,300px);
+		border-radius: 50%;
+	}
+}
+
+@keyframes run2{
+	0{
+		background-color: red;
+	}
+	25%{
+		background-color: blue;
+		transform: translate(300px,0px);
+		border-radius: 25%;
+	}
+	50%{
+		background-color: green;
+		transform: translate(300px,300px);
+		border-radius: 50%;
+	}
+	75%{
+		background-color: yello;
+		transform: translate(0px,300px);
+		border-radius: 25%;
+	}
+	100%{
+		background-color: pink;
+		transform: translate(0px,0px);
+		border-radius: 0;
+	}
+}
+
+.anim1{
+	width: 100px;
+	height: 100px;
+	border: 1px solid black;
+	/*animation: run1 5s;*/
+}
+.anim1{
+	/*animation: run1 5s;*/
+	/*animation-name: run1;
+	animation-duration: 5s;
+	animation-timing-function: ease-in;*/
+	/*animation-iteration-count: infinite;*/
+	/*animation-delay: 2s;*/
+	/*animation-direction: alternate;*/ /* 正向:首次从 from-> to */
+	/*animation-direction: reverse;*//* 方向:反向 从to -> from */
+	/*animation-direction: alternate-reverse;*//* 方向:首次反向 从to -> from */
+	/*animation-fill-mode: forwards;*/
+	/*animation-fill-mode: both;*/
+	
+	/*animation: run1 5s ease-in infinite 2s alternate both;*/
+	animation: run2 5s steps(5) infinite 2s alternate both;
+	
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		
+		<style type="text/css">
+			div{
+				width: 600px;
+				height:200px;
+				padding:30px;
+				border: 5px; 
+				
+				/*设置背景颜色·*/
+				/*background-color:#00FFFF;*/
+				
+				/* background-image:设置背景图片*/
+				background-image: url(img/cat.jpg);
+				
+				/*background-repeat:是否平铺   no-repert 不平埔，repert-x 水平方向平埔，repert-y 垂直方向平埔
+				 * ，repert 水平垂直方向平铺 （）默认值*/
+				background-repeat: no-repeat;
+				
+				/*background-attachment:设置背景图片是否与滚动条一起滚动
+				fixed:当网页滚动时,背景图片固定不动
+				scroll:当网页滚动时,背景图片会随滚动条滚动,这是默认值*/
+				
+				/*background-attachment:scroll;*/
+				/*设置图片在容易的某个位置,可以是对齐方式，也可以是具体位置，第一个数值是x轴位置，第二个是y轴位置*/
+				background-position: left;
+				
+				/*background-size:背景图片尺寸     cover和contain都会保持图片的原本比例
+				cover:会让背景图符合组件大小并充满组件, 水平方向充满。
+				contain：会让背景图符合组件大小并充满组件, 垂直方向方向充满。
+				也可以用数值和百分百表示，如果只输入第一个值，第二个表示自动（atou)	*/
+				background-size: cover;
+				
+				/*多背景图片，*/
+				/*background-image: url(img/cat.jpg),url(img/wangyou.jpg);
+				background-position: left top,center right;
+				background-repeat: no-repeat,no-repeat;*/
+				
+				/*定义背景图片的定位区域，
+				 padding-box(默认值，背景图像相对于内边距框来定位)
+				 border-box 背景图以边框为基准定位
+				 content-box 背景图在内容区定位*/
+				
+				border:10px double red;  /*border: 大小，类型，颜色*/
+				
+				/*border-box 背景图以边框为基准定位
+				padding-box 默认值，背景图像相对于内边距框来定位
+				content-box 背景图在内容区定位*/
+				
+				background-origin:padding-box;
+				/*background-clip:定义背景图片的裁剪区域
+				 border-box默认值，背景被裁剪到边框盒
+				 content-box裁剪超出盒子内边距区域的背景图
+				 padding-box裁剪超出盒子内边距区域的背景图*/
+				/*background-clip: padding-box;*/
+				
+				/*背景属性简写形式
+				background:背景颜色，背景图片，是否平铺，图片位置，图片尺寸，定位区域，裁剪区域*/
+				
+				
+				
+			}
+			
+		</style>
+	</head>
+	<body>
+		<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+		<div>
+			<br/><br/><br/><br/><br/><br/><br/><br/><br>
+			<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+			<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+			div
+			<br/><br/><br/><br/<br/><br/><br/><br/><br/><br/>
+			<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+		</div>
+	</body>
+</html>

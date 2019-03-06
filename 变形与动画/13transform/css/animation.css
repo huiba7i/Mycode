@@ -1,0 +1,17 @@
+@keyframes fun{
+	from{ 
+	background-color:red;}
+	to{
+		background-color: blue;
+		transform: translate(300px,300px);
+		border-radius: 50%;
+	}
+}
+.anim{
+	width: 77px;
+	height: 77px;
+	border: 1px solid black;
+}
+.anim{
+	animation: fun 5s ease-in infinite 2s alternate both;
+}

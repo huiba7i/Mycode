@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+			<style type="text/css">
+				div{
+					width: 400px;height: 250px;
+					
+					/*linear-gradient:线形渐变（方向(可以是具体方位和角度,默认是center),颜色值，颜色值……）*/
+					/*角度后缀  deg */
+					/*firefox:以-moz-
+ 					google chrome/safari:以-webkit-
+ 					opera:以-o-
+ 					ie9+:以-ms-识别*/
+					background:-webkit-linear-gradient(left,red,blue,aqua);
+					
+					color: darkorange;
+					/*radial-gradient:径向渐变
+					位置(center,left,right,bottom,left top、 right top、left bottom、right bottom)
+					形状 (circle--圆形，ellipse--椭圆  默认值)
+					颜色  范围,颜色  范围， 颜色   范围……*/
+					/*background:-webkit-radial-gradient(red,azure,darkorchid)*/
+				}
+				
+				img{
+					width: 300px;height: 150px;
+					/*-wekit-mask-image:图片渐变（里面一层颜色 范围,外面一层颜色 范围）
+					 rgba(0,0,0,0)——透明色*/
+					-webkit-mask-image:-webkit-radial-gradient(black 30px,rgba(0,0,0,0) 150px); 
+				}
+				
+				#div1{
+					width: 300px;height: 200px;
+					
+					/*repeating-linear-gradient——重复线性渐变（开始颜色值  颜色占比，第二颜色值  颜色占比，第三颜色值  颜色占比）*/
+					/*background:repeating-linear-gradient(red 2%,aqua 7%,blue 15%);*/
+					/*repeating-radial-gradient——重复径向渐变（开始颜色值  颜色占比，第二颜色值  颜色占比，第三颜色值  颜色占比）*/
+					background:repeating-radial-gradient(aqua, red 7%,blue 15%)
+				}
+			</style>
+	</head>
+	<body>
+		<div>
+		</div>
+		<br /><br /><br /><br /><br />
+		
+		<img src="img/cat.jpg" />
+		
+		<div id="div1"></div>
+	</body>
+</html>
