@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>work</title>
+    <style>
+        .all {
+            width: 702px;
+            height: 565px;
+        }
+
+        #topItem {
+            width: 700px;
+            height: 120px;
+            border: 1px solid;
+        }
+
+        #left {
+            width: 500px;
+            height: 380px;
+            border: 1px solid;
+            border-top-color: rgb(225, 236, 236);
+            float: left;
+        }
+
+        #right {
+            width: 130px;
+            height: 130px;
+            border: 1px solid;
+            position: relative;
+            left: 502px;
+            top: -71px;
+        }
+
+        ul {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            list-style: none;
+        }
+
+        li {
+            width: 80px;
+            height: 40px;
+            background: rgb(168, 159, 159);
+            margin-right: 15px;
+            text-align: center;
+            line-height: 40px;
+            float: left;
+            list-style: none;
+        }
+
+        li:hover {
+            cursor: pointer;
+        }
+
+        p {
+            font-weight: 700;
+            margin: 7px;
+            position: relative;
+            top: -378px;
+        }
+
+        .left_top {
+            width: 500px;
+            height:70px;
+            border: 1px solid;
+            border-bottom: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="all">
+        <div id="topItem">
+            <h2>可将你喜欢的项目拖进收藏夹</h2>
+            <ul>
+                <li class="item_one" ondragstart="dragStart(event)">项目一</li>
+                <li class="item_two" ondragstart="dragStart(event)">项目二</li>
+                <li class="item_three" ondragstart="dragStart(event)">项目三</li>
+                <li class="item_four" ondragstart="dragStart(event)">项目四</li>
+                <li class="item_five" ondragstart="dragStart(event)">项目五</li>
+            </ul>
+        </div>
+        <div class="left_top" ondragover="dragOver(event)">
+            <h2>收藏夹</h2>
+        </div>
+        <div id="left" ondragover="dragOver(event)" ondrop="drop(event)">
+        </div>
+        <div id="right" ondragover="dragOver(event)" ondrop="dleItem(event)">
+            <p>回收站</p>
+        </div>
+    </div>
+    <script src="js/work.js"></script>
+</body>
+
+</html>

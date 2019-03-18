@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>work</title>
+    <script src="js/jquery-3.1.1.js"></script>
+    <style>
+        .all {
+            width: 166px;
+            height: 300px;
+            border: 1px solid #a16f6f;
+            border-radius: 10px;
+            margin: 60px auto;
+            padding: 10px;
+        }
+        h4 {
+            margin: 0;
+            display: inline-block;
+            color: rgb(230, 111, 43);
+        }
+        span {
+            font-size: 14px;
+            color: rgb(238, 98, 43);
+        }
+        #nav {
+            margin: 5px 0 0 0;
+            padding: 0;
+            list-style: none;
+            display: flex;
+            justify-content: space-around;
+        }
+        #nav li {
+            font-size: 14px;
+            width: 48px;
+            height: 25px;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: yellow;
+        }
+        #nav li:hover {
+            cursor: pointer;
+        }
+        ol {
+            font-size: 13px;
+            padding: 0 20px;
+            color: blue;
+            display: none;
+        }
+        ol li {
+            margin: 10px 0;
+        }
+        .book {
+            background: url("img/menu2.gif") 48px 23px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="slt">
+        <select id="province">
+            <option value="选择省份">选择省份</option>
+        </select>
+        <select id="city">
+            <option value="选择城市">选择城市</option>
+        </select>
+    </div>
+
+    <div id="workTwo" class="all">
+        <h4>图书周排行</h4>
+        <span>top 100 近七天限量，每日更新</span>
+        <ul id="nav">
+            <li class="book">小说</li>
+            <li class="book">非小说</li>
+            <li class="book">少儿</li>
+        </ul>
+        <ol>
+            <li>时间旅行者的妻子</li>
+            <li>女心理师(下)</li>
+            <li>鬼吹灯之精绝古城</li>
+            <li>女心理师(上)</li>
+            <li>小时候</li>
+            <li>追风筝的人</li>
+            <li>盗墓笔记2</li>
+            <li>输赢</li>
+        </ol>
+        <ol>
+            <li>人生若只如初见</li>
+            <li>高效能人士的七个…</li>
+            <li>求医不如求己</li>
+            <li>人体使用手册</li>
+            <li>孩子，把你的手给我</li>
+            <li>别笑！我是英文单词书</li>
+            <li>人体经络使用手册</li>
+            <li>股市稳赚</li>
+        </ol>
+        <ol>
+            <li>斯凯瑞金色童书…</li>
+            <li>哈利波特与“混…</li>
+            <li>不一样的卡梅拉(…</li>
+            <li>它们是怎么来的</li>
+            <li>五 三班的坏小子…</li>
+            <li>男生日记</li>
+            <li>哈 利波特与魔法石</li>
+            <li>噼里啪啦丛书(全七册)</li>
+        </ol>
+    </div>
+    <script src="js/work.js"></script>
+</body>
+
+</html>

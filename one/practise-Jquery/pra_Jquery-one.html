@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Jquery</title>
+    <script src="js/jquery-3.1.1.js"></script>
+    <style>
+        .divstyleo {
+            width: 100px;
+            height: 40px;
+            color: blueviolet;
+        }
+
+        .divstylet {
+            width: 60px;
+            height: 60px;
+            background: #cccccc;
+        }
+    </style>
+</head>
+
+<body>
+    <p id="pOne">第一个P
+        <dd><span>spanOne</span></dd>
+        <dd><span>spantwo</span></dd>
+        <dd><span>spanThree</span></dd>
+    </p>
+    <div id="oneDiv">oneDiv</div>
+    <div>twoDiv</div>
+    <div id="threeDiv">threeDiv</div>
+    <div id="fourDiv">fourDiv</div>
+    <ul>
+        <li>11111</li>
+        <li>222</li>
+        <li>33333</li>
+        <li>444</li>
+        <li>555</li>
+        <li>66666666</li>
+    </ul>
+    <ol>
+        <td>noe</td>
+        <td id="mytd1">two</td>
+        <td>three</td>
+        <td>four</td>
+        <td>five</td>
+    </ol>
+     <h5>前置的内容</h5>
+    <script>
+
+        // 标签对象.css("属性名称"，"属性值")--添加样式
+        $("#pOne").css("color", "blue").css("font-size", "20px");
+        $("span").attr("style", "color:red");
+        $("dd>span:first").attr("style", "color:#ccc").css("background", "aqua");
+        $("#oneDiv").addClass("divstyleo").addClass("divstylet");   //添加指定class的样式
+        $("#oneDiv").append("追加内容") //标签对象.append   --指定标签追加内容
+        $("#oneDiv").removeClass("divstylet");  //删除指定class的样式
+        $("#oneDiv").removeClass()  //删除标签添加的所有class
+
+        console.log($("#oneDiv").position());   //position-返回第一个匹配元素相对与父元素的位置
+        console.log($("#oneDiv").scrollTop());  //返回匹配元素相对滚动条到顶部的位置，没有滚动条则返回 0 ;
+        $("div:nth-child(2n)").css("font-size", "11px"); //nth-child(2n) 伪类 -- 2的倍数匹配的项
+
+        //添加标签
+        $("<input type = 'button' value = '按钮'/>").appendTo("body");   //appendTo--指定标签末尾添加标签
+        $("<input>", {
+            type: "button",
+            value: "按钮2",
+            click: function () {
+                alert("点击了按钮2");
+            }
+        }).appendTo($("div:last"));
+        //标签对象.attr()    --添加属性，()中style样式可添加多属性，属性间分号隔开,标签属性之间用 ，隔开。
+        var a = $("<a>").attr({
+            style: "color:aqua;cursor:pointer"
+        }).text("a标签");
+        $("body").append(a);
+
+        // $("#oneDiv").remove();  //删除指定标签元素,节点一同删除
+        // $("body").empty();      //清空指定标签中的所有内容,该节点还在
+
+        console.log("b" + $.trim("   aa   ") + "b");    //去除字符串左右两边的空格
+
+
+        $("#threeDiv").prev().css("color", "red");       //标签对象 .prev()上一个节点
+        // $("#threeDiv").next().attr("style","color:blue;background:#cccccc") //标签对象 .next()下一个节点
+
+        //$(a).nextUntil(b)     节点a到节点b之间的节点，但不包括 a和b
+        $("#oneDiv").nextUntil("#fourDiv").attr("style", "color:white;background:#cccccc")
+
+        //指定节点之后的所有节点
+        $("ul>li:nth-child(2)").nextAll().css("color", "violet");
+
+        // each() 循环 -- i等于索引值
+        $("ul>li").each(function (i) {
+            this.innerHTML += "内容" + (i + 1);
+            console.log(Number(i))
+        })
+        //get(索引值) -- 获得指定索引值的元素
+        console.log($("ul>li").get(2));
+        // 过滤掉除索引为4的其他元素
+        $("ul>li").eq(4).css("color", "red");
+        console.log($("ul>li").eq(1));
+        // 元素.filter("#fourDiv"):过滤掉指定id以外的其他元素
+        $("div").filter("#fourDiv").css("background", "#cccc");
+
+        console.log($("div:contains('a')").length);
+
+        //过滤元素内容个数小于指定数值的元素
+        $("ul>li").filter(function () {
+            return this.innerHTML.length > 7;
+        }).css("background", "aqua");
+
+        // index -- 索引  val --value值
+        $.each(["a", "b", "c"], function (index, val) {
+            console.log(index, val)
+        })
+
+        //数组过滤
+        var g = $.grep(["aqq", "aqqq", "aqqqqq", "aqqqqqqqqq"], function (val,index) {
+            console.log(val + " " + index);
+            return val.length > 4
+        })
+        console.log(g.length);
+
+        $("p").html("改变后的内容");
+        $("p").append(" 追加的内容 ");
+        $("p").prepend(" 预置的内容 ");
+        $("p").before("在元素之前添加的内容，不在元素中")
+
+        $("p").addClass("addcls")   //向元素添加类名
+
+        //在指定的元素后添加内容
+        $("<b>Hello World!</b>").appendTo("p");  
+
+        //$(元素).clone --克隆元素
+        $("body").append($("p:first").clone());
+
+        // $("p").detach();  //  $("p").remove() //移出所有指定元素,DOM 中移除
+        // $("p").empty();      //移出所有指定元素的内容，元素还在
+        
+        // $("#threeDiv").insertAfter("#oneDiv");  //把元素放置在指定元素的后面
+
+        // $("#oneDiv").insertBefore("#threeDiv"); //把元素放置在指定的元素前面
+
+        $("h5").prependTo("p");     //在指定元素前添加内容 h5
+        
+    </script>
+
+</body>
+
+</html>

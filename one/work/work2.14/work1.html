@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>work1</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        .all {
+            width: 528px;
+            margin: 0 auto;
+        }
+
+        .nav {
+            height: 57px;
+            width: 528px;
+            background: url("imgs/top.gif");
+            margin-bottom: 5px;
+        }
+
+        .content {
+            width: 518px;
+            height: 380px;
+            border: 5px solid #FAD7E4;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+
+        img:first-child {
+            position: relative;
+            top: 20px;
+            left: 30px;
+        }
+
+        img:nth-of-type(2) {
+            position: relative;
+            left: 30px;
+            top: 5px;
+        }
+
+        .title {
+            color: red;
+            position: relative;
+            left: 35px;
+            font-weight: 700;
+            margin-bottom: 25px;
+        }
+
+        form {
+            margin-top: 25px;
+            width: 325px;
+            text-align: right;
+        }
+
+        form span {
+            display: inline-block;
+            margin: 5px 0;
+        }
+
+        form img {
+            margin: 5px 105px 0 0;
+        }
+        form input{
+            margin-right: 34px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="all">
+        <div class="nav"></div>
+        <div class="content">
+            <img src="imgs/pic001.gif" alt=""> <img src="imgs/pic002.gif" alt="">
+            <span class="title">欢迎您申请 SOHO联名信用卡</span><br>
+            <form action="">
+                <span>登录名 ：</span><input type="text"> <br>
+                <span>登陆密码 ：</span><input type="text"> <br>
+                <span>确认密码 ：</span><input type="password"> <br>
+                <span>身份证号码 ：</span><input type="password"> <br>
+                <span>固定电话 ：</span><input type="text"> <br>
+                <span>手机号码 ：</span><input type="text"> <br>
+                <span>电子邮箱 ：</span><input type="email"> <br>
+                <span>现居住地 ：</span>
+                <select  id="province" onchange="selProvince(this)">
+                    <option value="--选择省份--">--选择省份--</option>
+                </select>
+                <select  id="city">
+                    <option value="--选择城市--">--选择城市--</option>
+                </select> <br>
+                <img src="imgs/pic-sb.jpg" alt="">
+            </form>
+        </div>
+    </div>
+    <script src="js//work.js"></script>
+</body>
+
+</html>

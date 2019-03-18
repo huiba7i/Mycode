@@ -1,0 +1,112 @@
+body{
+	margin: 0;
+}
+.all{
+	width: 1000px;
+	display: flex;
+	flex-direction:column;
+	flex-wrap: wrap;
+	margin: 0 auto;
+}
+.header{
+    height: 130px;
+}
+.center{
+	background: url(../img/login_bg.gif) no-repeat ;
+	width: 960px;
+	height: 450px;
+	margin-left: 20px;
+	font-size: 13px;
+	display: flex;
+}
+.hy{
+	margin-left: 30px;
+}
+.aqdl ul li{
+	list-style-image: url(../img/login_03.png);
+	line-height: 30px;
+}
+.ls{
+	color: blue;
+}
+.aqdl{
+	margin-left: 65px;
+}
+.dll{
+	margin-left: 115px;
+	line-height: 40px;
+}
+.dll img{
+	margin-left: 70px;
+}
+.mi{
+	letter-spacing: 1em;
+}
+.dl{
+	width: 512px;
+	height: 389px;
+	margin-top: 55px;
+	border-right: 1px solid #CCC;
+}
+.zc1{
+	margin-left: 25px;
+	margin-top: 69px;
+}
+.ls1{
+	color: #4BB8FA;
+	font-size: 14px;
+	font-weight: 700;
+}
+.zc2 ul li div{
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	position: relative;
+	top: 7px;
+}
+.tb1 div{
+	background: url(../img/icon.gif) no-repeat 5px -125px;
+}
+.tb2 div{
+	background: url(../img/icon.gif) no-repeat 5px -165px;
+}
+.tb3 div{
+	background: url(../img/icon.gif) no-repeat 0 -205px;
+}.tb4 div{
+	background: url(../img/icon.gif) no-repeat 0px -245px;
+}
+.zc2 ul li{
+	line-height: 40px;
+}
+.zc ul{
+	list-style-type: none;
+	margin: 0px;	
+	margin-top: 15px;
+}
+.zc2{
+	margin-left: 50px;
+}
+.zc3{
+	margin-left: 50px;
+}
+.zc4{
+	width: 300px;
+	height: 70px;
+	background: #FDF7E7;
+	border: 1px solid orange;
+	margin-left: 57px;
+}
+.zc5{
+	width: 250px;
+	height: 21px;
+	background: white;
+	margin: 10px;
+	text-indent: 2em;
+	border: 1px solid orange;
+	margin-left: 25px;
+}
+
+iframe{
+    width: 100%;
+    height: 100%;
+}

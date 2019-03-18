@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <table id="studentTba" border="1" width = "400px" cellspacing = "0">
+        <tr>
+            <th>学号</th>
+            <th>姓名</th>
+            <th>年龄</th>
+            <th>性别</th>
+            <th>操作</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>张三1</td>
+            <td>16</td>
+            <td>男</td>
+            <td><input type="button" value="删除" onclick="deleteStudent(this)"></td>
+        </tr>
+    </table>
+    <br>
+    <input type="button" value="添加学生信息" onclick="addTr()">
+    <input type="button" value="获得第三个学生的信息" onclick="getTHreeStudent()">
+    <input type="button" value="修改单元格的值" onclick="setStudent()">
+    <input type="button" value="遍历表格" onclick="getAllStudent()">
+    <script src="js/2.28praTable.js"></script>
+</body>
+</html>

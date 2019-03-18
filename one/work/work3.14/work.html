@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>work</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+        .col-md-1,
+        .col-md-4 {
+            float: none;
+        }
+
+        .col-md-4 {
+            margin: 0 5px;
+        }
+
+        .btn-danger {
+            margin-top: -5px;
+        }
+        .header_div{
+            background: rgba(238, 236, 236, 0.8);
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .sort:hover{
+            cursor: pointer;
+        }
+        .str_red{
+            color: red;
+        }
+        .ascOrder{
+            display: inline-block;
+            transform:rotate(180deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container" ng-app="shopData" ng-controller="ctrl">
+        <div class="col-md-12 header_div">
+            
+            <input ng-model="product" type="search" class="col-md-12 form-control" placeholder="Search">
+        </div>
+        <table class="table table-border">
+            <thead>
+                <tr>
+                    <th>产品编号<span class="sort">▼</span></th>
+                    <th>产品名字<span class="sort">▼</span></th>
+                    <th>产品数量<span class="sort">▼</span></th>
+                    <th>产品单价<span class="sort">▼</span></th>
+                    <th>产品总价</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+
+            <tr ng-repeat="shop in (shopArry | filter:product)">
+                <td>{{shop.number}}</td>
+                <td>{{shop.name}}</td>
+                <td><input class="btn btn-info col-md-1" type="button" value="-" ng-click="reduce($index)">
+                    <input id="sum" class="col-md-4 quantity" type="text" ng-model="shop.quantity">
+                    <input class="btn btn-info col-md-1" type="button" ng-click=addShop($index) value="+">
+                </td>
+                <td>{{shop.price}}</td>
+                <td>{{shop.quantity*shop.price}}</td>
+                <td><input type="button" class="btn btn-danger" ng-click="deleteData($index)" value="移除"></td>
+            </tr>
+            <tr>
+                <td>总购买价：</td>
+                <td>{{cont()| currency:'¥'}}</td>
+                <td>总购买数量：</td>
+                <td>{{quantityAll()}}</td>
+                <td><input type="button" class="btn btn-danger" ng-click="empyShop()" value="清空购物车"></td>
+                <td></td>
+            </tr>
+        </table>
+    </div>
+    <script src="js/angular-1.7.0.js"></script>
+    <script src="js/jquery-3.1.1.js"></script>
+    <script src="js/work.js"></script>
+</body>
+
+</html>

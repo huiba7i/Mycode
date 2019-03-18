@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body>
+
+  <div class="container">
+    <!-- 分页 -->
+    <ul class="pagination pagination-lg">
+      <li class="disabled"><a href="">&laquo;</a></li>
+      <li class="active"><a href="">1</a></li>
+      <li><a href="">2</a></li>
+      <li><a href="">3</a></li>
+      <li><a href="">&raquo;</a></li>
+    </ul>
+
+    <!-- 翻页 -->
+    <ul class="pager">
+      <!-- previous 向左对齐, next 向右对齐 -->
+      <li class="previous"><a href="">上一页</a></li>
+      <li style="line-height:32px;">当第3页/共5页</li>
+      <li class="next"><a href="">下一页</a></li>
+    </ul>
+
+    <!-- 警告 -->
+    <div class="alert alert-danger alert-dismissable">
+      <button class="close" data-dismiss="alert">x</button>
+      操作失败
+    </div>
+  </div>
+
+  <script src="js/jquery-3.1.1.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+</body>
+</html>

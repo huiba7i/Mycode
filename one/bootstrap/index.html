@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+        div {
+            border: 1px solid #cccc;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- 网格系统 每行最多能有12列 -->
+        <div class="col-sm-6">one</div>
+        <div class="col-sm-6">two</div>
+        <div class="col-sm-8">three</div>
+        <div class="col-sm-4">four</div>
+        <div class="col-sm-2">2</div>
+        <div class="col-sm-2">2</div>
+        <div class="col-sm-2">2</div>
+        <div class="col-sm-2">2</div>
+        <div class="col-sm-2">2</div>
+        <div class="col-sm-2">2</div>
+        <div class="row">
+            <div class="col-md-4">4</div>
+            <!--偏移 col-md-offset-*偏移列数 -->
+            <div class="col-md-6 col-md-offset-2">6</div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">3</div>
+            <div class="col-md-9">9</div>
+        </div>
+        <div class="row">
+            <!-- 使用 col-md-push-*和col-md-pull-*类（必须放在col-md-push-*类前面）来互换两列的顺序，列宽不变 -->
+            <div class="col-md-3 col-md-push-9">3</div>
+            <div class="col-md-9 col-md-pull-3">9</div>
+        </div>
+        <h1>h1标题 <small>内联副标题</small></h1>
+        <h2>h2标题 <span class="small">内联副标题</span></h1>
+            <h3>h3标题 <bh class="small">内联副标题</bh>
+                </h1>
+                <p class="text-muted">弱性提示</p>
+                <p class="text-primary">蓝色提示</p>
+                <p class="text-danger">红色提示</p>
+                <p class="text-left bg-info">左对齐</p>
+                <p class="text-center bg-danger">居中对齐</p>
+                <!-- 移出ul默认样式，列表项中左对齐 -->
+                <ul class="list-unstyled text-center">
+                    <li>one</li>
+                    <li>two</li>
+                    <li>three</li>
+                </ul>
+                <!-- 将所有列放置在同一行 -->
+                <ul class="list-inline text-center">
+                    <li>one</li>
+                    <li>two</li>
+                    <li>three</li>
+                </ul>
+                <!-- 改变了自定义列表的排列方式 -->
+                <dl class="dl-horizontal">
+                    <dt>水果：</dt>
+                    <dd>葡萄</dd>
+                    <dd>水蜜桃</dd>
+                    <dd>猕猴桃</dd>
+                </dl>
+
+                <abbr title="显示提示">提示</abbr>
+    </div>
+    <br>
+    <!-- 表格 -->
+    <div class="container">
+        <table class="table table-bordered table-hover table-condensed">
+            <thead>
+                <tr class="info">
+                    <th>名称</th>
+                    <th>城市</th>
+                    <th>嗜好</th>
+                    <th>面貌</th>
+                </tr>
+            </thead>
+            <tbody class="table-striped">
+                <tr class="danger">
+                    <td>丁某</td>
+                    <td>安徽</td>
+                    <td>扣脚</td>
+                    <td>差得很</td>
+                </tr>
+                <tr>
+                    <td>汪某</td>
+                    <td>安徽</td>
+                    <td>战场</td>
+                    <td class="warning">良好</td>
+                </tr>
+                <tr>
+                    <td>余某</td>
+                    <td>安徽</td>
+                    <td>王者</td>
+                    <td class="success">良好</td>
+                </tr>
+                <tr>
+                    <td>范某</td>
+                    <td>安徽</td>
+                    <td>王者</td>
+                    <td class="active">良好</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <br>
+    <!-- 表单 -->
+    <div class="container form-group">
+        <h3>垂直表单</h3>
+        <form role="form">
+            账号：<input class="form-control" type="text">
+            密码：<input class="form-control" type="text">
+        </form>
+        <br>
+        <form class="form-inline" role="form">
+            <h3>内联表单</h3>
+            <label for="user">账号：</label>
+            <input class="form-control" id="user" type="text">
+            <label for="pwd">密码：</label>
+            <input class="form-control" id="pwd" type="text">
+        </form>
+    </div>
+    <div class="container">
+        <h3>水平表单</h3>
+        <form class="form-horizontal" role="form">
+            <div class="form-grou row">
+                <label for="user1" class="control-label col-sm-2">账号：</label>
+                <div class="col-sm-5">
+                    <input id="user1" class="form-control input-lg" type="text">
+                </div>
+            </div>
+            <br>
+            <div class="form-grou row">
+                <label for="pwd1" class="control-label col-sm-2">密码：</label>
+                <div class="col-sm-5">
+                    <input id="pwd1" class="form-control" type="text">
+                </div>
+            </div>
+            复选<input type="checkbox">
+            复选<input type="checkbox">
+            复选<input type="checkbox">
+            复选<input type="checkbox">
+            单选<input name="chekb" type="radio">
+            单选<input name="chekb" type="radio">
+            <br>
+            <!-- disabled--按钮呈被禁用的状态的class -->
+            <!-- disabled--让按钮呈激活状态的class -->
+            <button disabled 4 class="btn active">激活按钮</button>
+            <input type="button" class="btn btn-default" value="标准按钮">
+            <input disabled type="button" class="btn btn-primary" value="原始按钮样式(未被操作)">
+            <input type="button" class="btn btn-success" value="成功按钮">
+            <input type="button" class="btn btn-warning" value="提醒按钮">
+            <input type="button" class="btn btn-danger active" value="危险按钮">
+            <a class="btn btn-link">链接按钮</a>
+            <a class="btn btn-info active">蓝色按钮</a>
+            <input class="btn btn-lg" type="button" value="大按钮">
+            <input class="btn btn-sm" type="button" value="小按钮">
+            <input class="btn btn-xs btn-info" type="button" value="特小按钮">
+            <input class="btn btn-block btn-default" type="button" value="100%宽度的块按钮">
+            <br>
+        </form>
+    </div>
+    <div class="container">
+        <img src="img/fruit.jpg" class="img-rounded" title="圆角图">
+        <img src="img/fruit.jpg" class="img-circle" title="圆形图">
+        <img src="img/fruit.jpg" class="img-thumbnail" title="缩略图功能，带边框">
+        <img src="img/fruit.jpg" class="img-responsive" title="图片响应式">
+    </div>
+    <!-- hidden-xs--响应式工具，超小屏幕隐藏，其他显示 -->
+    <div style="width:200px;height:200px;border:1px solid" class="hidden-xs">
+
+    </div>
+</body>
+
+</html>

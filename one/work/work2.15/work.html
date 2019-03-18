@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>work</title>
+    <style type="text/css">
+        body {
+            font-size: 13px;
+            line-height: 25px;
+        }
+
+        table {
+            border-top: 1px solid #333;
+            border-left: 1px solid #333;
+            width: 450px;
+        }
+
+        td {
+            border-right: 1px solid #333;
+            border-bottom: 1px solid #333;
+            text-align: center;
+        }
+
+        .title {
+            font-weight: bold;
+            background-color: #cccccc;
+        }
+
+        .cell1 {
+            width: 120px;
+        }
+        .cell2 {
+            width: 40px;
+        }
+        .cell3 {
+            width: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <table border="0" cellspacing="0" cellpadding="0" id="order">
+        <tr class="title">
+            <td>商品名称</td>
+            <td>数量</td>
+            <td>价格</td>
+            <td>操作</td>
+        </tr>
+        <tr>
+            <td colspan="4" style="height:30px;">
+                <input type="button" value="增加订单" onclick="addRow()" />
+            </td>
+        </tr>
+    </table>
+    <script src="js/work.js"></script>
+</body>
+
+</html>

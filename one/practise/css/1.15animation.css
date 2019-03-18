@@ -1,0 +1,29 @@
+div{
+    width: 100px;
+    height: 100px;
+    /* background: fuchsia; */
+    animation: shift 3s ease-in 1.5s alternate infinite both;
+/*动画名称  持续时间  执行效果  延迟时间  执行方向  执行次数  动画播放前后状态 */
+}
+
+@keyframes shift{
+    0%{
+        background: rgb(202, 0, 202);
+    }
+    25%{
+        background: aqua;
+        transform: translate(400px,0);
+    }
+    50%{
+        background: white;
+        transform: translate(400px,400px);
+    }
+    75%{
+        background: rgb(10, 67, 190);
+        transform: translate(0,400px);
+    }
+    100%{
+        background: aqua;
+        transform: translate(0,0);
+    }
+}

@@ -1,0 +1,6 @@
+[
+    { "number": 1003, "name": "iphone4", "quantity": 3, "price": 4300 ,"allprice":"12900"},
+    { "number": 3300, "name": "iphone5", "quantity": 30, "price": 3300 ,"allprice":"99000"},
+    { "number": 233, "name": "max", "quantity": 4, "price": 23000 ,"allprice":"92000"},
+    { "number": 1000, "name": "ipad", "quantity": 5, "price": 6900 ,"allprice":"34500"}
+]

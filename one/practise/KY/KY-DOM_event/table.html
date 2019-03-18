@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>html中表格table对象的操作</title>
+</head>
+<body>
+    <table width="600" border="1" cellspacing="0" id="person">
+        <caption>企业的人事信息</caption>
+        <tr>
+            <th>工号</th>
+            <th>姓名</th>
+            <th>年龄</th>
+            <th>性别</th>
+            <th>岗位</th>
+            <th>薪资</th>
+            <th>操作</th>
+        </tr>
+        <tr>
+            <td>1001</td>
+            <td>张三</td>
+            <td>20</td>
+            <td>男</td>
+            <td>前端开发</td>
+            <td>6000</td>
+            <td>
+                <a href="javascript:void(0)" name="delTr">删除</a>
+                <a href="javascript:void(0)">修改</a>
+            </td>
+        </tr>
+    </table>
+
+    <input type="button" value="添加行" onclick="addRow()">
+    <script src="js/table.js"></script>
+</body>
+</html>

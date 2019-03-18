@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <div ng-app="app" ng-controller="ctrl">
+    <!-- uppercase转换成大写 -->
+    <p>hello, {{ name | uppercase }}</p>
+    <!-- currency转换成货币格式, 默认是$ -->
+    <p>价格为: {{ price | currency }}</p>
+    <p>价格为: {{ price | currency:'¥' }}</p>
+    <p>价格为: {{ price | currency:'RMB' }}</p>
+    <!-- number 保留几位小数 -->
+    <p>价格为(默认保留3位小数): {{ price | number }}</p>
+    <p>价格为(保留1位小数): {{ price | number:1 }}</p>
+
+    <!-- filter: 从数组中过滤一个条目子集, 并作为新数组返回 -->
+    <input type="text" ng-model="fName">
+    <ul>
+      <li ng-repeat="user in (array | filter:fName)">{{user}}</li>
+    </ul>
+
+    <hr>
+    请选择排序规则:
+    <select ng-model="order">
+      <option value="name">名字</option>
+      <option value="stuid">学号</option>
+      <option value="age">年龄</option>
+    </select>
+    <select ng-model="rule">
+      <option value="asc">升序</option>
+      <option value="desc">降序</option>
+    </select>
+    <table width="400" border="1" cellspacing="0">
+      <tr>
+        <th>学号</th>
+        <th>姓名</th>
+        <th>年龄</th>
+      </tr>
+      <!-- <tr ng-repeat="stu in stuList|orderBy:'age':true">
+        <td>{{ stu.stuid }}</td>
+        <td>{{ stu.name }}</td>
+        <td>{{ stu.age }}</td>
+      </tr> -->
+      <tr ng-repeat="stu in stuList|orderBy:order:(rule=='asc'?false:true)">
+        <td>{{ stu.stuid }}</td>
+        <td>{{ stu.name }}</td>
+        <td>{{ stu.age }}</td>
+      </tr>
+    </table>
+  </div>
+
+  <script src="js/angular-1.7.0.js"></script>
+  <script>
+    angular.module('app', []).controller('ctrl',function($scope, $filter){
+      $scope.name = 'zhangsan';
+      $scope.price = 784617.558697;
+      $scope.array = ['zhangsan', 'lisi', 'wangwu', 'zhaoliu'];
+      $scope.fName = 'i';
+      $scope.order = 'name';
+      $scope.rule = 'asc';
+
+      $scope.stuList = [
+        {"stuid":1, "name":'zhs', "age":10},
+        {"stuid":2, "name":'lisi', "age":18},
+        {"stuid":3, "name":'wangwu', "age":15},
+        {"stuid":4, "name":'zhaoliu', "age":12}
+      ];
+      // js中使用过滤器 向控制器中注入一个$filter
+      $scope.stuListOrderByName = $filter('orderBy')($scope.stuList, $scope.order, true);
+    });
+  </script>
+</body>
+</html>

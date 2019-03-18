@@ -1,0 +1,100 @@
+.logo{
+	margin-left: 150px;
+}
+.headx{
+	position: relative;
+	top: 40px;
+}
+.head{
+	width:1200px;
+	height: 35px;
+	margin-left: 160px;
+	background-color: aqua;
+	background:-webkit-linear-gradient(top,#98DDFD 72%,#ffffff)
+}
+.title{
+	height: 30px;
+	width: 1200px;
+	margin-left:160px;
+}
+.nav{
+	margin-top: 20px;
+	border-bottom: 1px solid grey;
+	width:1000px;
+	height: 21px;
+	margin-left: 200px;
+}
+.sy a{
+    text-decoration: none;
+    color: blue;
+    position: relative;
+	top: -20px;
+	left: 1200px;
+}
+.sy a:hover{
+    text-decoration: underline;
+}
+.hb{
+	font-size: 13px;
+	color: lightgrey;
+}
+table{
+	font-size: 13px;
+}
+.dh{
+	text-align: center;
+	position: relative;
+	top: -15px;
+}
+.js{
+	color: orange;
+}
+.ls{
+	color: blue;
+}
+.zc{
+	background-color: #FFFFCC;
+	border: 1px solid #FFCE0A;
+	width: 800px;
+	margin-left: 350px;
+}
+.ts{
+    margin: 0;
+	color: green;
+	margin-left: 350px;
+	position: relative;
+}
+.hs{
+	color: red;
+}
+.hbz{
+	color: lightgrey;
+	width: 300px;
+}
+.ts2{
+	color: orangered;
+	position: relative;
+	left: -140px;
+}
+.ky{
+	text-align: right;
+}
+.content a{
+	text-decoration: none;
+}
+
+table tr td{
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+.xy{
+	color: blue;
+}
+.tj{
+	background-color: orangered;
+	width: 130px;
+	height: 25px;
+	color: white;
+	border: 0;
+	margin-left: 35px;
+}

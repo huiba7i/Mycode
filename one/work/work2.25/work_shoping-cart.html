@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>shoping-cart</title>
+    <link rel="stylesheet" href="css/shoping_cart.css">
+</head>
+
+<body>
+    <div class="all">
+        <div class="nav">
+            <span>欢迎光临水果宅配购物网</span>
+            <input class="log_off" type="button" value="注销" onclick="logOff()"/>
+        </div>
+        <div class="content">
+            <span id="username" class="username"></span><br />
+            <span class="shoping">来看看好吃的，别摸，你买不起：</span>
+            <textarea id="shop_food" class="no_shop" style="resize :none">别看了，你买不起任何东西!</textarea>
+            <p onclick="delShop()"><span class="delgwc">来，点这清空购物车</span></p>
+            <p onclick="addShop()"><span class="encgwc">加入购物车就得付钱</span></p>
+        </div>
+        <div id="food_menu">
+            <div class="food_div">
+                <ul>
+                    <li class="food-img"><img src="img/fruit0.png" /></li>
+                    <li class="food-img"><img src="img/fruit1.png" /></li>
+                    <li class="food-img"><img src="img/fruit2.png" /></li>
+                </ul>
+                <ul class="food_ul red_str">
+                    <li name="food_name">水果蛋糕</li>
+                    <li name="food_name">葡萄</li>
+                    <li name="food_name">奇异果</li>
+                </ul>
+                <ul class="food_ul">
+                    <li><input type="checkbox" />我要选购</li>
+                    <li><input type="checkbox" />我要选购</li>
+                    <li><input type="checkbox" />我要选购</li>
+                </ul>
+            </div>
+
+            <div class="food_div">
+                <ul>
+                    <li class="food-img"><img src="img/fruit3.png" /></li>
+                    <li class="food-img"><img src="img/fruit4.png" /></li>
+                    <li class="food-img"><img src="img/fruit5.png" /></li>
+                </ul>
+                <ul class="food_ul red_str">
+                    <li name="food_name">柠檬</li>
+                    <li name="food_name">苹果派</li>
+                    <li name="food_name">菠萝</li>
+                </ul>
+                <ul class="food_ul">
+                    <li><input type="checkbox" />我要选购</li>
+                    <li><input type="checkbox" />我要选购</li>
+                    <li><input type="checkbox" />我要选购</li>
+                </ul>
+            </div>
+
+            <div class="food_div">
+                <ul>
+                    <li class="food-img"><img src="img/fruit6.png" /></li>
+                    <li class="food-img"><img src="img/fruit7.png" /></li>
+                    <li class="food-img"><img src="img/fruit8.png" /></li>
+                </ul>
+                <ul class="food_ul red_str">
+                    <li name="food_name">水果组合</li>
+                    <li name="food_name">苹果</li>
+                    <li name="food_name">水果茶</li>
+                </ul>
+                <ul class="food_ul">
+                    <li><input type="checkbox" />我要选购</li>
+                    <li><input type="checkbox" />我要选购</li>
+                    <li><input type="checkbox" />我要选购</li>
+                </ul>
+            </div>
+        </div>
+        <div class="foot">
+            <span>营业时间：周一~周六 8：30~20：30</span><br />
+            <span>电话：0739-1234567</span>
+        </div>
+    </div>
+    <script src="js/work_shoping_cart.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/header.css">
+</head>
+<body>
+  <!-- 指令(扩展了Html元素的属性): ng-app 指定AngularJS应用程序的作用范围
+  ng-init 初始化AngularJS应用程序的变量
+  ng-model 将输入域的值绑定到应用程序的变量
+  ng-bind 将应用程序的变量绑定到html元素的innerHTML(与{{表达式}}相同的作用)
+  ng-repeat 重复一个html元素
+  ng-include 引入其他的html文件
+  -->
+  <div ng-app="" ng-init="name='aowin';price=16.5;users=['zhangsan', 'lisi', 'wangwu'];obj={'name':'admin','password':'123'}">
+
+    <!-- 引入其他的html文件 -->
+    <div ng-include="'header.html'"></div>
+    1+1
+    <!-- {{表达式}} 将应用程序的数据绑定到html元素 -->
+    <p>{{1+1*2}}</p>
+    <h2>hello, {{name}}</h2>
+    <span>价格: {{price * 2}}</span>
+
+    <input type="text" ng-model="name">
+
+    <span ng-bind="name"></span>
+    
+    <ul>
+      <li ng-repeat="u in users">{{u}}</li>
+    </ul>
+    <p>{{users[1]}}  {{obj.name+'---'+obj.password}} </p>
+  </div>
+
+  <!-- 引入AngularJS -->
+  <script src="js/angular-1.7.0.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>home_page</title>
+    <link rel="stylesheet" href="css/home_page.css">
+</head>
+
+<body onload="init()">
+    <div id="all">
+        <div class="header">
+            <iframe src="head.html" width="965px" height="154px" frameborder="0" scrolling="no"></iframe>
+        </div>
+        <div class="center"> </div>
+        <div class="content">
+            <div class="content_left">
+                <div class="book_top">
+                    <p class="book_head">推荐分类</p>
+                    <ul>
+                        <li>外语</li>
+                        <li class="line">|</li>
+                        <li>中小学教辅</li>
+                        <li class="line">|</li>
+                    </ul>
+                </div>
+                <div class="book_bottom">
+                    <p class="book_head"><img src="images/dd_book_cate_icon.gif">图书商品分类</p>
+                    <div class="book_cls">
+                        <p class="book_title">[小说]</p>
+                        <ul>
+                            <li>悬疑</li>
+                            <li class="line">|</li>
+                            <li>言情</li>
+                            <li class="line">|</li>
+                            <li>职场</li>
+                            <li class="line">|</li>
+                            <li>财经</li>
+                        </ul>
+                    </div>
+                    <div class="book_cls">
+                        <p class="book_title">[文艺]</p>
+                        <ul>
+                            <li>文学</li>
+                            <li class="line">|</li>
+                            <li>传记</li>
+                            <li class="line">|</li>
+                            <li>艺术</li>
+                            <li class="line">|</li>
+                            <li>摄影</li>
+                        </ul>
+                    </div>
+                    <div class="book_cls">
+                        <p class="book_title">[青春]</p>
+                        <ul>
+                            <li>青春文学</li>
+                            <li class="line">|</li>
+                            <li>动漫</li>
+                            <li class="line">|</li>
+                            <li>幽默</li>
+                        </ul>
+                    </div>
+                    <div class="book_cls">
+                        <p class="book_title">[励志/成功]</p>
+                        <ul>
+                            <li>修养</li>
+                            <li class="line">|</li>
+                            <li>成功</li>
+                            <li class="line">|</li>
+                            <li>职场</li>
+                            <li class="line">|</li>
+                            <li>沟通</li>
+                        </ul>
+                    </div>
+                    <div class="book_cls">
+                        <p class="book_title">[少儿]</p>
+                        <ul>
+                            <li>0-2&nbsp;</li>
+                            <li class="line">|</li>
+                            <li>&nbsp;3-6&nbsp;</li>
+                            <li class="line">|</li>
+                            <li>&nbsp;7-10&nbsp;</li>
+                            <li class="line">|</li>
+                            <li>11-14</li>
+                        </ul>
+                        <ul>
+                            <li>文学</li>
+                            <li class="line">|</li>
+                            <li>科普</li>
+                            <li class="line">|</li>
+                            <li>图画书</li>
+                        </ul>
+                    </div>
+                    <div class="book_cls">
+                        <p class="book_title">[生活]</p>
+                        <ul>
+                            <li>保健</li>
+                            <li class="line">|</li>
+                            <li>家教</li>
+                            <li class="line">|</li>
+                            <li>美丽装扮</li>
+                            <li class="line">|</li>
+                            <li>育儿</li>
+                            <li class="line">|</li>
+                        </ul>
+                        <ul>
+                            <li>美食</li>
+                            <li class="line">|</li>
+                            <li>旅游</li>
+                            <li class="line">|</li>
+                            <li>收藏</li>
+                            <li class="line">|</li>
+                            <li>生活</li>
+                            <li class="line">|</li>
+                            <li>体育</li>
+                            <li class="line">|</li>
+                            <li>地图</li>
+                            <li class="line">|</li>
+                            <li>个人理财</li>
+                        </ul>
+                    </div>
+                    <div class="book_cls">
+                        <p class="book_title">[个人社科]</p>
+                        <ul>
+                            <li>文化</li>
+                            <li class="line">|</li>
+                            <li>历史</li>
+                            <li class="line">|</li>
+                            <li>哲学/宗教</li>
+                            <li class="line">|</li>
+                            <li>古籍</li>
+                        </ul>
+                        <ul>
+                            <li class="line">|</li>
+                            <li>政治/历史</li>
+                            <li class="line">|</li>
+                            <li>法律/</li>
+                            <li class="line">|</li>
+                            <li>经济</li>
+                            <li class="line">|</li>
+                            <li>社会科学</li>
+                            <li class="line">|</li>
+                            <li>心理学</li>
+                        </ul>
+                    </div>
+                    <div class="book_cls">
+                        <p class="book_title">[管理]</p>
+                        <ul>
+                            <li>管理</li>
+                            <li class="line">|</li>
+                            <li>金融</li>
+                            <li class="line">|</li>
+                            <li>营销</li>
+                            <li class="line">|</li>
+                            <li>会计</li>
+                        </ul>
+                    </div>
+                    <div class="book_cls">
+                        <p class="book_title">[科技]</p>
+                        <ul>
+                            <li>科普</li>
+                            <li class="line">|</li>
+                            <li>建筑</li>
+                            <li class="line">|</li>
+                            <li>医学</li>
+                            <li class="line">|</li>
+                            <li>计算机</li>
+                            <li class="line">|</li>
+                            <ul>
+                                <li>农业</li>
+                                <li class="line">|</li>
+                                <li>自然科学</li>
+                                <li class="line">|</li>
+                                <li>工业</li>
+                                <li class="line">|</li>
+                                <li>通讯</li>
+                            </ul>
+                        </ul>
+                    </div>
+                    <div class="book_cls">
+                        <p class="book_title">[教育]</p>
+                        <ul>
+                            <li>修养</li>
+                            <li class="line">|</li>
+                            <li>成功</li>
+                            <li class="line">|</li>
+                            <li>职场</li>
+                            <li class="line">|</li>
+                            <li>沟通</li>
+                        </ul>
+                    </div>
+                    <p class="book_title">[工具书]</p>
+                    <p class="book_title">[圈外原版书]</p>
+                    <p class="book_title">[期刊]</p>
+                </div>
+            </div>
+            <div class="content_center">
+                <div class="roll_img_top"></div>
+                <div class="roll_img">
+                    <div id="roll_img_div" class="roll_img_div"></div>
+                </div>
+                <ul id="roll_img_ul" class="roll_img_ul">
+                    <li class="roll_li" onmousemove="stopRoll(1)" onmouseout="startRoll(1)">1</li>
+                    <li class="roll_li" onmousemove="stopRoll(2)" onmouseout="startRoll(2)">2</li>
+                    <li class="roll_li" onmousemove="stopRoll(3)" onmouseout="startRoll(3)">3</li>
+                    <li class="roll_li" onmousemove="stopRoll(4)" onmouseout="startRoll(4)">4</li>
+                    <li class="roll_li" onmousemove="stopRoll(5)" onmouseout="startRoll(5)">5</li>
+                    <li class="roll_li" onmousemove="stopRoll(6)" onmouseout="startRoll(6)">6</li>
+                </ul>
+                <div class="roll_img_bottom"></div>
+                <!-- 最新上架内容 -->
+                <div class="pos">
+                    <div class="new_book_top">
+                        <p class="new_book_nav">最新上架</p>
+                        <ul class="new_book_ul">
+                            <li class="book_class">历史</li>
+                            <li class="book_class">家教</li>
+                            <li class="book_class">文化</li>
+                            <li class="book_class">小说</li>
+                        </ul>
+                        <span class="many">更多 >></span>
+                    </div>
+                    <!-- 1 -->
+                    <div class="new_book">
+                        <div class="bookshelf">
+                            <div class="bookdata">
+                                <img src="images/dd_history_1.jpg" alt="">
+                                <div class="bookdata_str">
+                                    <p class="bule_str">嘿，我知道你</p>
+                                    <p>作者：兰博 著</p>
+                                    <p>出版社：中国妇女出版社</p>
+                                    <p class="red_str">出版时间:2009年10月</p>
+                                    <p>定价：￥28.80</p>
+                                    <p>当当价：17.90</p>
+                                </div>
+                            </div>
+                            <div class="bookdata">
+                                <img src="images/dd_history_2.jpg" alt="">
+                                <div class="bookdata_str">
+                                    <p class="bule_str">择业要乘早</p>
+                                    <p>作者：兰博 著</p>
+                                    <p>出版社：中国妇女出版社</p>
+                                    <p class="red_str">出版时间:2009年10月</p>
+                                    <p>定价：￥28.80</p>
+                                    <p>当当价：17.90</p>
+                                </div>
+                            </div>
+                            <div class="bookdata">
+                                <img src="images/dd_history_3.jpg" alt="">
+                                <div class="bookdata_str">
+                                    <p class="bule_str">爷爷奶奶的‘孙子兵法’</p>
+                                    <p>作者：兰博 著</p>
+                                    <p>出版社：中国妇女出版社</p>
+                                    <p class="red_str">出版时间:2009年10月</p>
+                                    <p>定价：￥28.80</p>
+                                    <p>当当价：17.90</p>
+                                </div>
+                            </div>
+                            <div class="bookdata">
+                                <img src="images/dd_history_4.jpg" alt="">
+                                <div class="bookdata_str">
+                                    <p class="bule_str">一分钟读懂孩子心理</p>
+                                    <p>作者：兰博 著</p>
+                                    <p>出版社：中国妇女出版社</p>
+                                    <p class="red_str">出版时间:2009年10月</p>
+                                    <p>定价：￥28.80</p>
+                                    <p>当当价：17.90</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 2 -->
+                    <div class="new_book">
+                        <div class="bookshelf">
+                            <div class="bookdata">
+                                <img src="images/dd_family_1.jpg" alt="">
+                                <div class="bookdata_str">
+                                    <p class="bule_str">嘿，我知道你</p>
+                                    <p>作者：兰博 著</p>
+                                    <p>出版社：中国妇女出版社</p>
+                                    <p class="red_str">出版时间:2009年10月</p>
+                                    <p>定价：￥28.80</p>
+                                    <p>当当价：17.90</p>
+                                </div>
+                            </div>
+                            <div class="bookdata">
+                                <img src="images/dd_family_2.jpg" alt="">
+                                <div class="bookdata_str">
+                                    <p class="bule_str">择业要乘早</p>
+                                    <p>作者：兰博 著</p>
+                                    <p>出版社：中国妇女出版社</p>
+                                    <p class="red_str">出版时间:2009年10月</p>
+                                    <p>定价：￥28.80</p>
+                                    <p>当当价：17.90</p>
+                                </div>
+                            </div>
+                            <div class="bookdata">
+                                <img src="images/dd_family_3.jpg" alt="">
+                                <div class="bookdata_str">
+                                    <p class="bule_str">爷爷奶奶的‘孙子兵法’</p>
+                                    <p>作者：兰博 著</p>
+                                    <p>出版社：中国妇女出版社</p>
+                                    <p class="red_str">出版时间:2009年10月</p>
+                                    <p>定价：￥28.80</p>
+                                    <p>当当价：17.90</p>
+                                </div>
+                            </div>
+                            <div class="bookdata">
+                                <img src="images/dd_family_4.jpg" alt="">
+                                <div class="bookdata_str">
+                                    <p class="bule_str">一分钟读懂孩子心理</p>
+                                    <p>作者：兰博 著</p>
+                                    <p>出版社：中国妇女出版社</p>
+                                    <p class="red_str">出版时间:2009年10月</p>
+                                    <p>定价：￥28.80</p>
+                                    <p>当当价：17.90</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 3 -->
+                    <div class="new_book">
+                        <div class="bookshelf">
+                            <div class="bookdata">
+                                <img src="images/dd_culture_1.jpg" alt="">
+                                <div class="bookdata_str">
+                                    <p class="bule_str">嘿，我知道你</p>
+                                    <p>作者：兰博 著</p>
+                                    <p>出版社：中国妇女出版社</p>
+                                    <p class="red_str">出版时间:2009年10月</p>
+                                    <p>定价：￥28.80</p>
+                                    <p>当当价：17.90</p>
+                                </div>
+                            </div>
+                            <div class="bookdata">
+                                <img src="images/dd_culture_2.jpg" alt="">
+                                <div class="bookdata_str">
+                                    <p class="bule_str">择业要乘早</p>
+                                    <p>作者：兰博 著</p>
+                                    <p>出版社：中国妇女出版社</p>
+                                    <p class="red_str">出版时间:2009年10月</p>
+                                    <p>定价：￥28.80</p>
+                                    <p>当当价：17.90</p>
+                                </div>
+                            </div>
+                            <div class="bookdata">
+                                <img src="images/dd_culture_3.jpg" alt="">
+                                <div class="bookdata_str">
+                                    <p class="bule_str">爷爷奶奶的‘孙子兵法’</p>
+                                    <p>作者：兰博 著</p>
+                                    <p>出版社：中国妇女出版社</p>
+                                    <p class="red_str">出版时间:2009年10月</p>
+                                    <p>定价：￥28.80</p>
+                                    <p>当当价：17.90</p>
+                                </div>
+                            </div>
+                            <div class="bookdata">
+                                <img src="images/dd_culture_4.jpg" alt="">
+                                <div class="bookdata_str">
+                                    <p class="bule_str">一分钟读懂孩子心理</p>
+                                    <p>作者：兰博 著</p>
+                                    <p>出版社：中国妇女出版社</p>
+                                    <p class="red_str">出版时间:2009年10月</p>
+                                    <p>定价：￥28.80</p>
+                                    <p>当当价：17.90</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 4 -->
+                    <div class="new_book">
+                        <div class="bookshelf">
+                            <div class="bookdata">
+                                <img src="images/dd_novel_1.jpg" alt="">
+                                <div class="bookdata_str">
+                                    <p class="bule_str">嘿，我知道你</p>
+                                    <p>作者：兰博 著</p>
+                                    <p>出版社：中国妇女出版社</p>
+                                    <p class="red_str">出版时间:2009年10月</p>
+                                    <p>定价：￥28.80</p>
+                                    <p>当当价：17.90</p>
+                                </div>
+                            </div>
+                            <div class="bookdata">
+                                <img src="images/dd_novel_2.jpg" alt="">
+                                <div class="bookdata_str">
+                                    <p class="bule_str">择业要乘早</p>
+                                    <p>作者：兰博 著</p>
+                                    <p>出版社：中国妇女出版社</p>
+                                    <p class="red_str">出版时间:2009年10月</p>
+                                    <p>定价：￥28.80</p>
+                                    <p>当当价：17.90</p>
+                                </div>
+                            </div>
+                            <div class="bookdata">
+                                <img src="images/dd_novel_3.jpg" alt="">
+                                <div class="bookdata_str">
+                                    <p class="bule_str">爷爷奶奶的‘孙子兵法’</p>
+                                    <p>作者：兰博 著</p>
+                                    <p>出版社：中国妇女出版社</p>
+                                    <p class="red_str">出版时间:2009年10月</p>
+                                    <p>定价：￥28.80</p>
+                                    <p>当当价：17.90</p>
+                                </div>
+                            </div>
+                            <div class="bookdata">
+                                <img src="images/dd_novel_4.jpg" alt="">
+                                <div class="bookdata_str">
+                                    <p class="bule_str">一分钟读懂孩子心理</p>
+                                    <p>作者：兰博 著</p>
+                                    <p>出版社：中国妇女出版社</p>
+                                    <p class="red_str">出版时间:2009年10月</p>
+                                    <p>定价：￥28.80</p>
+                                    <p>当当价：17.90</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 以上最新上架 -->
+                    <div class="new_book_two">
+                        <div class="new_book_top">
+                            <p class="new_book_nav">重点关注</p>
+                        </div>
+                        <div class="new_book_div">
+                            <div class="keynode">
+                                <div class="keynode_book">
+                                    <img src="images/dd_focus_1.jpg" alt="">
+                                    <p class="book_name">郑玉巧育儿经 幼儿卷</p>
+                                    <p>定价：￥49.80</p>
+                                    <p>当当价：￥32.00</p>
+                                </div>
+                            </div>
+                            <div class="keynode">
+                                <div class="keynode_book">
+                                    <img src="images/dd_focus_2.jpg" alt="">
+                                    <p class="book_name">蹦蹦和跳跳的故事（全10册）</p>
+                                    <p>定价：￥49.80</p>
+                                    <p>当当价：￥32.00</p>
+                                </div>
+                            </div>
+                            <div class="keynode">
+                                <div class="keynode_book">
+                                    <img src="images/dd_focus_3.jpg" alt="">
+                                    <p class="book_name">人体自有大药（让每一个人都能变成……</p>
+                                    <p>定价：￥49.80</p>
+                                    <p>当当价：￥32.00</p>
+                                </div>
+                            </div>
+                            <div class="keynode">
+                                <div class="keynode_book">
+                                    <img src="images/dd_focus_4.jpg" alt="">
+                                    <p class="book_name">特效穴位使用手册</p>
+                                    <p>定价：￥49.80</p>
+                                    <p>当当价：￥32.00</p>
+                                </div>
+                            </div>
+                            <div class="keynode">
+                                <div class="keynode_book">
+                                    <img src="images/dd_focus_5.jpg" alt="">
+                                    <p class="book_name">《猫武士系列》（全6册）</p>
+                                    <p>定价：￥49.80</p>
+                                    <p>当当价：￥32.00</p>
+                                </div>
+                            </div>
+                            <div class="keynode">
+                                <div class="keynode_book">
+                                    <img src="images/dd_focus_6.jpg" alt="">
+                                    <p class="book_name">求医不如求己养生救命大宝典</p>
+                                    <p>定价：￥49.80</p>
+                                    <p>当当价：￥32.00</p>
+                                </div>
+                            </div>
+                            <div class="keynode">
+                                <div class="keynode_book">
+                                    <img src="images/dd_focus_7.jpg" alt="">
+                                    <p class="book_name">雅思词汇词根+联想记忆法</p>
+                                    <p>定价：￥49.80</p>
+                                    <p>当当价：￥32.00</p>
+                                </div>
+                            </div>
+                            <div class="keynode">
+                                <div class="keynode_book">
+                                    <img src="images/dd_focus_8.jpg" alt="">
+                                    <p class="book_name">等待Nemo的日子</p>
+                                    <p>定价：￥49.80</p>
+                                    <p>当当价：￥32.00</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 内容右侧 -->
+            <div class="content_right">
+                <!-- 上部分 -->
+                <div class="book_message">
+                    <div class="book_head">
+                        <p class="book_p"> <img src="images/dd_book_mess.gif" alt="" align="center">书勋快递</p>
+                    </div>
+                    <div id="rollstr" class="rollstr">
+                        <ul id="rollstr_ul" onmouseout="rollStart()" onmouseover="rollStop()">
+                            <li id="roolstrli">·计算机新书畅销书75折扣</li>
+                            <li>·2009年孩子最新喜欢的书>></li>
+                            <li>·弗洛德作品精选集59折</li>
+                            <li>·2015年考验英语大纲到货75折</li>
+                            <li>·权威定本四大名著（人民文……</li>
+                            <li>·袁伟民与体坛风云，实话实……</li>
+                            <li>·我们台湾这些年，轰动两岸……</li>
+                            <li>·畅销教辅推荐：精品套书50……</li>
+                            <li>·权威定本四大名著（人民文……</li>
+                            <li>·袁伟民与体坛风云，实话实……</li>
+                            <li>·我们台湾这些年，轰动两岸……</li>
+                            <li>·畅销教辅推荐：精品套书50……</li>
+                            <li>·计算机新书畅销书75折扣</li>
+                            <li>·2009年孩子最新喜欢的书>></li>
+                            <li>·弗洛德作品精选集59折</li>
+                            <li>·2015年考验英语大纲到货75折</li>
+                            <li>·权威定本四大名著（人民文……</li>
+                            <li>·畅销教辅推荐：精品套书50……</li>
+                            <li>·权威定本四大名著（人民文……</li>
+                            <li>·袁伟民与体坛风云，实话实……</li>
+                            <li>·我们台湾这些年，轰动两岸……</li>
+                            <li>·畅销教辅推荐：精品套书50……</li>
+                        </ul>
+                    </div>
+                    <img class="oneday" src="images/dd_book_right_adver1.jpg" alt="">
+                    <img class="oneday" src="images/dd_book_right_adver2.gif" alt="">
+                </div>
+                <!-- 下部分 -->
+                <div class="sell_well">
+                    <div class="sell_well_nav">
+                        <p>近七日畅销榜</p><img src="images/dd_bang.gif" alt="" align="center">
+                    </div>
+                    <div class="sell_well_book">
+                        <div class="sell_well_book_cls">
+                            <ul class="book_arr_nav">
+                                <li>励志</li>
+                                <li>旅游</li>
+                                <li>外语</li>
+                                <li>小说</li>
+                                <li>动漫</li>
+                            </ul>
+                            <div class="sell_well_book_name">
+                                <div class="book_one">
+                                    <img src="images/dd_book_no_01.gif" alt="" align="top">
+                                    <img src="images/dd_seven_hearten_01.jpg" alt="" align="top">
+                                    <div class="book_data">
+                                        <p class="book_bule_str">不抱怨的世界</p>
+                                        <p>作者：（美）鲍温</p>
+                                        <p>出版社：陕西师范</p>
+                                        <p>出版时间：2009年4月</p>
+                                    </div>
+                                </div>
+                                <div class="book_one">
+                                    <img src="images/dd_book_no_02.gif" alt="" align="top">
+                                    <img src="images/dd_seven_hearten_02.jpg" alt="" align="top">
+                                    <div class="book_data">
+                                        <p class="book_bule_str">遇见为止的自己</p>
+                                        <p>作者：张德芬</p>
+                                        <p>出版社：华夏出版</p>
+                                        <p>出版时间：2008年1月</p>
+                                    </div>
+                                </div>
+                                <div class="book_one">
+                                    <img src="images/dd_book_no_03.gif" alt="" align="top">
+                                    <img src="images/dd_seven_hearten_03.jpg" alt="" align="top">
+                                    <div class="book_data">
+                                        <p class="book_bule_str">活法</p>
+                                        <p>作者：(稻盛)</p>
+                                        <p>出版社：东方出版</p>
+                                        <p>出版时间：2005年3月</p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <ul class="book_arrfour__nav">
+                                        <li>4</li><span class="book_bule_str">效能人士的七个习惯</span><br>
+                                        <li>5</li><span class="book_bule_str">被迫强大</span><br>
+                                        <li>6</li><span class="book_bule_str">遇见心想事成的自己</span><br>
+                                        <li>7</li><span class="book_bule_str">世界上最伟大的推销员</span><br>
+                                        <li>8</li><span class="book_bule_str">我的成功可以复制</span>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="footer">
+            <ul>
+                <li>公司简介</li>
+                <li>|</li>
+                <li>诚征英才</li>
+                <li>|</li>
+                <li>网站联盟</li>
+                <li>|</li>
+                <li>百货招商</li>
+                <li>|</li>
+                <li>交易条款</li>
+            </ul>
+            <div class="footer_iframe">
+                <iframe src="foot.html" width="850px" height="54px" frameborder="0" scrolling="no"></iframe>
+            </div>
+        </div>
+        <div id="advert">
+            <div id="close"><a>关闭</a></div>
+        </div>
+    </div>
+    <script src="js/home_page.js"></script>
+</body>
+
+</html>

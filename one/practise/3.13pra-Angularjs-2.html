@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Angular</title>
+</head>
+
+<body>
+    <!-- ng-controller -- 向应用程序添加一个控制器 -->
+    <div ng-app="app" ng-controller="ctrl">
+        <p>holle,{{name}}</p>
+
+        <p>点击次数（<span>{{cont}}</span>）</p>
+        <button ng-click='addQuantity()'>点击按钮</button><br><br>
+
+        <select name="" id="">
+            <option value="省份" ng-repeat='p in arry'>{{p}}</option>
+        </select>
+        <select name="" id="">
+            <option value="城市" ng-repeat='c in cityArry'>{{c}}</option>
+        </select>
+
+    </div>
+
+    <!-- 引入angular文件 -->
+    <script src="js/angular-1.7.0.js"></script>
+
+    <script>
+        // 调用angular对象的方法module('模块名称'，[依赖的模块])来创建一个模块
+        var app = angular.module('app', []);
+        // 向模块中添加控制器
+        // 调用controller('控制器名称',构造函数)
+        app.controller('ctrl', function ($scope) {
+            $scope.cont = 0;
+            // 定义应用程序的变量 -- 作为scope对象的属性
+            $scope.name = 'Angular';
+            $scope.addQuantity = function () {
+                $scope.cont++;
+            }
+            $scope.arry = ['江西','浙江','北京'];
+           
+        })
+    </script>
+</body>
+
+</html>

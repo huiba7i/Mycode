@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body>
+
+  <div class="container">
+    <!-- 下拉菜单 -->
+    <div class="dropdown">
+      <!-- data-* 是html5新的属性,允许用户自定义属性  -->
+      <button class="btn dropdown-toggle" data-toggle="dropdown">web课程
+        <i class="glyphicon glyphicon-chevron-down"></i></button>
+
+      <!-- 下拉菜单项 pull-rgiht: 向右对齐-->
+      <!-- <ul class="dropdown-menu pull-rgiht"> -->
+      <ul class="dropdown-menu">
+        <li><a class="menuitem" href="">HTML</a></li>
+        <!-- 添加分隔线 用空的<li class="divider"> -->
+        <li class="divider"></li>
+        <li><a class="menuitem" href="">CSS</a></li>
+        <li class="divider"></li>
+        <li><a class="menuitem" href="">JS</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <script src="js/jquery-3.1.1.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+body {
+  width: 100%;
+  height: 800px;
+  background: url("../practise/imgs/壁纸5.jpg");
+}
+p {
+  margin: 0;
+  width: 90%;
+  font-size: 21px;
+  text-indent: 14px;
+  color: white;
+  background-color: aqua;
+  border: 1px solid red;
+}
+div ul {
+  list-style: none;
+  height: 35px;
+  line-height: 35px;
+}
+div ul li {
+  width: 60px;
+  margin-right: 20px;
+  float: left;
+  text-align: center;
+  box-shadow: 7px -7px 5px orange, -7px 7px 5px orange, -7px -7px 5px #e22b80, 7px 7px 5px #e22b80;
+  opacity: 0.5;
+  color: #766666;
+  background: linear-gradient(45deg, red, blue);
+}
+div ul li:hover {
+  text-decoration: underline;
+  color: red;
+  cursor: pointer;
+}
+.first_div {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  position: relative;
+  top: -20px;
+  left: 800px;
+  background: -webkit-radial-gradient(circle black 20%, #877778 45%, #cccccc 65%, white 100%);
+  box-shadow: 5px -5px 10px #999999;
+  opacity: 0.7;
+}
+.first_div .first_two {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  position: relative;
+  top: -19px;
+  left: 70px;
+  background: -webkit-radial-gradient(circle #ffffff 15%, #b1a1a2 45%, #5b545e 65%, #000000 100%);
+  box-shadow: 5px -5px 10px #999999;
+  opacity: 0.6;
+}
+.two_div {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  position: relative;
+  top: -30px;
+  left: 380px;
+  background: -webkit-radial-gradient(circle #3cc9db 10%, #e6888e 40%, #807d7d 65%, #7006fc 85%);
+  box-shadow: 5px 5px 30px #c27171, -5px -5px 30px #c27171;
+  opacity: 0.7;
+}

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>practise</title>
+    <style>
+        ul {
+            width: 180px;
+            margin: 0;
+            padding: 0;
+            border: 1px solid aqua;
+            list-style: none;
+            text-align: center;
+            display: none;
+        }
+
+        dd {
+            margin: 0 0 7px 0;
+        }
+
+        .menu,.menu li {
+            width: 180px;
+            line-height: 30px;
+            font-size: 18px;
+            text-align: center;
+        }
+
+        .menu {
+            border: 1px solid blue;
+            background: rgb(61, 177, 206);
+            cursor: pointer;
+        }
+
+        li {
+            line-height: 40px;
+            border-bottom: 1px solid orange;
+        }
+        .hidd{
+            display: none;
+        }
+        .show{
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 2.14 -->
+    <input type="checkbox" name="" id="all" onchange="checkAll(this)">全选
+    <br>
+    <input type="checkbox" name="check" onchange="checkSon()">
+    <br>
+    <input type="checkbox" name="check" onchange="checkSon()">
+    <br>
+    <input type="checkbox" name="check" onchange="checkSon()">
+    <br>
+    <input type="checkbox" name="check" onchange="checkSon()">
+    <br>
+    <input type="checkbox" name="check" onchange="checkSon()">
+    <br>
+    <input type="checkbox" name="check" onchange="checkSon()">
+
+
+    <!-- 2.15 -->
+    <div>
+        <dd>
+            <div class="menu">系统管理</div>
+            <ul class="a" name="hidds">
+                <li>系统管理1</li>
+                <li>系统管理2</li>
+                <li>系统管理3</li>
+            </ul>
+        </dd>
+        <dd>
+            <div class="menu">人事管理</div>
+            <ul class="a" name="hidds">
+                <li>人事管理1</li>
+                <li>人事管理2</li>
+                <li>人事管理3</li>
+            </ul>
+        </dd>
+        <dd>
+            <div class="menu">部门管理</div>
+            <ul class="a" name="hidds">
+                <li>部门管理1</li>
+                <li>部门管理2</li>
+                <li>部门管理3</li>
+            </ul>
+        </dd>
+    </div>
+
+
+
+    <script src="js/2.14~15pra-Dom.js"></script>
+</body>
+
+</html>

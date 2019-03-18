@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1003,
+    "name": "iphone4",
+    "number": 4,
+    "price": 4300
+  },
+  {
+    "id": 1004,
+    "name": "iphone5",
+    "number": 3,
+    "price": 5000
+  },
+  {
+    "id": 1005,
+    "name": "mac",
+    "number": 8,
+    "price": 12300
+  },
+  {
+    "id": 1006,
+    "name": "ipad",
+    "number": 10,
+    "price": 6800
+  }
+]

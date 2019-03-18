@@ -1,0 +1,84 @@
+@font-size:7px;
+@bg:background;
+@width:1px;
+@bor:border;
+.border(@width,@color:red){
+    border: @width solid @color;
+}
+body{
+    width: 100%;
+    height: 800px;
+    @{bg}:url("../practise/imgs/壁纸5.jpg");
+}
+p{
+    margin: 0;
+    width: 90%;
+    font-size: @font-size*3;
+    text-indent: @font-size*2;
+    color: white;
+    @{bg}-color: aqua;
+    .border(@width,@color:red);
+}
+
+// 嵌套
+div{
+    ul{
+        list-style: none;
+        height: 35px;
+        line-height: 35px;
+        li{
+            width: 60px;
+            margin-right: 20px;
+            float: left;
+            text-align: center;
+            box-shadow: 7px -7px 5px orange,
+            -7px 7px 5px orange,
+            -7px -7px 5px rgb(226, 43, 128),
+            7px 7px 5px rgb(226, 43, 128);
+            opacity: 0.5;
+            color: #877777 - #111;
+            @{bg}:linear-gradient(45deg,red,blue);
+            // & -- 表示当前选择的父选择器（外层选择器）
+            &:hover{
+                text-decoration: underline;
+                color: red;
+                cursor:pointer;
+            }
+        }
+    }
+}
+
+.first_div{
+    width: 150px;
+    height: 150px;
+    @{bor}-radius: 50%;
+    position: relative;
+    top: -20px;
+    left: 800px;
+    @{bg}:-webkit-radial-gradient(circle black 20%,#877778 45%,#cccccc 65%,white 100%);
+    box-shadow: 5px -5px 10px #999999;
+    opacity: 0.7;
+    .first_two{
+        width: 40px;
+    height: 40px;
+    @{bor}-radius: 50%;
+    position: relative;
+    top: -19px;
+    left: 70px;
+    @{bg}:-webkit-radial-gradient(circle rgb(255, 255, 255) 15%,#b1a1a2 45%,#5b545e 65%,rgb(0, 0, 0) 100%);
+    box-shadow: 5px -5px 10px #999999;
+    opacity: 0.6;
+    }
+}
+.two_div{
+    width: 110px;
+    height: 110px;
+    @{bor}-radius: 50%;
+    position: relative;
+    top: -30px;
+    left: 380px;
+    @{bg}:-webkit-radial-gradient(circle rgb(60, 201, 219) 10%,#e6888e 40%,#807d7d 65%,rgb(112, 6, 252) 85%);
+    box-shadow:5px 5px 30px #c27171,
+                -5px -5px 30px #c27171;
+    opacity: 0.7;
+}

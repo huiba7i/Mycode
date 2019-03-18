@@ -1,0 +1,25 @@
+body{
+    background-color: green;
+
+    /* 1.css属性hack
+    属性名称前加* 仅ie识别, 加_ ie6及以下识别, 加+ ie7及以下识别
+    属性值值后面加\0 - 仅ie8,9识别
+
+    */
+    /* *background-color: blue; */
+    /* background-color: blue!important; */
+
+    /* _background-color: orange;
+    +background-color: red; */
+    /* background-color:#ccc \0; */
+}
+
+/* 2.css选择器hack
+选择器加前缀 *html ie6及以下识别 , *+html 仅ie7识别
+*/
+/* *html ul{
+    color: #fff;
+} */
+*+html ul{
+    color: #fff;
+}

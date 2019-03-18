@@ -1,0 +1,96 @@
+div{
+    width: 100px;
+    height: 100px;
+    margin-bottom: 20px;
+}
+.one{
+    background: aqua;
+}
+.one:hover{
+    transform: translate(15px,0)   /* translate-移动*/
+}
+.two{
+    background: red;
+}
+.two:hover{
+    transform: rotate(-25deg);      /* rotate-旋转*/
+    transform-origin: right top;   /* transform-origin —— 变换的初始位置，默认值为中心点*/
+}
+.three{
+    background: violet;
+}
+.three:hover{
+    /* transform: scale(1.5); */
+    transform: scaleX(1.5);   /* scalex-缩放*/
+    transform-origin: left;
+}
+.four{
+    background: rgb(134, 77, 240);
+}
+.four:hover{
+    transform: skew(45deg);             /*skew--倾斜*/
+    transform-origin: left top;
+    transition: 2s;
+}
+.five{
+    background: orange;
+}
+.five:hover{
+    transform: translate(20px,0) skew(30deg);       /*多种变换中间空格隔开*/
+    transform-origin: left top;
+}
+.center{
+    width: 300px;
+    height: 300px;
+    border:1px solid black;
+
+    /* 子元素居中对齐 -one */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.center div{
+    width: 100px;
+    height: 100px;
+    background: black;
+
+    /* 子元素居中对齐 two*/
+    /* position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%); */
+}
+.sell_out{
+    width: 200px;
+    height: 180px;
+    border:1px solid black;
+    position: absolute;
+    left: 470px;
+    top: 300px;
+    overflow: hidden;   /* hidden--隐藏*/
+}
+p{
+    background: #cccccc;
+    text-align: center;
+    color: #4442425b;
+    transform: translate(60px,10px) rotate(45deg);
+}
+.animation_bser{
+    width: 100px;
+    height: 100px;
+    background: blueviolet;
+    transition: all 1.5s ease-out 1s;  /*all-所有都执行(不用每个变换都写)  执行时间   时间函数  延迟时间*/
+}
+.animation_bser:hover{
+    transform: rotate(1800deg) scale(0.3);
+    background: rgb(255, 255, 255);
+}
+img{
+    position: absolute;
+    left: 500px;
+    top: 10px;
+}
+img:hover{
+    transform: translate(300px);
+     transition: 1s steps(7,start);   /*start-开始计时时就执行    end-计时结束后执行   */
+}

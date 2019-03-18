@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>work3</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        .all {
+            width: 900px;
+            margin: 0 auto;
+        }
+
+        .all div {
+            width: 400px;
+            height: 246px;
+            position: relative;
+            left: 50%;
+            transform: translate(-50%, 0);
+        }
+
+        ul {
+            width: 900px;
+            display: flex;
+            flex-flow: row;
+            list-style: none;
+            justify-content: space-between;
+        }
+
+        li img {
+            width: 100px;
+        }
+
+        li img:hover {
+            border: 1px solid red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="all">
+        <div>
+            <img id="img_big" src="imgs/show1.jpg" alt="">
+        </div>
+        <ul>
+            <li><img src="imgs/show1.jpg" alt="" onmouseover="changShow('show1.jpg')"></li>
+            <li><img src="imgs/show2.jpg" alt="" onmouseover="changShow('show2.jpg')"></li>
+            <li><img src="imgs/show3.jpg" alt="" onmouseover="changShow('show3.jpg')"></li>
+            <li><img src="imgs/show4.jpg" alt="" onmouseover="changShow('show4.jpg')"></li>
+            <li><img src="imgs/show5.jpg" alt="" onmouseover="changShow('show5.jpg')"></li>
+        </ul>
+    </div>
+    <script src="js/work3.js"></script>
+</body>
+
+</html>

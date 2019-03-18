@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>work</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+        #header {
+            background: #F6F7F7;
+            height: 68px;
+        }
+        #header a{
+            font-size: 13px;
+        }
+        #content {
+            border: 1px solid #cccccc;
+            background: rgb(12, 95, 155) url("img/bg.png") no-repeat;
+            background-size: 100% 100%;
+            padding: 20px 0 0 0px;
+            color: white;
+        }
+        #nav li:first-of-type {
+            background: rgb(10, 107, 177);
+        }
+        #nav li:nth-of-type(n+2) {
+            background: #134B72;
+            margin-bottom: 7px;
+        }
+        #nav li a:hover {
+            background: url("img/daohang.png") no-repeat;
+            background-size:  100% 100%;
+        }
+        #content-data {
+            padding-right: 10px;
+        }
+        .shadow {
+            height: 100%;
+            box-shadow: 3px -3px 7px rgba(112, 64, 4, 0.829);
+            margin-top: 10px;
+        }
+        .shadow .col-md-3 {
+            padding: 0 0 0 15px;
+        }
+        #tb_h {
+            height: 43px;
+            background: #134B72;
+            border-bottom: 1.5px solid white;
+        }
+        #content a {
+            color: white;
+        }
+        #tb_h p {
+            font-size: 17px;
+            line-height: 43px;
+        }
+        #tb_con{
+            background: #327FB5;
+            height: 100%;
+            padding: 40px 0;
+        }
+        table {
+            margin: 40px auto;
+            font-size: 13px;
+        }
+        table tr:nth-last-of-type(n+2) {
+            height: 43px;
+        }
+        table tr:last-child {
+            height: 68px;
+        }
+        table tr td:nth-of-type(2n) {
+            text-align: right;
+        }
+        #last_texr {
+            position: relative;
+            top: -15px;
+            left: -370px;
+        }
+        input {
+            background: none;
+            border: 0;
+        }
+        #font_str {
+            font-size: 3px;
+            position: relative;
+            top: -1px;
+        }
+        .str_red {
+            color: red;
+        }
+        .train{
+            width: 94%;
+            background: none;
+            border: 0;
+            display: inline-block;
+            color: white;
+        }
+        .train option{
+            color: black;
+        }
+        .footer{
+            height: 45px;
+            background: #D8E5F6;
+            text-align: center;
+        }
+        .footer a{
+            font-size: 12px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div id="header">
+            <div class="col-md-offset-1 col-md-3">
+                <img src="img/logo.png" alt="">
+            </div>
+            <div class="col-md-offset-6 col-md-2">
+                <ul class="list-inline" style="line-height: 60px">
+                    <li><a href="">登陆</a></li>
+                    <li><a href="">注册</a></li>
+                    <li><a href=""><span id="font_str" class="glyphicon glyphicon-play"></span>注销</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="content">
+            <div id="content-data">
+                <div class="shadow">
+                    <div class="col-md-3">
+                        <ul id="nav" class="list-unstyled nav nav-pills nav-stacked text-center">
+                            <li>
+                                <a href="" style="color:white">
+                                    <h4>栏目分类</h4>
+                                </a>
+                            </li>
+                            <li><a href="">申请订票</a></li>
+                            <li><a href="">火车时刻表</a></li>
+                            <li><a href="">我的火车票</a></li>
+                            <li><a href="">修改密码</a></li>
+                            <li><a href="">联系我们</a></li>
+                        </ul>
+                    </div>
+                    <div class="text-center col-md-offset-3">
+                        <div id="tb_h">
+                            <p>申请订票</p>
+                        </div>
+                        <div id="tb_con">
+                            <table class="table-bordered">
+                                <tr>
+                                    <td class="col-md-2">姓名：</td>
+                                    <td class="col-md-4"><input type="text"><span class="str_red">*</span></td>
+                                    <td class="col-md-2">身份证：</td>
+                                    <td class="col-md-4"><input type="text"><span class="str_red">*</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-2">联系电话：</td>
+                                    <td class="col-md-4"><input type="text"><span class="str_red">*</span></td>
+                                    <td class="col-md-2">备用电话：</td>
+                                    <td class="col-md-4"><input type="text"></td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-2">车次：</td>
+                                    <td class="col-md-4">
+                                        <select class="form-control train">
+                                            <option value="">G8715</option>
+                                            <option value="">G8716</option>
+                                            <option value="">G8717</option>
+                                        </select>
+                                        <span class="str_red">*</span>
+                                    </td>
+                                    <td class="col-md-2">起点站：</td>
+                                    <td class="col-md-4"><input type="text"><span class="str_red">*</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-2">终点站：</td>
+                                    <td class="col-md-4"><input type="text"><span class="str_red">*</span></td>
+                                    <td class="col-md-2">出发日期：</td>
+                                    <td class="col-md-4"><input type="datetime-local" ><span class="str_red">*</span></td>
+                                </tr>
+                                <tr rowspan="2">
+                                    <td>备注：</td>
+                                    <td colspan="3"><span id="last_texr">有需要请详细填写！</span></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <a>火车订票版权所有</a><br>
+            <a>重庆工程学院</a>
+        </div>
+    </div>
+    <script src="js/jquery-3.1.1.js"></script>
+    <script src="js//bootstrap.min.js"></script>
+</body>
+
+</html>

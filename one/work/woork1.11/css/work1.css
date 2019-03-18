@@ -1,0 +1,247 @@
+body{
+    margin: 0;
+}
+.all{
+    width: 1113px;
+    margin: 0 auto;
+}
+.header{
+    width: 1113px;
+    height: 110px;
+}
+.header img{
+    position: relative;
+    top: 30px;
+    left: 250px;
+}
+.header ul{
+    margin: 0;
+    padding: 0;
+    width: 370px;
+    height: 25px;
+    list-style-type: none;
+    color: #E4DDE1;
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    top: -30px;
+    left: 440px;
+}
+.header ul li{
+    text-align: center;
+    font-size: 13px;
+    line-height: 25px;
+    margin-left: 5px;
+}
+.string_b{
+    font-weight: bold;
+    color: black;
+}
+.poster{
+    text-decoration: none;
+    color: #9B9FAB;
+}
+.header input{
+    width: 350px;
+    outline: 4px solid blue;
+    position: relative;
+    top: -30px;
+    left: 450px;
+}
+.search{
+    width: 55px;
+    height: 28px;
+    text-align: center;
+    background: blue;
+    color: white;
+    border: 0;
+    position: relative;
+    top: -29px;
+    left: 455px;
+}
+.content{
+    width: 1113px;
+    height: 510px;
+    margin: 10px 0;
+    display: flex;
+}
+.content_left{
+    width: 700px;
+    height: 100%;
+}
+.content_left_top{
+    width: 100%;
+    height: 200px;
+}
+.content_left_top img{
+    width: 100%;
+    height: 100%;
+}
+.content_left_bottom{
+    width: 100%;
+    height: 290px;
+    margin-top: 10px;
+}
+.sp_r{
+    margin-left: 237px;
+}
+.str_red{
+    color: red;
+}
+.nav_title{
+    width: 100%;
+    position: relative;
+    top: 10px;
+}
+.content_left_deta{
+    width: 100%;
+    height: 263px;
+    display: flex;
+    flex-flow: row wrap;
+    align-content: space-around;
+    position: relative;
+    top: 10px;
+    color: #cccccc;
+}
+.content_left_deta div{
+    width: 50%;
+}
+.content_left_deta span{
+    display: inline-block;
+}
+.imgs_deta{
+    width: 68px;
+}
+.str_blue{
+    color: blue;
+}
+.content_right{
+    width: 400px;
+    height: 100%;
+    margin-left: 10px;
+}
+.content_right_top{
+    width:100%;
+    height:190px;
+    border: 1px solid black;
+    background: #F7F7F7;
+}
+.content_right_top p{
+    margin: 0;
+}
+.str_aqua{
+    margin: 0;
+    color: #5DD5E1;
+}
+.str_orange{
+    color: orange;
+}
+.land{
+    margin-left: 15px;
+}
+.land .password{
+    display: inline-block;
+    margin: 4px 0;
+}
+.str_hs{
+    color: #9B9FAB;
+}
+.land button{
+    width: 70px;
+    height: 30px;
+    background: orange;
+    border: 0;
+    color: white;
+}
+.content_right_center{
+    width: 100%;
+    height:70px;
+    margin:10px 0 ;
+    background: #F7F7F7;
+    border: 1px solid black;
+}
+.content_right_center p{
+    font-size: 20px;
+    line-height: 70px;
+    text-indent: 5px;
+    margin: 0;
+}
+.content_right_center a{
+    color: #cccccc;
+    text-decoration: none;
+}
+.content_right_center a:hover{
+    color: red;
+    text-decoration: underline;
+}
+.content_right_bottom{
+    width: 100%;
+    height:220px;
+    border: 1px solid black;
+}
+.content_right_bottom_nav{
+    height: 40px;
+    background: #CCCCCC;
+}
+.content_right_bottom_nav p{
+    margin: 0;
+    position: relative;
+    top: 10px;
+    left: 10px;
+}
+.content_right_bottom_deta{
+    width: 100%;
+    height: 180px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+.content_right_bottom_deta div{
+    width: 50%;
+}
+.content_right_bottom_deta img{
+    width: 65px;
+    height: 70px;
+    margin-left: 5px;
+    margin-top: 7px;
+}
+.content_right_bottom_str{
+    display: inline-block;
+    margin-top: 7px;
+}
+.footer_date{
+    width: 1113px;
+    height: 100px;
+    margin-top: 10px;
+}
+.footer_date img:first-child{
+    width: 690px;
+    height: 93px;
+}
+.footer_date img:last-child{
+    width: 400px;
+    height: 93px;
+    margin-left: 15px;
+}
+.footer{
+    width: 1110px;
+    height: 60px;
+}
+.footer ul{
+    list-style-type: none;
+    width: 800px;
+    height: 25px;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+    margin: 0 auto;
+    padding: 0;
+    position: relative;
+    top:10px;
+}   
+.footer p{
+    display: block;
+    width: 100%;
+    margin: 10px auto 0;
+    text-align: center;
+}

@@ -1,0 +1,23 @@
+body{
+	margin: 0;
+}
+.all{
+	width: 1000px;
+	display: flex;
+	flex-direction:column;
+	flex-wrap: wrap;
+	margin: 0 auto;
+}
+.header{
+    height: 130px;
+}
+iframe{
+    width: 100%;
+    height: 100%;
+}
+.center{
+	height: 187px;
+	text-align: center;
+	font-size: 13px;
+	line-height: 13px;
+}

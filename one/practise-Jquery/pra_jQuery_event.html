@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="js/jquery-3.1.1.js"></script>
+    <style>
+        .changeCls {
+            color: aqua;
+        }
+    </style>
+    <title>pra_jQuery_event</title>
+</head>
+
+<body>
+    <div id="oneDiv">div</div>
+    <input id="btnOne" type="button" value="切换"></input>
+
+    <script>
+        var $jQ = jQuery.noConflict();
+        // $jQ(document).ready(function(){     // .ready -- 文档加载完成
+        //     alert("加载完成");
+        // })
+        $jQ("#btnOne").click(function () {
+            // toggleClass -- 切换类
+            $jQ("#oneDiv").toggleClass("changeCls");
+            // $jQ("#oneDiv").toggle(function () {
+            // 切换操作（显示隐藏）
+            // })
+
+            // $jQ("#oneDiv").toggle(function () {
+            //     console.log("1操作");
+            // }, function () {
+            //     console.log("2操作")
+            // });
+        })
+    </script>
+    <br><br>
+    <div id="twoDiv">twoDiv</div>
+    <!-- .fadeOut(数值)--逐渐隐藏 -->
+    <input type="button" onclick="$jQ('#twoDiv').fadeOut(5000)" id="btnTwo" value="按钮">
+    <input type="button" id="btnThree" value="按钮三">
+    <script>
+        function oneFun() {
+            alert("777");
+        }
+        function twoFun() {
+            // alert("111");
+        }
+
+        $jQ("#btnTwo").one("click", function () {
+            // alert("只执行一次的事件")
+        })
+        $jQ("#btnTwo").on("click", function (event) {
+            // alert("执行多次的事件");
+            //.off      删除
+            $jQ(this).off(event);       //删除当前事件
+        })
+
+        //添加多个事件
+        $jQ("#btnThree").on({
+            click: oneFun,
+            mouseout: twoFun
+        })
+
+    </script>
+</body>
+
+</html>

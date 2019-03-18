@@ -1,0 +1,98 @@
+body{
+    margin: 0;
+}
+.header_all{
+    width: 1000px;
+    height: 120px;
+    background: url(../img/h_bg.jpg) no-repeat  ;
+    background-size: 1000px 135px;
+    font-size: 13px;
+}
+ul{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+.nav_head{
+    width: 450px;
+    height: 25px;
+    position: relative;
+    left: 547px;
+
+}
+.nav_head li{
+    width: 80px;
+    height: 25px;
+    float: left;
+}
+.nav_head li div{
+    width: 20px;
+    height: 25px;
+    position: relative;
+    top: 10px;
+}
+.nav_head li div{
+    display: inline-block;
+}
+.nav_head li:first-child div{
+    background:url(../img/icon.gif) no-repeat -5px -4px;
+}
+.nav_head li:nth-of-type(2) div{
+    background:url(../img/icon.gif) no-repeat -47px -4px;
+}
+.nav_head li:nth-of-type(3) div{
+    background:url(../img/icon.gif) no-repeat -88px -4px;
+}
+.nav_head li:nth-of-type(4) div{
+    background:url(../img/icon.gif) no-repeat -131px -4px;
+}
+.nav_head li:nth-of-type(n+5 ){
+    width: 40px;
+    position: relative;
+    top: 9px;
+    margin-right: 13px;
+}
+.nav_head button{
+    width: 40px;
+    height: 20px;
+    font-size: 12px;
+    border-radius: 7px;
+    border: 1px solid;
+    background: white;
+}
+p{
+    color: #615d5d;
+    position: relative;
+    top: 25px;
+    left: 587px;
+    letter-spacing: 3px;
+}
+.nav{
+    width: 650px;
+    height: 25px;
+    font-size: 14px;
+    font-weight: bold;
+    position: relative;
+    left: 23px;
+    top: 25px;
+    display: flex;
+    justify-content: space-around;
+}
+.nav li{
+    width: 80px;
+    text-align: center
+}
+.nav li:hover{
+    background: url(../img/nav_bg.gif);
+}
+.content_spacing{
+    letter-spacing: 2px
+}
+a{
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+a:hover{
+    color: red;
+}

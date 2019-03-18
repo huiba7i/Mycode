@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="js/jquery-3.1.1.js"></script>
+    <style>
+        p{
+            width: 200px;
+            height: 80px;
+            text-align: center;
+            border: 1px solid #cccccc;
+        }
+    </style>
+    <title>work</title>
+</head>
+<body>
+    <p id="myP">
+    </p>
+    <input id="nth" type="button" value="按钮">
+    
+    <script>
+        // $("#nth").click(function(){
+        //     $("#myP").load("data/text.txt");
+        // })
+            $("#nth").click(function(){
+                $.ajax({
+                    url:"data/text.txt",success:function(result){
+                        $("#myP").html(result);
+                    }
+                })
+            })
+    </script>
+</body>
+</html>

@@ -1,0 +1,378 @@
+body{
+    margin: 0;
+}
+.header{
+    height: 154px;
+}
+.header,.center,.content{
+    width: 965px;
+    margin: 0 auto;
+}
+.center{
+    height: 65px;
+    margin: 10px auto 15px;
+    background: url("../images/dd_index_top_adver.jpg") no-repeat;
+}
+li:hover,p:hover{
+    cursor: pointer;
+    text-decoration:underline;
+}
+a:hover{
+text-decoration:underline;
+}
+/*  内容部分 */
+.content{
+    height: 980px;
+    display: flex;
+    flex-flow: row;
+    font-size: 12px;
+}
+.content_left ul{
+    list-style: none;
+    display: flex;
+    flex-flow: row wrap;
+    margin: 0 0 0 7px;
+    padding: 0;
+}
+/* (1) 左侧 */
+.content_left{
+    width: 190px;
+}
+.line{
+    margin: 0 4px;
+}
+/* 左侧上部 */
+.book_top{
+    border: 1px solid #949191;
+    margin-bottom: 10px;
+}
+.book_head{
+    background: #FFF0D9;
+    font-weight: bold;
+    font-size: 13px;
+    color: firebrick;
+    padding: 4px;
+    margin: 0;
+}
+.content_left li{
+    height: 25px;
+    line-height: 25px;
+}
+/* 左侧下部 */
+.book_bottom{
+    border: 1px solid #949191;
+}
+.book_cls{
+    width: 178px;
+    margin: 0 auto;
+    border-bottom: 1px solid;
+}
+.book_title{
+    font-weight: bold;
+    margin: 10px 7px 2px;
+}
+/* (2) 中部 */
+.content_center{
+    width: 530px;
+    margin: 0 10px;
+}
+.roll_img_top{
+    width: 540px;
+    height: 51px;
+    background: url("../images/dd_scroll_top.gif") no-repeat;
+    background-size: 530px;
+}
+.roll_img_bottom{
+    width: 530px;
+    height: 10px;
+    background: url("../images/dd_scroll_end.gif") no-repeat;
+    background-size: 530px;
+    margin-bottom: 7px;
+    position: relative;
+    top: -163px;
+}
+.pos{
+    position: relative;
+    top: -163px;
+}
+.roll_img{
+    width: 528px;
+    height: 190px;
+    border-left: 1px solid #F2F2F3;
+    border-right: 1px solid #F2F2F3;
+    background: #F2F2F3;
+}
+.roll_img_div{
+    width: 530px;
+    height: 190px;
+    background: #F2F2F3 url("../images/1.jpg") no-repeat;
+}
+.content_center .roll_img_ul{
+    width: 40px;
+    list-style: none;
+    position: relative;
+    top: -177px;
+    left: 465px;
+}
+.content_center .roll_img_ul li{
+    width: 17px;
+    height: 17px;
+    font-weight: 17px;
+    text-align: center;
+    border: 1px solid;
+    margin-bottom: 5px;
+}
+.new_book{
+    width: 528px;
+    height: 275px;
+    border: 1px solid #6e6c6ccb;
+    margin-bottom: 7px;
+}
+.new_book_nav{
+    background: #F2F2F3;
+    height: 25px;
+    margin: 0;
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 25px;
+    text-indent: 1em;
+    color: rgb(221, 95, 36);
+    border: 1px solid #e9e4e4;
+}
+.new_book_top{
+    height: 26px;
+    border-bottom: 0;
+}
+.new_book_ul{
+    list-style: none;
+    display: flex;
+    position: relative;
+    top: -23px;
+    left: 148px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    line-height: 27px;
+}
+.new_book_ul li{
+    width: 40px;
+    background: url("../images/dd_book_bg1.jpg") no-repeat;
+    margin-right: 3px;
+}
+.many{
+    position: relative;
+    top: -44px;
+    left: 472px;
+}
+/* 最新上架 */
+.new_book_two{
+    height: 412px;
+    margin-bottom: 10px;
+    border: 1px solid #6e6c6ccb;
+}
+.bookshelf{
+    height:260px;
+    display: flex;
+    flex-flow: row wrap;
+}
+.bookdata{
+    width: 264px;
+}
+.bookdata img{
+    float: left;
+    margin: 5px 15px 0 25px;
+}
+.bookdata_str{
+    float: left;
+}
+.bookdata_str p{
+    margin: 5px;
+}
+.bule_str{
+    font-weight: bold;
+    color: blue;
+    font-size: 13px;
+}
+.red_str{
+    color: red;
+}
+/* 重点关注 */
+.new_book_div{
+    display: flex;
+    flex-flow: row wrap;
+    border-top: 1px solid #6e6c6ccb;
+}
+.keynode{
+    height: 192px;
+    text-align: center;
+}
+.keynode_book{
+    width: 132px;
+    height: 150px;
+}
+.keynode_book img{
+    display: block;
+    margin: 5px auto 3px;
+}
+.keynode_book p{
+    margin-left: 5px;
+}
+.book_name{
+    margin: 5px 0;
+    display: block;
+    height: 30px;
+    color: blue;
+}
+/* (3) 右侧 */
+#rollstr_ul{
+    width: 177px;
+    list-style: none;
+    padding: 0;
+    margin: auto;
+}
+#rollstr_ul li{
+    height: 22px;
+    line-height: 22px;
+    border-bottom: 1px dashed;
+}
+#rollstr_ul li:hover{
+    color: red;
+}
+.content_right{
+    width: 220px;
+}
+.book_message{
+    border: 1px solid rgba(12, 11, 11, 0.8);
+    height: 590px;}
+.book_p{
+    height: 20px;
+    margin: 0;
+}
+.rollstr{
+    width: 210px;
+    margin: 0 auto;
+    height: 320px;
+    border: 1px solid;
+    overflow: hidden;
+}
+.oneday{
+    width: 100%;
+    margin-bottom: 7px;
+}
+.sell_well{
+    margin-top: 7px;
+}
+.sell_well_nav{
+    height: 25px;
+    background: #518700;
+}
+.sell_well_nav p{
+    display: inline-block;
+    color: white;
+    margin: 0 7px;
+}
+.sell_well_book{
+    height: 350px;
+    border: 1px solid rgba(128, 122, 122, 0.8);
+}
+.sell_well_book_cls{
+    width: 210px;
+    height: 342px;
+    margin: 4px auto;
+    background: #F2F4DF;
+}
+.book_arr_nav{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    position: relative;
+    top: 3px;
+    left: 33px;
+}
+.book_arr_nav li{
+    width: 35px;
+    height: 20px;
+    text-align: center;
+    background: url("../images/dd_seven_bg1.jpg") no-repeat;
+}
+.sell_well_book_name{
+    width: 206px;
+    height: 321px;
+    margin-left: 1px;
+    border: 1px solid #CCCCCC;
+}
+.book_data{
+    display: inline-block;
+}
+.book_one img{
+    margin-top: 3px;
+}
+.book_one img:first-child{
+    margin-left: 4px;
+}
+.book_data p{
+    margin: 2px 0;
+}
+.book_bule_str{
+    color: blue;
+}
+.book_bule_str:hover{
+    cursor: pointer;
+}
+.book_arrfour__nav{
+    padding: 0;
+    margin: 7px 0;
+}
+.book_arrfour__nav li{
+    list-style:none;
+    display: inline-block;
+    margin: 1px 5px;
+    width: 15px;
+    background: green;
+    color: white;
+    text-align: center;
+}
+/* 底部 */
+.footer{
+    width: 980px;
+    margin: 0 auto;
+    font-size: 13px;
+    position: relative;
+    top: 20px;
+}
+.footer ul{
+    width: 365px;
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 12px auto 0;
+}
+.footer li{
+    margin: 0 5px;
+    color: rgb(148, 56, 23);
+    text-align: center;
+}
+.footer_iframe{
+    width: 850px;
+    margin: 0 auto;
+}
+#advert{
+    position: fixed;
+    right: 55px;
+    top: 45px;
+    width: 100px;
+    height: 133px;
+    background: url("../images/dd_scroll.jpg") no-repeat;
+}
+#close{
+    font-size: 13px;
+    width: 30px;
+    height: 20px;
+    text-align: center;
+    position: relative;
+    top: 3px;
+    left: 68px;
+    background: rgb(185, 181, 181);
+    cursor: pointer;
+}

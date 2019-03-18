@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Anglarjs</title>
+</head>
+
+<body>
+    <!-- ng-app -- 定义作用域 
+        ng-init -- 初始化Angular应用程序的变量
+    -->
+    <div ng-app="" ng-init="name='angular';price=17;users=['one','two','three'];obj={'name':'ding','age':35}">
+        <!-- ng-include -- 在 HTML 中包含 HTML 文件 -->
+        <div ng-include="'3.13pra_header.html'"></div>
+        <p >hello,{{name}}</p>
+        <!-- ng-model --把输入域的值绑定到应用程序变量 -->
+        <input type="text" ng-model="name">
+        <!-- ng-bind -- 把应用程序变量 绑定到某个标签元素的 innerHTML。 -->
+        <span ng-bind = "name">
+        </span>
+        <p>{{price*7}}</p>
+        <ol>
+            <!-- ng-repeat -- 循环 —— 重复一个HTML元素  u-自定义的变量 -->
+            <li ng-repeat="u in users">{{u}}</li>
+        </ol>
+        <p>数组第二个值：{{users[1]}}</p>
+        <p>对象的name值：{{obj.name}}</p>
+    </div>
+    
+    <script src="js/angular-1.7.0.js"></script>
+</body>
+
+</html>

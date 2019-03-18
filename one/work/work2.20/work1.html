@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>work1</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        .all {
+            width: 1000px;
+            /* margin: 0 auto; */
+            font-size: 13px;
+        }
+
+        p {
+            font-weight: 700;
+            margin: 7px 0;
+            background: rgb(218, 236, 247);
+        }
+
+        .content {
+            margin-left: 220px;
+        }
+
+        .content div {
+            width: 400px;
+            margin-left: 182px;
+        }
+
+        .long {
+            width: 170px;
+        }
+
+        .short {
+            width: 130px;
+        }
+
+        span {
+            margin: 3px 0;
+        }
+
+        .sp {
+            display: inline-block;
+            width: 97px;
+            text-align: right
+        }
+
+        .hint {
+            color: rgba(112, 108, 103, 0.664);
+            position: relative;
+            right: -100px;
+        }
+
+        #sub {
+            margin: 20px 0 0 330px;
+            width: 120px;
+            height: 30px;
+            font-weight: 700;
+            color: rgba(102, 3, 141, 0.473);
+            border: 3px solid #ccc;
+            background: radial-gradient(45px, aqua, orange);
+        }
+
+        #sub:hover {
+            cursor: pointer;
+        }
+
+        .red_str {
+            color: red;
+        }
+
+        .point {
+            font-size: 10px;
+            color: rgb(224, 11, 11);
+            margin-top: -15px;
+        }
+
+        .bottom{
+            position: relative;
+            top: 4px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="all">
+        <nav><img src="imgs/top.jpg" alt=""></nav>
+        <div class="content">
+            <form id="myform" action="success.html" method="GET">
+                <span>欢迎您申请免费QQ号码，申请过程将不会收取任何费用，我们承诺保护您的信息安全，不会将它提供给第三方。</span><br>
+                <span>注：<span class="red_str">*</span>为必填项</span>
+                <p>您的账户信息</p>
+                <div>
+                    <span class="sp"><span class="red_str">*</span>昵称：</span>
+                    <input type="text" class="long" id="name" onblur="checknName()"> <span class="point">
+                    </span><br>
+                    <span class="hint">英文字母，数字或下划线，长度为4-16个字符</span><br>
+                    <span class="sp"><span class="red_str">*</span>密码：</span>
+                    <input type="password" class="long" id="password" onblur="checkPwd()"> <span class="point">
+                    </span><br>
+                    <span class="hint">6-16个字符,字母或数字组成</span><br>
+                    <span class="sp"><span class="red_str">*</span>重新输入密码：</span>
+                    <input type="password" class="short" id="chepassword" onblur="checkChPwd()">
+                    <span class="point"> </span>
+                </div>
+                <p>您的个人信息</p>
+                <div>
+                    <span class="sp"><span class="red_str">*</span>出生日期：</span>
+                    <input type="text" class="short" id="birthday" onblur="checkBirday()">
+                    <span class="point"> </span><br>
+                    <span class="hint">日期格式yyyy-mm-dd</span><br>
+                    <span class="sp">性别：</span>
+                    <input type="radio" name="sex" checked='checked'>男
+                    <input type="radio" name="sex">女<br>
+                    <span class="short"><span class="red_str">*</span>电子邮箱地址：</span>
+                    <input type="text" id="email" onblur="checkEmail()"> <span class="point"> </span>
+                </div>
+                <p>所在地址</p>
+                <div>
+                    <span class="sp">国家：</span>
+                    <select id="countryselect" onchange="checkCountry()">
+                        <option value="请选择国家">请选择国家</option>
+                    </select><br>
+                    <span class="sp">省份：</span>
+                    <select id="province">
+                        <option value="请选择">请选择</option>
+                    </select>
+                </div>
+                <p>相关服务条款</p>
+                <input id="sub" type="button" onclick="subConfirm()" value="提交注册">
+            </form>
+        </div>
+    </div>
+    <script src="js/work1.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,71 @@
+.one{
+    width: 300px;
+    height: 250px;
+    background-color: green;
+
+    /* 设置弹性布局,项目沿主轴排列,只在一行显示,默认水平方向为主轴 */
+    display: flex;
+
+    /* 设置容器的主轴 */
+    /* flex-direction: column; */
+
+    /* 设置容器中的项目是否换行 */
+    flex-wrap: wrap;
+
+    /* 简写设置主轴与项目是否换行 flex-flow ,默认为row nowrap */
+    /* flex-flow: column wrap; */
+
+    /* 设置容器中的项目在主轴方向的对齐方式 flex-start,flex-end,center,space-between,space-space等 */
+    justify-content: center;
+
+    /* 设置容器中的项目在侧轴方向的对齐方式 */
+    align-items: center;
+
+    /* 设置容器中各行的项目的对齐方向(有多行的情况flex-wrap:wrap) */
+    align-content: flex-start;
+}
+
+.one div,.two div{
+    width: 100px;
+    height: 100px;
+    border: 1px dashed #ccc;
+}
+
+.two{
+    width: 400px;
+    height: 300px;
+    background-color: blueviolet;
+    margin-top:10px;
+    display: flex;
+}
+
+.two div:nth-of-type(2){
+    /* 设置项目的排列顺序 order:值越小,排序在前面 默认为0,可以为负值 */
+    order:-1;
+
+    /* 三个属性分开设置(不推荐) */
+    /* 设置项目的放大比例(默认0不放大),如果容器存在剩余空间 */
+    /* flex-grow: 2; */
+    /* 设置项目的缩小比例 (默认1会缩小,0不缩小),如果容器空间不够 */
+    /* flex-shrink: 0; */
+    /* flex-basis: 120px; */
+
+    /* 推荐用简写 默认 0 1 auto,第一个必填,后面两个可选 */
+    /* flex: auto; */
+    flex:1;
+
+    /* align-self允许单个项目与其它项目在侧轴上的对齐方式不同,会覆盖align-items */
+    align-self: center;
+}
+
+.two div{
+    /* auto相当于 1 1 auto,    none相当于 0 0 auto */
+    flex: none; 
+}
+
+.two div:nth-of-type(1){
+    flex:2;
+}
+.two div:nth-of-type(3){
+    flex:1;
+}

@@ -1,0 +1,11 @@
+#header{
+  height: 60px;
+  background-color: #666;
+}
+#header h1{
+  color: #fff;
+  letter-spacing: 3px;
+  margin: 0;
+  margin-left: 100px;
+  line-height: 60px;
+}

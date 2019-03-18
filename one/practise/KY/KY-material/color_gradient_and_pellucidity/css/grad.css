@@ -1,0 +1,44 @@
+.linear{
+    width: 300px;
+    height: 200px;
+    /* 
+    线性渐变
+    为了兼容不同的浏览器,需要加前缀
+    -webkit- chrome,safari
+    -moz- firefox
+    -o- opera
+    -ms- ie
+    */
+    /* background: -webkit-linear-gradient(bottom,red,green,blue);
+    background: -ms-linear-gradient(bottom,red,green,blue);
+    background: linear-gradient(bottom,red,green,blue);
+    background: -o-linear-gradient(bottom,red,green,blue);
+    background: -moz-linear-gradient(bottom,red,green,blue); */
+
+    background: -webkit-linear-gradient(45deg,red,green,blue);
+}
+
+.radi{
+    width: 200px;
+    height: 100px;
+
+    /* 径向渐变 */
+    background: -webkit-radial-gradient(center,100px 20px,red,blue);
+}
+
+/* 图片渐变 mask-image */
+img{
+    -webkit-mask-image: -webkit-radial-gradient(black -160px,rgba(0,0,0,0) 130px);
+}
+
+.alph{
+    width: 100px;
+    height: 100px;
+    /* rgba a-透明度 0(透明)~1(不透明) */
+    background-color: rgba(255,0,0,0.8);
+}
+
+span{
+    color:green;
+    opacity: 0.8; /* 透明度 */
+}

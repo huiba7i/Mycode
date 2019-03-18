@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="container">
+    hello bootstrap
+    <hr>
+    <!-- 网格系统: .row 定义行, .col-*-* 定义列 -->
+    <div class="row">
+      <div class="col-sm-4">
+        <h2>第一列</h2>
+        <p>
+          学的不是技术,更是梦想!<br/>
+          再牛逼的梦想也抵不住你的坚持
+        </p>
+      </div>
+      <div class="col-sm-4"><h2>第一列</h2>
+        <p>
+          学的不是技术,更是梦想!<br/>
+          再牛逼的梦想也抵不住你的坚持
+        </p></div>
+      <div class="col-sm-4"><h2>第一列</h2>
+        <p>
+          学的不是技术,更是梦想!<br/>
+          再牛逼的梦想也抵不住你的坚持
+        </p></div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-1">one</div>
+      <div class="col-sm-1">two</div>
+      <div class="col-sm-1">three</div>
+      <div class="col-sm-1">four</div>
+      <div class="col-sm-1">five</div>
+      <div class="col-sm-1">one</div>
+      <div class="col-sm-1">two</div>
+      <div class="col-sm-1">three</div>
+      <div class="col-sm-1">four</div>
+      <div class="col-sm-1">five</div>
+      <div class="col-sm-1">four</div>
+      <div class="col-sm-1">five</div>
+    </div>
+    <div class="row">
+      <div class="col-md-6 test">6列</div>
+      <div class="col-md-6 test">6列</div>
+    </div>
+
+    <!-- 列偏移 .col-*-offset-* -->
+    <div class="row">
+      <div class="col-md-4 test">4列</div>
+      <div class="col-md-offset-2 col-md-4 test">4列offset2</div>
+    </div>
+
+    <!-- 列顺序 .col-md-pull-*(前面) .col-md-push-*(后面) 列宽不变 -->
+    <!-- 排序前 -->
+    <div class="row">
+      <div class="col-md-3" style="border:1px solid #ccc">我在左边</div>
+      <div class="col-md-9" style="border:1px solid #ccc">我在右边</div>
+    </div>
+    <!-- 排序后 -->
+    <div class="row">
+      <div class="col-md-3 col-md-push-9" style="border:1px solid #ccc">我在左边</div>
+      <div class="col-md-9 col-md-pull-3" style="border:1px solid #ccc">我在右边</div>
+    </div>
+  </div>
+</body>
+</html>

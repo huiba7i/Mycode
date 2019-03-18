@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>博客园注册</title>
+  <style>
+  .prom{
+    font-size: 14px;color: #999;margin-left:5px;
+  }
+  .error{
+    font-size: 14px; color: red;font-weight: bold;
+  }
+  .ok{
+    font-size: 14px; color: green;font-weight: bold;
+  }
+  </style>
+</head>
+<body>
+  <!-- (1)使用提交按钮, 给表单添加submit事件, 加上return , 如果所有数据都合理,返回true,则自动提交表单;否则返回false,即不提交表单 -->
+  <form action="success.html" method="get" onsubmit="return checkRegiste()">
+  <!-- <form action="success.html" method="get" id="regForm"> -->
+    用户名 <input type="text" id="account" onblur="checkAccount()">
+    <span id="accResult"></span>
+    <span class="prom">由4~16位的数字/字母组成, 必须以字母开头</span><br>
+    密码 <input type="password" id="password" onchange="checkPwd()">
+    <span id="pwdResult"></span>
+    <span class="prom">由4~10位的数字/字母组成</span><br>
+    确认密码 <input type="password" id="confirmpassword">
+    <span id="conpwdResult"></span>
+    <span class="prom">与上面的密码一致</span><br>
+    电子邮箱 <input type="text" id="email">
+    <span id="emailResult"></span>
+    <span class="prom">必须包含@和.符号</span> <br>
+    手机号 <input type="text" id="phone">
+    <span id="phoneResult"></span>
+    <span class="prom">11位的手机号</span><br>
+    <input type="submit" value="注册">
+
+    <!-- (2)使用普通按钮, 确保数据都合理后手动提交表单 -->
+    <!-- <input type="button" value="注册" onclick="checkRegisteBtn()"> -->
+  </form>
+
+  <script src="js/KYreg.js"></script>
+</body>
+</html>

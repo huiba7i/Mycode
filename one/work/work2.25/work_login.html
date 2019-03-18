@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>login</title>
+    <style type="text/css">
+        .all {
+            width: 300px;
+            height: 170px;
+            margin: 0 auto;
+        }
+
+        .all div {
+            width: 300px;
+            height: 170px;
+            border: 3px solid #780000;
+            border-radius: 10px;
+            border-bottom: 3px solid #CC0000;
+            border-right: 3px solid #CC0000;
+            text-align: center;
+            line-height: 25px;
+        }
+
+        input:last-child {
+            margin-top: 10px;
+        }
+
+        img {
+            position: relative;
+            right: 145px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="all">
+        <img src="img/logo.png" />
+        <div>
+            <form id = "myform" action="work_shoping-cart.html" method="get" onsubmit="login()">
+                请输入你的账号：<br />
+                <input id="user" type="text" onchange="userName()" value="dingmouren"/><br /> 请输入你的密码：
+                <br />
+                <input id="password" type="password" onchange="passWord()"/><br />
+                <input type="button" value="登陆" onclick="sub()"/>
+            </form>
+        </div>
+    </div>
+    <script src="js/work_login.js"></script>
+</body>
+
+</html>

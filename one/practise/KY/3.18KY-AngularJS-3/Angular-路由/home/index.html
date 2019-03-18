@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>路由</title>
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <style>
+    .text{
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div ng-app="route-app" ng-ctrl="routeCtrl" class="container">
+    <ul class="nav nav-tabs">
+      <li class="active" data-toggle="tab"><a href="#!/user/login">登录</a></li>
+      <li data-toggle="tab"><a href="#!/user/reg">注册</a></li>
+    </ul>
+
+    <!-- ng-view: 当路由变化时,其内容会显示在有该指令的标签元素中 -->
+    <div class="text" ng-view></div>
+  </div>
+
+  <script src="../js/angular-1.7.0.js"></script>
+  <script src="../js/angular-route-1.7.0.js"></script>
+
+  <script src="../js/jquery-3.1.1.js"></script>
+  <script src="../js/bootstrap.min.js"></script>
+
+  <script src="../js/route.js"></script>
+</body>
+</html>

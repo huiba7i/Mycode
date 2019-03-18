@@ -1,0 +1,61 @@
+body {
+  font-style: italic;
+}
+/*
+(2)混合: 包含了一组css属性,可以使用类.或id选择器#来声明混合
+*/
+p {
+  font-size: 18px;
+  text-indent: 36px;
+  background-color: green;
+  color: #fff;
+  border-top: 1px solid red;
+  border-bottom: 1px solid red;
+}
+a {
+  color: #fff - #111;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+  color: red;
+}
+/*
+a:hover{
+  text-decoration: underline;
+  @{col}: red;
+}*/
+/*
+body{
+  background: url('@{img}');
+}*/
+/*
+(3)less嵌套
+*/
+header {
+  height: 60px;
+  background-color: orange;
+}
+header ul {
+  position: relative;
+  top: 20px;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  height: 40px;
+  line-height: 40px;
+}
+header ul li {
+  float: left;
+  width: 100px;
+  text-align: center;
+  background-color: dimgray;
+  margin-right: 5px;
+  color: #fff;
+}
+/*(4)函数*/
+div {
+  width: 50%;
+  height: 100px;
+  border: 1px solid #ccc;
+}

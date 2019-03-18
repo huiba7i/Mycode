@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>practise</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+        .carousel-inner img {
+            width: 800px;
+            margin: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 下拉菜单 -->
+    <div class="container">
+        <div class="dropdown">
+            <button class="btn dropdown-toggle" data-toggle="dropdown">下拉菜单
+                <i class="glyphicon glyphicon-chevron-down"></i>
+            </button>
+            <ul class="dropdown-menu">
+                <li><a class="menuitem" href="">css</a></li>
+                <li class="divider"></li>
+                <li><a class="menuitem" href="">js</a></li>
+                <li class="divider"></li>
+                <li><a class="menuitem" href="">jquery</a></li>
+                <li class="divider"></li>
+                <li><a class="menuitem" href="">bootstrap</a></li>
+            </ul>
+        </div>
+    </div>
+    <br>
+    <!-- 导航栏 -->
+    <div class="row">
+        <div class="col-md-2">
+            <ul class="nav nav-pills nav-stacked">
+                <li class="active"><a href="">学习使我快乐</a></li>
+                <li><a href="">我爱学习</a></li>
+                <li><a href="">十分热爱学习</a></li>
+                <li><a href="">我不爱玩游戏</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="row">
+        <ul class="nav nav-tabs">
+            <li class="active"><a href="">学习使我快乐</a></li>
+            <li><a href="">我爱学习</a></li>
+            <li><a href="">十分热爱学习</a></li>
+            <li><a href="">我不爱玩游戏</a></li>
+        </ul>
+    </div>
+    <div class="row">
+        <ul class="nav nav-pills nav-justified">
+            <li class="active"><a href="">学习使我快乐</a></li>
+            <li><a href="">我爱学习</a></li>
+            <li><a href="">十分热爱学习</a></li>
+            <li><a href="">我不爱玩游戏</a></li>
+        </ul>
+    </div>
+
+    <!-- 分页 -->
+    <div class="container text-center">
+        <ul class="pagination">
+            <li><a href="">&laquo;</a></li>
+            <li><a href="">1</a></li>
+            <li><a href="">2</a></li>
+            <li><a href="">3</a></li>
+            <li><a href="">&raquo;</a></li>
+        </ul>
+        <ul class="pagination pagination-lg">
+            <li><a href="">&laquo;</a></li>
+            <li><a href="">1</a></li>
+            <li><a href="">2</a></li>
+            <li><a href="">3</a></li>
+            <li><a href="">&raquo;</a></li>
+        </ul>
+        <ul class="pagination pagination-sm">
+            <li class="disabled"><a href="">&laquo;</a></li>
+            <li class="active"><a href="">1</a></li>
+            <li><a href="">2</a></li>
+            <li><a href="">3</a></li>
+            <li><a href="">&raquo;</a></li>
+        </ul>
+    </div>
+    <!-- 翻页 -->
+    <div class="container">
+        <ul class="pager">
+            <li class="previous"><a href="">上一页</a></li>
+            <li>共77页/第7页</li>
+            <li class="next"><a href="">下一页</a></li>
+        </ul>
+    </div>
+
+    <!-- 进度条 -->
+    <div class="container">
+        <div class="progress">
+            <!-- <div class="progess-bar"></div> -->
+            <div style="width:60%;height: 100%;" class="progress-bar-warning"></div>
+        </div>
+        <!-- 提示框 -->
+        <div class="alert alert-success">
+            <a href="" class="alert-info">成功完成提交</a>
+        </div>
+        <!-- 关闭提示框 -->
+        <div class="alert alert-success alert-dismissable">
+            <input type="button" class="close" data-dismiss="alert" value="&times;">
+            成功提交
+        </div>
+    </div>
+
+    <!-- 模态框 -->
+    <div class="container">
+        <button class="btn btn-primary" data-toggle="modal" data-target="#myModal">模态框</button>
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button class="close" data-dismiss="modal" aria-hidden="false">&times;</button>
+                        <h4 class="modal-title" id="myModalLabel">标题</h4>
+                    </div>
+                    <div class="modal-body">
+                        文本
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-default btn-sm" data-dismiss="modal">关闭</button>
+                        <button class="btn btn-sm">提交</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <!-- 轮播（Carousel）指标 -->
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
+            <!-- 轮播（Carousel）项目 -->
+            <div class="carousel-inner">
+                <div class="item active">
+                    <img src="img/壁纸1.jpg" alt="First slide">
+                    <div class="carousel-caption">标题 1</div>
+                </div>
+                <div class="item">
+                    <img src="img/壁纸2.jpg" alt="Second slide">
+                    <div class="carousel-caption">标题 2</div>
+                </div>
+                <div class="item">
+                    <img src="img/壁纸3.jpg" alt="">
+                    <div class="carousel-caption">标题 3</div>
+                </div>
+            </div>
+            <!-- 轮播（Carousel）导航 -->
+            <a class="carousel-control left" href="#myCarousel" 35. data-slide="prev">&lsaquo;</a>
+            <a class="carousel-control right" href="#myCarousel" 37. data-slide="next">&rsaquo;</a>
+        </div>
+    </div>
+    <script src="js/jquery-3.1.1.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>

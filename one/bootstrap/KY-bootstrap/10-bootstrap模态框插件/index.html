@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body>
+
+  <div class="container">
+    <button class="btn btn-primary" data-toggle="modal" data-target="#prompt">提示模态框</button>
+
+    <div class="modal fade" id="prompt">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button class="close" data-dismiss="modal">x</button>
+            <h4 class="modal-title">提示标题</h4>
+          </div>
+          <div class="modal-body">
+            操作成功
+          </div>
+          <div class="modal-footer">
+            <!-- data-dismiss: 点击让模态框隐藏 -->
+            <button class="btn btn-default" data-dismiss="modal">关闭</button>
+            <button class="btn btn-primary">确定</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/jquery-3.1.1.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+</body>
+</html>
