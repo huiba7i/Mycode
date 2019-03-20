@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>work2</title>
+    <style>
+        div{
+            width: 746px;
+            height: 359px;
+            background: url("imgs/bg.jpg") no-repeat;
+            margin: 0 auto;
+        }
+        form{
+            position: relative;
+            top: 120px;
+            left: 390px;
+        }
+        span:first-child,span:nth-of-type(3){
+            display: inline-block;
+            width: 100px;
+            text-align: right;
+            margin-bottom: 3px;
+        }
+        .login{
+            margin: 7px 0 0 100px;
+        }
+        .login:hover{
+            cursor: pointer;
+        }
+        #checkN,#checkP{
+            color: red;
+            font-size:12px;
+            position: relative;
+            left: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <form action="http://localhost:7777/log" method="get" id="myform" name="login">
+            <span>用户名：</span><input name="username" id="username" type="text" onblur="checkName()" onkeypress="changing(event,password)"><br>
+            <span id="checkN"></span><br>
+            <span>密码：</span><input name="password" id="password" type="password" onblur="checkPwd()" onkeypress="changing(event,username)"><br>
+            <span id="checkP"></span><br>
+            <img class="login" src="imgs/login.gif" alt="" onclick="formSub()">
+        </form>
+    </div>
+    <script src="js/work.js"></script>
+</body>
+</html>
