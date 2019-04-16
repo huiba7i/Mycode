@@ -1,0 +1,12 @@
+header{
+    color: orange;
+    text-align: center;
+    margin: 0 auto;
+}
+p{
+    text-decoration: unset;
+    color: aqua;
+    font-size: 17px;
+    position: relative;
+    right: -400px;
+}
