@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>vue_demo</title>
+  <style>
+    [v-cloak]{
+      display: none;
+    }
+    p{
+      margin: 5px 0;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="app" v-cloak>
+    <div class="container table-responsive">
+      <h4>购物车列表：</h4>
+      <table class="col-md-12 table">
+        <tr>
+          <th>序号</th>
+          <th>商品</th>
+          <th>单价</th>
+          <th>数量</th>
+          <th>小计</th>
+          <th>操作</th>
+        </tr>
+        <tr v-for="(shop,index) in shops">
+          <td>{{shop.num}}</td>
+          <td>{{shop.name}}{{shop.num}}</td>
+          <td>￥{{shop.price}}</td>
+          <td>
+            <button @click="subQuantity(index)">-</button>
+            <input type="text" v-model="shop.quantity"> 
+            <button @click="addQuantity(index)">+</button>
+          </td>
+          <td>{{shop.price*shop.quantity}}</td>
+          <td><button class="btn btn-danger btn-sm" @click="delt(index)">删除</button></td>
+        </tr>
+        <tr>
+          <td colspan="3"><b>购买商品总数</b></td>
+          <td colspan="3"><b>总价</b></td>
+        </tr>
+        <tr>
+          <td colspan="3">共{{allQuantity}}件商品</td>
+          <td colspan="3">购物车总金额￥{{allPrice}}元</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</body>
+
+</html>

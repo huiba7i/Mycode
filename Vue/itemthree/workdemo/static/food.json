@@ -1,0 +1,8 @@
+[
+    {"num":1,"name":"测试商品","price":10,"quantity":1},
+    {"num":2,"name":"测试商品","price":5,"quantity":3},
+    {"num":3,"name":"测试商品","price":6,"quantity":7},
+    {"num":4,"name":"测试商品","price":20,"quantity":5},
+    {"num":5,"name":"测试商品","price":11,"quantity":6},
+    {"num":6,"name":"测试商品","price":7,"quantity":9}
+]

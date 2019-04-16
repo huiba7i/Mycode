@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>vue_demo</title>
+  <style>
+    [v-cloak]{
+      display: none;
+    }
+    p{
+      margin: 5px 0;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Vue_three -->
+  <div id="app" v-cloak>
+    <p><b>商品详情：</b></p>
+    <p>菜品名称：{{food.name}}</p>
+    <p>商品价格：{{food.price}}</p>
+    <p>商品数量：{{food.quantity}}</p>
+    <p>折扣价：{{sumPrice}}</p>
+    <p><b>购买详情：</b></p>
+    <input type="text" v-model="monitor">
+    <input type="text" v-model="txtVal">
+     <table>
+       <tr>
+         <th>菜名</th>
+         <th>价格</th>
+         <th>数量</th>
+         <th>单品总计</th>
+       </tr>
+       <tr v-for="(dishes) in foods">
+         <td>{{dishes.name}}</td>
+         <td>{{dishes.price}}</td>
+         <td>{{dishes.quantity}}</td>
+         <td>{{dishes.price*dishes.quantity}}</td>
+       </tr>
+       <tr>
+         <td colspan="4">总价：{{allPrice}}</td>
+       </tr>
+     </table>
+  </div>
+  
+  <!-- Vue实例(对象)的生命周期 -->
+  <div id="appTwo" v-cloak>
+    <p><b>{{msg}}</b></p>
+    <input type="text" v-model="msg">
+    <button @click="destroyVue">手动销毁Vue实例</button>
+  </div>
+</body>
+
+</html>
