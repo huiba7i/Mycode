@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>vue_demo</title>
+  <style>
+    [v-cloak] {
+      display: none;
+    }
+
+    .btnDiv {
+      margin-top: 10px;
+    }
+
+    h3 {
+      color: rgb(33, 165, 226);
+    }
+
+    tr {
+      line-height: 35px;
+    }
+
+    .nothave {
+      font-size: 13px;
+      margin: 5px 0;
+      color: #a7a2a2;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Vue -- twoDay -->
+  <!-- <div id="apptwo">
+    <h4>{{title}}</h4>
+    <p>原始显示：{{msg}}</p>
+    <p>大写显示：{{msg | uppercase}}</p>
+    <p>小写显示：{{msg | lowercase}}</p>
+    <p>保留两位小数：{{price | num(2)}}</p>
+    <input type="text" v-focus v-change-background-color="myBgColor">
+  </div> -->
+
+  <!-- vue与后端的交互 -->
+  <div id="appeach" v-cloak>
+    <!-- <form method="GET"> -->
+      <div class="col-md-12 form-group">
+        <label for="username"><b>用户名:</b></label>
+        <input type="text" class="form-control" id="username" v-model="namevalue" placeholder="输入用户名">
+      </div>
+      <div class="col-md-12 form-group">
+        <label for="age"><b>年&nbsp;&nbsp;&nbsp;龄:</b></label>
+        <input type="text" class="form-control" id="age" v-model="agevalue" placeholder="输入年龄">
+
+        <div class="btnDiv">
+          <button class="btn btn-info" @click="addUser">添加</button>
+          <button class="btn btn-danger" @click="reset">重置</button>
+        </div>
+      </div>
+    <!-- </form> -->
+
+    <button @click="test">axios请求本地资源文件</button>
+    <input type="button" class="btn btn-info" value="请求后端资源" @click="visit">
+    <ul>
+      <li v-for="(item, index) in items">{{index}} - {{item}}</li>
+    </ul>
+
+    <div class="container">
+      <table class="col-md-12 table-bordered text-center">
+        <tr class="text-danger">
+          <th>序号</th>
+          <th>姓名</th>
+          <th>年龄</th>
+          <th>性别</th>
+          <th>操作</th>
+        </tr>
+        <tr v-for="(user,index) in itemeTwo">
+          <td>{{user.stuid}}</td>
+          <td>{{user.name}}</td>
+          <td>{{user.age}}</td>
+          <td>{{user.sex}}</td>
+          <td>
+            <button class="btn btn-info delet" @click='deletStu(index,user.stuid)'>删除</button>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</body>
+
+</html>

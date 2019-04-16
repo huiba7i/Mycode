@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>vue_demo</title>
+  <style>
+    [v-cloak] {
+      display: none;
+    }
+
+    .btnDiv {
+      margin-top: 10px;
+    }
+
+    h3 {
+      color: rgb(33, 165, 226);
+    }
+
+    tr {
+      line-height: 35px;
+    }
+
+    .nothave {
+      font-size: 13px;
+      margin: 5px 0;
+      color: #a7a2a2;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Vue -- oneDay  -->
+  <!--                            v-cloak-页面未加载完成时不显示原始的页面 -->
+  <div id="app" class="container" v-cloak>
+    <div class="col-md-12 form-group">
+      <label for="username"><b>用户名:</b></label>
+      <input type="text" class="form-control" id="username" placeholder="输入用户名" v-model="namevalue">
+    </div>
+    <div class="col-md-12 form-group">
+      <label for="age"><b>年&nbsp;&nbsp;&nbsp;龄:</b></label>
+      <input type="text" class="form-control" id="age" placeholder="输入年龄" v-model="agevalue">
+
+      <div class="btnDiv">
+        <button class="btn btn-info" @click="add">添加</button>
+        <button class="btn btn-danger" @click="reset">重置</button>
+      </div>
+    </div>
+
+    <div>
+      <h3 class="text-center">用户信息表</h3>
+      <table class="col-md-12 table-bordered text-center">
+        <tr class="text-danger">
+          <th>序号</th>
+          <th>姓名</th>
+          <th>年龄</th>
+          <th>操作</th>
+        </tr>
+        <tr v-for="(user,index) in userList">
+          <td>{{index+1}}</td>
+          <td>{{user.name}}</td>
+          <td>{{user.age}}</td>
+          <td>
+            <button class="btn btn-info delet" data-toggle="modal" @click='delet(index)'
+              data-target="#myModal">删除</button>
+          </td>
+        </tr>
+        <tr class="text-right">
+          <td colspan="4">
+            <!-- 用户列表不为空是显示，否则隐藏 -->
+            <button class="btn btn-danger" v-show="userList!=''" @click='empty' data-toggle="modal"
+              data-target="#myModal">删除全部</button>
+            <div class="text-center col-md-12" v-show="userList==''">
+              <p class="nothave">暂无数据</p>
+            </div>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <!-- 模态框 -->
+    <div class="container">
+      <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title" id="myModalLabel">删除提示</h4>
+            </div>
+            <div class="modal-body">
+              确认删除吗？
+            </div>
+            <div class="modal-footer">
+              <button class="btn btn-danger btn-sm" data-dismiss="modal">关闭</button>
+              <button class="btn btn-info btn-sm" data-dismiss="modal" @click="affirm(filg)">删除</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
