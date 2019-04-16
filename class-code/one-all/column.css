@@ -1,0 +1,12 @@
+div:first-of-type{
+	width:600px;
+	border: 1px solid red;
+	
+	/* 分栏布局的列数 */
+	column-count: 3;
+	/* 每列之间的空隙 */
+	column-gap: 30px;
+	
+	/* 每列之间的规则:边框的宽度,边框的样式,边框的颜色 */
+	column-rule: 10px dashed green;
+}

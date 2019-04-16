@@ -1,0 +1,20 @@
+div{
+	width: 200px;
+	height: 100px;
+	border: 1px solid red;
+	
+	/* 4个padding值相同 */
+	/*padding:10px;*/
+	
+	/* 值1:上下,值2:左右 */
+	/*padding:10px 15px;*/
+	
+	/* 值1:上,值2:左右,值3:下  */
+	/*padding: 10px 15px 20px;*/
+	
+	/* 上右下左(从上开始顺时针) */
+	/*padding:10px 15px 20px 25px;*/
+	
+	padding-top:10px;
+	padding-right:15px;
+}

@@ -1,0 +1,43 @@
+div{
+    width: 100px;
+    height: 100px;
+    /* background-color: #f00; */
+    /* animation: run 3s; */
+    animation: percent 5s ease-in-out 2s alternate both;
+}
+
+/* 定义动画 */
+@keyframes run{
+    from {
+        background-color: #0f0;
+    }
+    to{
+        transform: translate(300px,300px);
+    }
+}
+
+@keyframes percent{
+    0%{
+        background-color: #0f0;
+    }
+    25%{
+        transform: translate(300px,0px);
+        border-radius: 25%;
+        background-color: orange;
+    }
+    50%{
+        transform: translate(300px,300px);
+        border-radius: 50%;
+        background-color: #00f;
+    }
+    75%{
+        transform: translate(0,300px);
+        border-radius: 25%;
+        background-color: orange;
+    }
+    100%{
+        transform: translate(0,0px);
+        border-radius: 0%;
+        background-color: #f00;
+    }
+}

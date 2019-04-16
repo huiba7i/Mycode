@@ -1,0 +1,62 @@
+.demo1{
+	width: 600px;
+	height: 300px;
+	border: 1px solid red;
+	
+	/* 设置父元素为弹性盒子布局 */
+	display: flex;
+	
+	/* 设置主轴(默认是水平轴作为主轴),并且每个项目不换行 */
+	/*flex-wrap: wrap;*//* 设置换行 */
+	/*flex-direction: column;*/
+	
+	/* wrap:第一行在右方,wrap-reverse:第一行在左方 */
+	/*flex-flow: column wrap;*/
+	/*flex-flow: column wrap-reverse;*/
+	
+	
+	/*flex-flow: row-reverse wrap;*/
+	flex-flow: row nowrap;
+	
+	/* 设置主轴上项目的对齐方式 */
+	/* 主轴上居中对齐 */
+	/*justify-content: center;*/
+	/* 靠主轴的结束点对齐 */
+	/*justify-content: flex-end;*/
+	/* 靠主轴的起始点对齐(默认) */
+	/*justify-content: flex-start;*/
+	/* 每个项目两侧的间隔相等 */
+	/*justify-content: space-around;*/
+	/* 靠主轴的两端对齐 */
+	justify-content: space-between;
+	
+	/* 设置交叉轴上的项目对齐方式:center,flex-start,flex-end,stretch等  */
+	/* stretch默认:如果项目没有设置高度,会铺满整个容器的高度 */
+	/*align-items: stretch;*/
+	
+	align-items: flex-start;
+}
+
+.demo1 .item{
+	width: 120px;height: 60px;
+	background-color: green;
+	color: #fff;
+	border:1px dashed black;
+	/* 设置项目的放大比例(默认是0),缩小比例(默认是1),分配容器剩余空间(默认是auto) */
+	/*flex:1;*/
+	/*flex:1 1 auto;*/
+	/*flex:1 0 auto;*/
+	/*flex:1;  如果有剩余空间会放大 */
+	
+}
+.demo1 .item:last-of-type{
+	/* order:项目的排列顺序,默认值为0,值越小,排列在前面 */
+	/*order:-1;*/
+	/*flex:2 1 auto;*/
+	
+	/* 固定项目的尺寸 :可以用百分比,px等*/
+	/*flex:0 0 200px;*/
+	
+	/* 设置项目在交叉轴上的单独的对齐方式 */
+	align-self: flex-end;
+}

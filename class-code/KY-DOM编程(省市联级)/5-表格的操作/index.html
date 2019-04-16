@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <table border="1" cellspacing="0" width="500" id="studentTable">
+    <tr>
+      <th>学号</th>
+      <th>姓名</th>
+      <th>性别</th>
+      <th>年龄</th>
+      <th>操作</th>
+    </tr>
+  </table>
+
+  <input type="button" value="添加学生信息" onclick="addStudent()">
+  <input type="button" value="获得第3个学生信息" onclick="getStudent()">
+  <input type="button" value="修改指定单元格的值" onclick="setStudent()">
+  <input type="button" value="遍历表格" onclick="getAllStudent()">
+
+  <script src="js/table.js"></script>
+</body>
+</html>

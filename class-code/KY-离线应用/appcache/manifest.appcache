@@ -1,0 +1,5 @@
+CACHE MANIFEST
+# 注释 要缓存的文件
+./js/test.js
+./css/test.css
+./img/bd_logo1.png

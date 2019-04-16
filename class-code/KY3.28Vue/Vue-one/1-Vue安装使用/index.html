@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <div id="app">
+    <h1>{{msg}}</h1>
+    <input type="text" v-model="msg"> <!--双向绑定: 使用表单元素绑定到数据模型中的变量,当表单元素的值发生变化时,直接影响到数据模型中变量的改变-->
+    <p>总价格: {{price*count}}</p>
+    <p>成绩:{{score>=60?'及格':'不及格'}}</p>
+  </div>
+  <script src="js/vue2.5.17.js"></script>
+  <script>
+    let vm = new Vue({
+      el: '#app', // Vue应用程序作用的标签范围: 标签的css选择
+      data: { // 绑定到View层的数据模型
+        msg: 'Welcome To Vue.js!',
+        price: 16.5,
+        count: 3,
+        score: 55
+      }
+    });
+  </script>
+</body>
+</html>

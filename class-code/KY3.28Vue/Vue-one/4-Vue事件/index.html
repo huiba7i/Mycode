@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <div id="app">
+    <!-- 元素添加事件 v-on:事件名称="事件处理函数"
+    简写形式 @事件名称="事件处理函数"
+    -->
+    <button v-on:click="count=count+1">点击计数</button>
+    <p v-text="count"></p>
+
+    <button @click="test">请点击</button>
+    <!-- input事件: 输入事件,h5中新添加的事件 -->
+    <input type="text" @input="deal">
+    <!-- <input type="text" @keydown="prevent"> -->
+    <input type="text" @keydown.prevent="prevent" >
+
+    <ul @click="clickUl">
+      <!-- .stop阻止事件冒泡 -->
+      <li @click.stop="clickLi">one</li>
+      <li>two</li>
+    </ul>
+    <!-- 回车键处理 -->
+    <input type="text" @keydown.enter="func">
+  </div>
+
+  <script src="js/vue2.5.17.js"></script>
+  <script>
+    let vm = new Vue({
+      el: '#app',
+      data: { /*模型数据*/
+        count: 0
+      },
+      methods: { /*函数*/
+        test(event){ // event:产生的事件对象
+          console.log('处理事件');
+          // this.count = 10; // 操作模型中的数据
+          vm.count = 12;
+          console.log(event, event.type, event.target);
+        },
+        deal(event){
+          console.log('输入的键为:',event.data);
+        },
+        prevent(event){
+          event.preventDefault();// 阻止事件的默认行为
+          console.log('阻止默认行为');
+        },
+        clickLi(){
+          console.log("点击的是li");
+        },
+        clickUl(){
+          console.log('触发ul的click事件');
+        },
+        func(){
+          console.log("按下了回车键");
+        }
+      }
+    });
+
+  </script>
+</body>
+</html>

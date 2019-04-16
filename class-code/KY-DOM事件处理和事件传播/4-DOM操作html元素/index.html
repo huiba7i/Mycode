@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .bg{
+      background-color: green;
+      font-size: 20px;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <ul id="list" name="ullist" class="item">
+    <li><a href="http://www.baidu.com">one</a></li>
+    <li>two</li>
+    <li>three</li>
+  </ul>
+
+  <hr />
+  <div id="parent">
+
+    <p>this is child</p>
+    <span>span标签</span>
+  </div>
+  <form action="">
+    账号: <input type="text" value="admin" readonly="readonly" id="username">
+  </form>
+  <div name="ullist">hello dom</div>
+  <p>This is paragraph.</p>
+  <hr>
+  <button onclick="add()">增加子标签</button>
+  <button onclick="getElement()">获得html中的元素</button>
+  <button onclick="testContent()">操作标签的内容</button>
+  <button onclick="testAttribute()">操作标签的属性</button>
+  <button onclick="testCss()">操作标签的css样式</button>
+  <button onclick="testRelation()">标签间的关系</button>
+  <button onclick="testDelete()">删除标签</button>
+
+  <script src="js/dom.js"></script>
+</body>
+</html>

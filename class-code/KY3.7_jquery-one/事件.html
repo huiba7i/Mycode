@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="js/jquery-3.1.1.js"></script>
+		<style type="text/css">
+			.fSize{
+				font-size: 30px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="d" style="width: 300px;height: 200px;background: yellow;">
+			div
+		</div>
+		<button id="btn">按钮</button>
+		
+		<script>
+			//$("#d").css("color","red");
+			
+			//通过noConflict方法重命名jquery对象
+			var $jq = jQuery.noConflict();
+			$jq("#d").css("color","blue");
+			
+			//javascript
+//			window.onload = function(){
+//				alert("加载完成");
+//			}
+			//jquery   ready 文档加载完成
+//			$jq(document).ready(function(){
+//				alert("加载完成");
+//			});
+			
+			
+			$jq("#btn").click(function(){
+//				console.log("按钮点击");
+				//toggle   切换操作（显示隐藏）
+				//toggleClass  切换操作类
+//				$jq("#d").toggleClass("fSize");
+
+				$jq("#d").toggle(function(){
+					console.log("切换操作");
+				});
+//				$jq("#d").toggle(function(){
+//					console.log("1操作");
+//				},function(){
+//					console.log("2操作")
+//				});
+			});
+		</script>
+		
+		<br/><br/><br/>
+		
+		
+		<button id="b">按钮</button>
+		<input type="checkbox" id="ch"/>
+		<script>
+			function bFun(){
+				alert("点击事件");
+			}
+			function bFunover(){
+				alert("鼠标事件");
+			}
+			//on 绑定一次事件
+//			$jq("#b").on("click",bFun);
+			//on 绑定多次事件
+//			$jq("#b").on({
+//				click:bFun,
+//				mouseout:bFunover
+//			});
+
+
+			$jq("#b").click(function(){
+				//trigger   给当前对象一定的操作
+				$jq("#ch").trigger("click");
+			});
+		</script>
+	</body>
+</html>

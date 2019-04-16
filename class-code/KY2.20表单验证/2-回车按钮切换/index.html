@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <!-- 当在输入框中敲入回车键时, 默认是在提交表单 -->
+  <form action="success.html" name="login">
+    账号 <input type="text" name="acc" onkeypress="dealEnter(event,login.pwd)"><br>
+    密码 <input type="passowrd" id="password" name="pwd" onkeypress="dealEnter(event,login.acc)"><br>
+    <input type="submit" value="登录" name="btn">
+  </form>
+
+  <script src="js/enter.js"></script>
+</body>
+</html>

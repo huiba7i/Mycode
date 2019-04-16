@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			p{
+				/*color 颜色*/
+				color: red;
+				/*font-size  大小*/
+				font-size: 20px;
+				/*font-style   样式*/
+				font-style: italic;
+				/*text-align  水平对其方式*/
+				/*text-align: right;*/
+				/*font-weight   bold   粗细*/
+				font-weight: 400;
+				/*font-variant   字体转换*/
+				font-variant: small-caps;
+				/*font-family  字体*/
+				font-family: "STXingkai";
+				/*段落缩进*/
+				/*text-indent: 2em;*/
+				/*字符间距*/
+				/*letter-spacing: 10px;*/
+				/*单词间距*/
+				word-spacing: 20px;
+				/*行高*/
+				line-height: 20px;
+				/*书写方向*/
+				direction: ltr;
+				
+				text-decoration: underline;
+				text-decoration-color:yellow;
+			}
+			@font-face {
+				font-family:STXingkai;
+				src: url('STXINGKA.TTF');
+			}
+			img{
+				/*垂直对其方式*/
+				vertical-align:middle;
+			}
+			h1{
+				width: 100px;
+				border: 1px solid black;
+				/*允许单词换行*/
+				/*word-break: break-all;*/
+				word-wrap: break-word;
+				
+				
+				/*不换行     遇到<br/>换行*/
+				/*white-space: nowrap;*/
+				/*范围外隐藏*/
+				/*overflow: hidden;*/
+				/*文字的显示方式*/
+				/*text-overflow: ellipsis;*/
+				
+				
+				/*阴影：水平偏移  垂直偏移  模糊范围  阴影颜色*/
+				/*text-shadow: 10px 10px 10px red;*/
+			}
+			ul li{
+				/*square 实心正方形    circle 空心圆   实心圆  默认*/
+				list-style-type: square;
+				
+				/*outside 默认*/
+				/*list-style-position: inside;*/
+				
+				/*list-style-image: url(img/read.gif);*/
+				
+				color: black;
+			}
+			ul li a{
+				color: red;
+			}
+		</style>
+	</head>
+	<body>
+		<!--
+			列表：
+		-->
+		<ul>
+			<li><a>11</a></li>
+			<li><a>11</a></li>
+			<li><a>11</a></li>
+			<li><a>11</a></li>
+		</ul>
+		
+		<h1>我在学习HTML5，CSS3！</h1>
+		
+		<!--<p>p标签,samall big</p>-->
+		<p>
+			p标签,samall big
+			<img src="img/tuangou.png" />
+		</p>
+		
+		<!--定义大号字-->
+		<big>big</big>
+		<!--定义小号字-->
+		<small>small</small>
+		<!--<p>
+			p
+			<!--上标字--
+			<!--<sup>sup</sup>--
+			<!--下标字--
+			<sub>sub</sub>
+		</p>-->
+		<!--删除字-->
+		<del>del</del>
+		<!--插入字-->
+		<ins>ins</ins>
+	</body>
+</html>

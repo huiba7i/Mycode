@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <div id="app">
+    <!-- v-text: 与{{}}作用类似,绑定到标记的text内容,不解析标记
+    v-html: 与v-text类似,但是绑定到标记的html内容,会解析标记
+    v-model:实现与数据模型的双向绑定
+    v-once: 与v-text类似,但仅渲染一次
+    v-show: 显示或隐藏,值为真时显示,否则隐藏
+    -->
+    <p v-text="message"></p>
+    <p v-html="message"></p>
+    <input type="text" v-model="message">
+    <p v-once>{{message}}</p>
+    <p v-show="flag">现在能看到这个标记的内容</p>
+    <p v-show="score>=80">优秀</p>
+
+    <p v-if="score>=80">优秀</p>
+    <p v-else-if="score>=70">良好</p>
+    <p v-else-if="score>=60">及格</p>
+    <p v-else>不及格</p>
+
+    <ul>
+      <li v-for="item in items">{{item}}</li>
+    </ul>
+    <ul>
+      <li v-for="(item, index) in items">{{item}} - {{index}}</li>
+    </ul>
+
+    <table width="500" border="1" cellspacing="0">
+      <tr>
+        <th>序号</th>
+        <th>姓名</th>
+        <th>年龄</th>
+        <th>性别</th>
+      </tr>
+      <tr v-for="(stu, index) in stuList">
+        <td>{{index+1}}</td>
+        <td>{{stu.name}}</td>
+        <td>{{stu.age}}</td>
+        <td>{{stu.sex}}</td>
+      </tr>
+    </table>
+
+    <div>
+      <span v-for="(prop, key, index) in obj">{{index}} - {{key}} - {{prop}} ,</span>
+    </div>
+
+    <p v-for="i in 10">{{i}}</p>
+  </div>
+  <script src="js/vue2.5.17.js"></script>
+  <script>
+    let vm = new Vue({
+      el: '#app',
+      data: {
+        message: '<i>hello world</i>',
+        flag: false,
+        score: 59,
+        items: [
+          'html', 'css', 'javascript'
+        ],
+        stuList: [
+          {name: 'zhs', age:10, sex: '男'},
+          {name: 'lisi', age:12, sex: '男'}
+        ],
+        obj:{
+          type: 'Object',
+          value: 100
+        }
+      }
+    });
+  </script>
+</body>
+</html>

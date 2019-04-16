@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			div{
+				width: 800px;
+				text-align: center;
+				margin: 0 auto;
+			}
+			ul{
+				margin: 0;padding: 0;list-style-type: none;
+			}
+			li{
+				width: 150px;
+				display: inline-block;
+				text-align: center;
+			}
+			.img-selected{
+				border: 1px solid red;
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+			<img src="img/show1_big.jpg" id="test" />
+			<ul>
+				<li>
+					<img src="img/show1_big.jpg" width="60" class="img-selected" name="small" onmouseover="selectImg(1,this)"/>
+				</li>
+				<li>
+					<img src="img/show2_big.jpg" width="60" onmouseover="selectImg(2,this)" name="small" />
+				</li>
+				<li>
+					<img src="img/show3_big.jpg" width="60" name="small"  onmouseover="selectImg(3,this)"/>
+				</li>
+				<li>
+					<img src="img/show4_big.jpg" width="60" name="small"  onmouseover="selectImg(4,this)"/>
+				</li>
+				<li>
+					<img src="img/show5_big.jpg" width="60" name="small"  onmouseover="selectImg(5,this)"/>
+				</li>
+			</ul>
+		</div>
+		
+		<script>
+			function selectImg(index,img){
+				var testImg = document.getElementById("test");
+				testImg.src = "img/show"+index+"_big.jpg";
+				var sms = document.getElementsByName("small");
+				for (var i=0;i<sms.length;i++) {
+					sms[i].className = "";
+				}
+				img.className = 'img-selected';
+			}
+		</script>
+	</body>
+</html>

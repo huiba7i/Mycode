@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+  .hidd{
+    display: none;
+  }
+  .show{
+    display: block;
+  }
+  </style>
+</head>
+
+<body>
+  <dl id="menu">
+    <dd onclick="showMenu(0)">文学艺术</dd>
+    <ul class="hidd">
+      <li>先锋写作</li>
+      <li>小说散文</li>
+      <li>诗风词韵</li>
+    </ul>
+    <dd onclick="showMenu(1)">贴图专区</dd>
+    <ul class="hidd">
+      <li>真我风采</li>
+      <li>视频贴图</li>
+      <li>flash贴图</li>
+    </ul>
+  </dl>
+
+  <script src="js/menu.js"></script>
+</body>
+
+</html>

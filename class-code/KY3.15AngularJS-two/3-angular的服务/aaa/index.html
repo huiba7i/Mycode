@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body ng-app="serviceApp" ng-controller="ctrl" >
+  <p>当前页面的absurl地址: {{ absUrl }}</p>
+  <p>当前页面的url地址的端口号: {{ port }}, 主机: {{host}}, url: {{url}}</p>
+  <p>当前页面的url地址的请求参数: {{ params }}</p>
+
+  <!-- form表单默认提交方式 get -->
+  <form action="login" method="post">
+    <input type="text" name="username" placeholder="用户名">
+    <input type="password" name="password" placeholder="密码">
+    <input type="submit" value="登录">
+  </form>
+
+  <button ng-click="test()">请求服务器上的数据</button>
+  <p>响应的内容: {{message}}</p>
+
+  <script src="../js/angular-1.7.0.js"></script>
+  <script>
+    // 将需要用到的服务注入到控制器中
+    angular.module('serviceApp', []).controller('ctrl', function($scope, $location, $filter, $http){
+      // $location 表示当前页面的url地址(浏览器的地址栏 window.location)
+      console.log($location);
+      console.log($location.absUrl());
+
+      $scope.absUrl = $location.absUrl();
+      $scope.port = $location.port();
+      $scope.host = $location.host();
+      $scope.url = $location.url();
+      $scope.params = $location.search();
+    
+      console.log($scope.params);
+
+      // $http:读取远程服务器中的数据
+      $scope.message = "";
+      // $http.get().then()
+      // 请求响应成功时调用then函数
+      $scope.test= function(){
+
+        // $http.get('../data/1.txt').then(function(resp){
+        //   // resp响应对象
+        //   console.log(resp.data); // 获得响应的数据
+        //   $scope.message = resp.data;
+        // });
+
+        $http.get('../data/productor.json').then(function(resp){
+          // resp响应对象
+          console.log(resp.data); // 获得响应的数据
+          $scope.proList = resp.data;
+        });
+      };
+    });
+  </script>
+</body>
+</html>

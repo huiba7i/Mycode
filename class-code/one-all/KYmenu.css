@@ -1,0 +1,35 @@
+dl,dd,ul,h2{margin:0;padding:0;}
+ul{
+	list-style-type: none;
+}
+
+dd h2{
+	width: 200px;
+	height: 40px;
+	line-height: 40px;
+	font-size: 16px;
+	background-color: #657DA3;
+	border: 1px solid blue;
+	color:#66C1D5;
+	text-align: center;
+	letter-spacing: 5px;
+	cursor: pointer;
+}
+dd ul li{
+	width: 200px;
+	height: 40px;
+	line-height: 40px;
+	color: #555;
+	border-bottom: 1px solid yellow;
+	text-align: center;
+}
+dd ul{
+	width: 200px;
+	border: 1px solid #66C1D5;
+}
+.hidd{
+	display: none;
+}
+.selected{
+	display: block;
+}

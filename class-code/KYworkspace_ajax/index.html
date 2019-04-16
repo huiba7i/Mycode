@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script src="js/ajax.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<p id="p">数据显示</p>
+		
+		<input type="button" value="点击1" id="btn1"/>
+		<input type="button" value="点击2" id="btn2"/>
+		
+		<script type="text/javascript">
+			document.getElementById("btn1").onclick = function(){
+				funAjax("http://127.0.0.1:8020/workspace_ajax/file/test.txt",function(str){
+					document.getElementById("p").innerHTML = str;
+				});
+			}
+			document.getElementById("btn2").onclick = function(){
+				funAjax("http://127.0.0.1:8020/workspace_ajax/file/test1.txt",function(str){
+					document.getElementById("p").innerHTML = str;
+				});
+			}
+		</script>
+	</body>
+</html>

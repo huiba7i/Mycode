@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app" ng-controller="ctrl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <div>{{my}}</div>
+
+  <!-- 当访问路由的url地址 #!标记 , 会将路由页面的内容显示在ng-view指令的标签中 -->
+  <div ng-view></div>
+  <script src="js/angular-1.7.0.js"></script>
+  <script src="js/angular-route-1.7.0.js"></script>
+  <script src="my.module.js"></script>
+  <script>
+  var app = angular.module('app', ['ngRoute', 'myModule']);
+  // 添加index.html的控制器
+  app.controller('ctrl', function($scope){
+    $scope.my = "hello";
+  });
+
+  // 配置index.html的路由
+  app.config(function($routeProvider){
+    // url标记 /log
+    // 访问时 #!标记 --> #!/login
+    $routeProvider.when('/login', {
+      templateUrl: '/1.html'
+    }).when('/reg', {
+      templateUrl: '/2.html'
+    }).when('/home', {
+      templateUrl: '/home.html',
+      controller: 'myCtrl' // 指定对应的控制器
+    });
+  });
+
+  </script>
+</body>
+</html>

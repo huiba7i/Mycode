@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<!--每个li中都有一个空节点-->
+		<ul id="ul">
+			
+			<li>111</li>
+			
+			<li id="li2">222</li>
+			
+			<li>333</li>
+			
+			<li>444</li>
+			
+		</ul>
+		
+		<!--查看节点-->
+		<script type="text/javascript">
+//			var li2 = document.getElementById("li2");
+//			//parentNode  父节点
+//			console.log(li2.parentNode);
+//			//previousSibling   上一个同级节点
+//			console.log(li2.previousSibling);//空节点
+//			console.log(li2.previousSibling.previousSibling);//li为111的节点
+//			console.log(li2.nextSibling);
+//			console.log(li2.nextSibling.nextSibling);
+			
+			var ul = document.getElementById("ul");
+			console.log(ul.firstChild);
+			console.log(ul.firstChild.nextSibling);			
+			console.log(ul.lastChild.previousSibling);
+		</script>
+		
+		<img src="img/fruit.jpg" id="f"/>
+		<input type="button" name="" id="" value="添加节点" onclick="funNodeInsert()"/>
+		<input type="button" name="" id="" value="添加节点" onclick="funNodeInsert2()"/>
+		<input type="button" name="" id="" value="删除节点" onclick="funNodeRemove()"/>
+		<input type="button" name="" id="" value="替换节点" onclick="funNodeReplace()"/>
+		
+		<script type="text/javascript">
+			var oldImg = document.getElementById("f");
+			
+			//添加节点
+			function funNodeInsert(){
+				//createElement  创建节点
+				var newImg = document.createElement("img");
+				//节点添加属性节点src
+				newImg.setAttribute("src","img/newimg.jpg");
+				//document.body  body节点
+				//insertBefore  添加节点
+				document.body.insertBefore(newImg,oldImg);
+			}
+			//添加节点
+			function funNodeInsert2(){
+				//cloneNode克隆   true克隆子节点和内容   false只克隆标签
+				var newImg = oldImg.cloneNode("false");
+				//appendChild   末尾追加标签
+				document.body.appendChild(newImg);
+			}
+			//删除节点
+			function funNodeRemove(){
+				//removeChild 删除节点
+				document.body.removeChild(oldImg);
+			}
+			//替换节点
+			function funNodeReplace(){
+				var newImg = document.createElement("img");
+				newImg.setAttribute("src","img/grape.jpg");
+				//replaceChild  替换
+				document.body.replaceChild(newImg,oldImg);
+			}
+		</script>
+	</body>
+</html>

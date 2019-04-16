@@ -1,0 +1,92 @@
+// (1)定义变量 @变量名:值;
+// 变量名可以用于属性值(@变量名), 还可以用于选择器名称,css属性名称,url,@import语句中(@{变量名})
+@ot:other;
+@import '@{ot}.less'; // 引入其它的样式文件
+
+@fontSize:18px;
+@col:color;
+@img:"../img/Jellyfish.jpg";
+@white:#fff;
+/*
+(2)混合: 包含了一组css属性,可以使用类.或id选择器#来声明混合
+*/
+// .bordered{
+//   border-top:1px solid red;
+//   border-bottom:1px solid red;
+// }
+
+// 带参数
+.bordered(@width,@color:red){
+  border-top:@width solid @color;
+  border-bottom:@width solid @color;
+}
+
+p{
+  // 用于属性值
+  font-size: @fontSize;
+  text-indent: @fontSize*2;
+  background-@{col}: green;
+  @{col}: @white;
+  // .bordered;
+  .bordered(1px);
+}
+
+a{
+  // .bordered;
+  // .bordered(10px);
+  // .bordered(10px,#000);
+  @{col}: @white -#111; // #fff - #111 = #eee
+  text-decoration: none;
+  // & 表示当前选择器的父选择器
+  &:hover{
+    text-decoration: underline;
+    @{col}: red;
+  }
+}
+/*
+a:hover{
+  text-decoration: underline;
+  @{col}: red;
+}*/
+
+/*
+body{
+  background: url('@{img}');
+}*/
+
+
+/*
+(3)less嵌套
+*/
+// 头部
+header{
+  height: 60px;
+  background-@{col}: orange;
+  ul{
+    position: relative;
+    top:20px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    height: 40px;
+    line-height: 40px;
+    li{
+      float: left;
+      width: 100px;
+      text-align: center;
+      background-@{col}: dimgray;
+      margin-right: 5px;
+      @{col}: @white;
+    }
+  }
+}
+
+
+/*(4)函数*/
+@val:0.5;
+div{
+  width: percentage(@val); // percentage:将小数转换成百分比
+  height: 100px;
+  border: 1px solid #ccc;
+}
+

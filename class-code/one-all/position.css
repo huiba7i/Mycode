@@ -1,0 +1,62 @@
+body{
+	margin:0px;
+}
+
+.par{
+	width: 1000px;
+	background-color: #ccc;
+}
+
+.sub{
+	width: 200px;
+	height: 100px;
+	background-color: green;
+	/*margin-top:50px;*/
+	
+	/* position定位一般结合top,bottom,left,right使用 */
+	/* relative:相对原来初始位置进行定位,不影响盒子的尺寸 */
+	position: relative;
+	top:50px;
+	left:100px;
+	/*right: 100px;*/
+}
+
+.demo1{
+	width: 500px;
+	height: 200px;
+	background-color: #ccc;
+	margin-top:60px;
+	/* 父相子绝 */
+	position:relative;
+}
+
+.demo1 div{
+	width: 200px;
+	height: 100px;
+	background-color: green;
+	
+	/* 绝对定位:默认是相对于body进行定位,如果父元素有设置定位,相对于父元素进行定位 */
+	position:absolute;
+	top:0px;
+	left:20px;
+	/*bottom:0px;
+	right:0px;*/
+	
+	/* 通常和定位结合使用,控制元素的堆叠的顺序,
+	 * 默认值0,值越大,在上面,值越小,在下面,如果值相同,看元素的先后顺序,后面的会又叠在前面元素的上面 */
+	z-index: 1;
+}
+.demo1 img{
+	position:relative;
+	z-index:2;
+}
+
+.demo2{
+	width:100px;
+	height: 200px;;
+	/* 固定定位:相对于body进行定位 */
+	position: fixed;
+	bottom:0;
+	right:10px;
+	background-color: red;
+}

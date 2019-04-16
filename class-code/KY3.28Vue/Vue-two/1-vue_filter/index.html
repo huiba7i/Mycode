@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>1-vue_filter</title>
+    <style>
+      [v-cloak]{
+        display: none; 
+      }
+    </style>
+  </head>
+  <body>
+    <!-- v-cloak通常结合{display:none}使用,当模型数据没有编译完成时,隐藏该指令绑定的标记 -->
+    <div id="app" v-cloak>
+      <h1>{{title}}</h1>
+      <p>原始: {{msg}}</p>
+      <p>大写: {{msg.toUpperCase()}}</p>
+      <p>大写过滤器: {{msg | uppercase}}</p>
+      <p>小写过滤器: {{msg | lowercase}}</p>
+      <p>价格: {{price|number(1)}}
+        <span v-text="price | number"></span>
+      </p>
+    </div>
+  </body>
+</html>

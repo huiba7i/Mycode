@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<!--
+			form 定义表单
+			action 表单提交页面
+			method 表单提交方式   get   post
+		-->
+		<form action="login.html" method="get">
+			<!--text  文本框-->
+			用户名：<input type="text" value="张三"/><br/>
+			<!--password  密码框-->
+			密码： <input type="password" value="123456"/><br/>
+			<!--radio 单选框   name必须一致   默认单选checked-->
+			性别：<input type="radio" name="sex" />男
+				<!--<input type="radio" name="sex" checked/>女-->
+				<input type="radio" name="sex" checked="checked"/>女<br/>
+			<!--checkbox  多选框   默认选择checked-->
+			爱好：<input type="checkbox" />运动
+				<input type="checkbox" checked/>学习
+				<input type="checkbox" checked/>做作业<br/>
+			<!--select  下拉列表     option列表项   selected默认选项-->
+			月份：<select>
+					<option value="" selected>请选择月份</option>
+					<option value="">一月</option>
+					<option value="">二月</option>
+					<option value="">三月</option>
+					<option value="">四月</option>
+					<option value="">五月</option>
+			</select><br/>
+			
+			<!--多行文本域   cols列    rows行 -->
+			<textarea cols="80" rows="6">
+我同意。。。。
+			</textarea><br/>
+			<!--hidden隐藏域-->
+			<input type="hidden" value="隐藏" /><br/>
+			<!--file文件域-->
+			<input type="file" /><br/>
+			
+			<!--label   for   和input元素进行绑定关系-->
+			<input type="checkbox" id="c"/>
+			<label for="c">玩游戏</label>
+			<br/>
+			
+			<!--accesskey   热键     使用方式：alt+热键值-->
+			<!--<input type="checkbox" id="click"/>-->
+			<input type="text" value="请输入游戏类型" id="click"/>
+			<label for="click" accesskey="m">玩游戏</label>
+			<br/>
+			
+			<fieldset id="">
+				<legend>请选择您的爱好</legend>
+				<input type="radio" name="like"/>作业<br/>
+				<input type="radio" name="like" checked=""/>做作业<br/>
+				<input type="radio" name="like"/>做作业
+				
+				邮箱：<input type="email" /><br/>
+				搜索：<input type="search" /><br/>
+				url：<input type="url" /><br/>
+				数字：<input type="number" max="5" min="-2" step="2"/><br/>
+				范围：<input type="range"/><br/>
+				<!--年月日-->
+				日期：<input type="date"/><br/>
+				<!--年份  周数-->
+				日期：<input type="week"/><br/>
+				日期：<input type="month"/><br/>
+				日期：<input type="time"/><br/>
+				日期：<input type="datetime-local"/><br/>
+				颜色：<input type="color"/><br/>
+				<input type="text" name="" id="" list="lists"/>
+				<datalist id="lists">
+					<option value="1"/>
+					<option value="2"/>
+					<option value="3"/>
+					<option value="4"/>
+				</datalist><br/>
+				<progress max="100" value="50"></progress><br/>
+				<meter max="100" min="0" value="90" low="20" high="80" optimum="60"></meter>
+			</fieldset>
+			
+			<!--reset 重置  清空数据-->
+			<input type="reset" value="清空"/>
+			<input type="reset" value="清空" disabled="disabled"/>
+			<!--button  按钮-->
+			<button>清空</button>
+			<!--submit   提交表单-->
+			<input type="submit" value="确认"/>
+			<!--disabled   按钮失效-->
+			<input type="submit" value="确认" disabled="disabled"/>
+			<br/>
+		</form>
+	</body>
+</html>

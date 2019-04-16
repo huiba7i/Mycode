@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form action="success.html" method="get" id="login">
+        <input type="text" placeholder="请输入用户名" value="admin" id="username">
+        <br>
+        <input type="password" placeholder="请输入密码">
+        <br>
+        <input type="submit" value="登录">
+        <input type="button" value="按钮1" disabled="disabled" name="btn">
+        <input type="button" value="按钮2" onclick="test(this)"  name="btn">
+
+        <hr>
+        <label><input type="checkbox" id="sall" onchange="selectAll(this)">全选</label>
+        <br>
+        <input type="checkbox" name="se" ><br/>
+        <input type="checkbox" name="se" ><br/>
+        <input type="checkbox" name="se" ><br/>
+        <input type="checkbox" name="se" ><br/>
+    </form>
+    <script src="js/form.js"></script>
+
+</body>
+</html>

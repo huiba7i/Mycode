@@ -1,0 +1,61 @@
+.div1{
+	width: 200px;
+	height: 100px;
+	background-color: #0000FF;
+	border-top:10px dashed red;
+	border-bottom:10px solid red;
+}
+
+table{
+	width:300px;
+	margin-top:10px;
+	
+	/* 表格的边框:collapse - 合并边框,separate - 独立的边框 */
+	/*border-collapse: collapse;*/
+	/*border-collapse: separate;*/
+	
+	/*border-spacing: 10px;  水平与垂直的间距相同 */
+	border-spacing: 10px 20px; /* 1.水平,2.垂直 */
+}
+
+p{
+	width: 200px;height: 100px;
+	background-color: orange;
+	/* border-radius: 50%; 边框圆角(css3):弧度的半径 */
+	border-radius: 30px/10px ;/* 1:水平弧度的半径,2:垂直弧度的半径 */
+}
+
+input{
+	width: 100px;height: 50px;
+	/* 值1:↘ ,值2:↙ */
+	/*border-radius: 5px 15px;*/
+	/* 值1:左上,值2:↙ ,值3:右下 */
+	/*border-radius:5px 15px 20px;*/
+	
+	/* 从左上角开始顺时针  */
+	border-radius: 5px 15px 20px 25px;
+}
+
+.shadow,.pic{
+	width: 200px;height: 100px;
+	margin-bottom: 30px;
+	background-color: orange;
+}
+
+/*边框阴影(css3)*/
+.shadow{
+	/* 1:阴影的水平偏移值,2:阴影的垂直偏移值,3:阴影的模糊度,4:阴影的颜色 */
+	/*box-shadow: 16px 10px 6px #999;*/
+	
+	/* inset:向内扩展.默认向外扩展 */
+	box-shadow: 10px 10px 6px #999,10px 10px 6px #999 inset;
+}
+
+.pic{
+	border:39px solid black;
+	
+	/* 边框使用自定义图片 (css3) */
+	border-image: url(../img/border.jpg) 39 39 stretch ;
+}
+
+/* 查看浏览器是否支持html5,css3的属性:https://caniuse.com */

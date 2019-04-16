@@ -1,0 +1,48 @@
+.one,.two{
+	width: 100px;height: 100px;
+	background-color: green;
+	color: #fff;
+	text-align: center;
+	line-height: 100px;
+	border: 1px solid red;
+	transition: transform 3s;
+	/*transform-origin: left center;*/
+}
+
+.one:hover{
+	/*transform: rotate(180deg);*/
+	transform: translate(100px,100px);
+}
+
+.two:hover{
+	/*transform: rotateX(180deg);*/
+	/*transform: rotateY(180deg);*/
+	/*transform: rotateZ(180deg);*/
+	/*transform: rotate3d(1,1,1,160deg);*/
+	transform: translate3d(100px,100px,100px);
+}
+
+.two{
+	backface-visibility: hidden;/* 设置元素的背面是否可见 */
+}
+
+.pers{
+	width: 300px;
+	height: 400px;
+	border: 1px solid black;
+	/* 眼睛看的视点到xy平面上的距离 */
+	perspective: 150px;/* 设置透视点,通常设置在父元素上,子元素会有透视效果 */
+	perspective-origin: 10px 30px;
+}
+
+.pers img{
+	width:200px;
+	margin-top:50px;
+	margin-left: 50px;
+	transition: transform 3s;
+}
+
+.pers img:hover{
+	transform: rotateX(90deg);	
+}
+

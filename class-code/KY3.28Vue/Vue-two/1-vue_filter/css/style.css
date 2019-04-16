@@ -1,0 +1,4 @@
+/* v-cloak通常结合{display:none}使用,当模型数据没有编译完成时,隐藏该指令绑定的标记 */
+[v-cloak]{
+  display: none; 
+}

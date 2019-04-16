@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript" src="js/jquery-3.1.1.js">
+			
+		</script>
+	</head>
+	<body>
+		<!--<div id="d" style="width: 200px;height: 200px;background: blue;display: none;">-->
+		<div id="d" style="width: 200px;height: 200px;background: blue;position: relative;">
+			div
+		</div>
+		<button id="b">点击</button>
+		
+		<script>
+			$("#b").click(function(){
+//				$("#d").toggle(function(){
+//					alert("切换完成！");
+//				});
+				//toggle(5000)   切换执行时间
+//				$("#d").toggle(5000);
+				
+				//slideUp  向上隐藏
+//				$("#d").slideUp(1000);
+				
+				//slideDown  向下显示
+//				$("#d").slideDown(1000);
+				
+				//fadeIn   zhuojian显示
+//				$("#d").fadeIn(1000);
+				
+				//fadeOut   隐藏
+//				$("#d").fadeOut(1000);
+				
+				//fadeTo(动画运行时间，元素的不透明度，[动画完成时执行的函数])
+//				$("#d").fadeTo("slow",0.3);
+
+				//讲id为d的div     当透明度执行到0.3时   再次讲div透明度1
+//				$("#d").fadeTo("slow",0.3,function(){
+//					alert("透明度已经改变");
+////					$("#d").css("opacity","1");
+//					$(this).css("opacity","1");
+//				});
+
+				//$(selector).animate({params},[duration],[easing],[callback])
+//				$("#d").animate({
+//					//fontSize  属性中font-size必须使用驼峰命名fontSize
+//					fontSize:"30px"
+//				},{
+//					//duration   动画执行的时间
+//					duration:3000,
+//					//complete  动画执行结束时的操作
+//					complete:function(){
+//						alert("动画执行完成！");
+//					}
+//				});
+				
+				$("#d").animate({left:"+=500"},5000);
+				$("#d").slideUp(1000);
+				$("#d").fadeIn(1000);
+				$("#d").animate({left:"-=500"},5000);
+			});
+		</script>
+		
+		<hr/>
+		
+		红色：<input type="checkbox"  />
+		黑色：<input type="checkbox"  />
+		绿色：<input type="checkbox"  />
+		蓝色：<input type="checkbox"  />
+		<input type="button" value="全选" id="ok"/>
+		<input type="button" value="取消全选" id="no"/>
+		<script type="text/javascript">
+			//1、使用trigger
+			
+			$("#ok").click(function(){
+				$(":input").check();
+			});
+			$("#no").click(function(){
+				$("input").uncheck();
+			});
+			$.fn.extend({
+				//check函数   为全选函数
+				check:function(){
+					return this.each(function(){
+						this.checked = true;
+					});
+				},
+				uncheck:function(){
+					return this.each(function(){
+						this.checked = false; 
+					});
+				}
+			});
+		</script>
+	</body>
+</html>

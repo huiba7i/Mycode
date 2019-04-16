@@ -1,0 +1,26 @@
+body{
+	margin:0;
+}
+
+.box1{
+	/* 设置内容区域的大小 */
+	width:200px;
+	height: 100px;
+	background-color: red;
+	
+	/* 设置边框区域border: border-width border-style border-color  */
+	border:10px solid blue;
+	
+	/* 设置padding区域: padding-left,padding-right,padding-top,padding-bottom */
+	padding: 10px;
+	
+	/* 设置margin区域: margin-left,margin-right,margin-top,margin-bottom */
+	margin-left:100px;
+	margin-bottom:15px;
+}
+
+.box2{
+	width: 200px;
+	height: 100px;
+	background-color: green;
+}

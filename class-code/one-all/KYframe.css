@@ -1,0 +1,14 @@
+ul{
+	margin:0 auto;padding: 0;list-style-type: none;
+	
+}
+
+ul li{
+	width: 150px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	background-color: yellow;
+	color: darkred;
+	margin-bottom: 2px;
+}

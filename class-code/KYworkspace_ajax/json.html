@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			//json 使用{}表示这个集合
+			//json  里面是一些属性      属性名:属性值
+			//json的属性没有顺序      每个属性之间用,隔开
+			
+			//jsonOne  对象
+//			var jsonOne = {
+//				name:'zhangsan',
+//				age:18,
+//				address:'杭州'
+//			}
+//			console.log(jsonOne.name);//属性值
+//			console.log(jsonOne.age);//属性值
+
+//			var jsonOne = {
+//				name:{firstName:'zhang',lastName:'san'},
+//				age:18,
+//				address:'杭州'
+//			}
+//			console.log(jsonOne.name.firstName);
+//			console.log(jsonOne.name.lastName);
+			
+			//json属性名  引号可加可不加    建议加上
+//			var jsonOne = {
+//				'name':{firstName:'zhang',lastName:'san'},
+//				'age':18,
+//				'address':'杭州'
+//			}
+//			console.log(jsonOne.name.firstName);
+//			console.log(jsonOne.name.lastName);
+			
+//			var arr = [1,2,3];
+			var arr = [
+				{
+					'name':'zhangsan',
+					'age':18,
+					'address':'杭州'
+				},
+				{
+					'name':'lisi',
+					'age':19,
+					'address':'上海'
+				},{
+					'name':'wangwu',
+					'age':20,
+					'address':'北京'
+				}
+			];
+			for (var i = 0;i<arr.length;i++) {
+//				console.log(arr[i]);
+
+//				console.log(json对象.address);
+				console.log(arr[i].age);
+				console.log(arr[i].name);
+				console.log(arr[i].address);
+			}
+		</script>
+	</body>
+</html>

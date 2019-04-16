@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			div{
+				width: 600px;
+				height: 200px;
+				
+				/*
+				 * webkit  谷歌
+				 * moz     火狐
+				 * 
+				 * linear-gradient(方向/角度,颜色值1，颜色值2....)   线性渐变
+				 */
+				/*background: -webkit-linear-gradient(top,red,blue);*/
+				/*background: -webkit-linear-gradient(top,red,blue,yellow);*/
+				/*background: -webkit-linear-gradient(19deg,red,blue,yellow);*/
+				/*background: -moz-linear-gradient(top,red,blue);*/
+				
+				/*background: -webkit-radial-gradient(red,blue,yellow);*/
+				/*circle   形状*/
+				/*background: -webkit-radial-gradient(circle,red,blue,yellow);*/
+				/*20px  大小
+				 20px 50px   水平    垂直
+				 * */
+				/*background: -webkit-radial-gradient(20px 50px,red,blue,yellow);*/
+				/*center   渐变开始的位置，默认值
+				 * left     从左边开始渐变
+				 */
+				/*background: -webkit-radial-gradient(left,red,blue,yellow);*/
+				/*background: -webkit-repeating-radial-gradient(red,blue 5%,yellow 15%);*/
+				background: -webkit-repeating-linear-gradient(red,blue 5%,yellow 15%);
+			}
+			img{
+				width: 500px;
+				height: 200px;
+				/*-webkit-mask-image  图片渐变
+				 * rgba(0,0,0,0)   透明色*/
+				-webkit-mask-image: -webkit-radial-gradient(black 150px,rgba(0,0,0,0) 165px);
+			}
+		</style>
+	</head>
+	<body>
+		<div id="">
+			
+		</div>
+		<br/><br/><br/><br/>
+		<img src="img/1.jpg"/>
+	</body>
+</html>

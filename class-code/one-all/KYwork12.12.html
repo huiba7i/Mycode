@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			var one = /^[a-zA-Z]\w{2,17}@[a-zA-Z]+[.]com$/;
+			
+			var two = /^[1-9]\d{4,14}$/;
+			var qq = "93847a";
+			document.write(two.test(qq));
+			
+			// 非正则
+			function checkQQ(){
+				var len = qq.length;
+				if(len<5 || len>15){
+					return false;
+				}
+				var first = qq.charAt(0);
+				if(first=='0'){
+					return false;
+				}
+				
+				var res = isNaN(qq);
+				return !res;
+			}
+			
+			document.write(checkQQ());
+			document.write("<hr />");
+			
+			var three = /^1[3578]\d{9}$/;
+			
+			//$1,023,032.03 或 $2.03
+			//$01,023,032.03 $0.03
+//			var four = /^\$\d{1,3}(,\d{3})*(\.\d{2})?$/;
+			var four = /^\$([1-9]\d{0,2}(,\d{3})*|0)(\.\d{2})?$/;
+			var price = "$1,023,032.03";
+			price = "$100.32";
+			document.write(four.test(price));
+			
+			function test(){
+				var p = document.getElementById("love");
+				var s = p.innerHTML;// 获得p标记的内容
+				// 将匹配到的内容进行替换
+				var aft = s.replace(/爱/g,'<span style="color:red">爱</span>')
+				p.innerHTML = aft; // 修改p标记的内容
+			}
+			
+			function sum(){
+				var s = 0;
+				for(var i=0;i<arguments.length;i++){
+					s += arguments[i];
+				}
+				return s;
+			}
+			document.write(sum(34,69,18,20));
+		</script>
+		
+		<p id="love">我爱javascript哈哈爱javascript</p>
+		<button onclick="test()">点击后"爱"会变成红色的</button>
+	</body>
+</html>

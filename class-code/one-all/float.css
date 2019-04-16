@@ -1,0 +1,78 @@
+.nav{
+	width:1000px;
+}
+.nav div{
+	width:200px;
+	height: 50px;
+	background-color: orange;
+	/* 元素浮动在左边 */
+	float:left;
+	/*float:right;*/
+	font-size: 20px;
+	font-weight: bold;
+	text-align: center;
+	line-height: 50px;
+}
+.nav div:hover{
+	background-color: #ccc;
+}
+
+.demo{
+	width: 300px;
+	height: 300px;
+	background-color: #999;
+	/* 元素的左边和右边都不允许有浮动元素 */
+	clear:both;
+}
+.item1{
+	width:100px;
+	height:100px;
+	background-color: red;
+	float:left;
+}
+.item2{
+	width: 100px;
+	height: 80px;
+	background-color: green;
+	float:left;
+}
+.item3{
+	width:100px;
+	height:40px;
+	background-color: blue;
+	float:left;
+}
+.item4{
+	width:80px;
+	height: 120px;
+	background-color: pink;
+	float:left;
+}
+
+.demo2{
+	width:100%;
+	background-color: #ccc;
+}
+.one,.two{
+	width:100px;
+	height:100px;
+	background-color: #000;
+	border:1px dashed red;
+}
+
+.one{
+	float:left;
+}
+.two{
+	float:right;
+}
+.clear{
+	clear:right;/* 清除元素右边的浮动 */
+}
+
+/* 向.demo2元素内容的后面插入一个伪元素,结合 content使用 */
+.demo2:after{
+	display: block;
+	content:"";
+	clear:both;
+}

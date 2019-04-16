@@ -1,0 +1,101 @@
+body{
+	margin:0;
+}
+
+.demo1,.demo2,.demo3,.demo4{
+	width: 100px;
+	height: 100px;
+	background-color: red;
+	border: 1px solid black;
+	color:#fff;
+}
+
+.demo1:hover{
+	/* 1.平移 */
+	
+	/* x轴方向  正值:向正向平移,负值:相反方向平移 */
+	/*transform: translate(-20px);*/
+	
+	/* 值1:x轴平移的值,值2:y轴平移的值 */
+	transform: translate(30px,20px);
+	-webkit-transform: translate(30px,20px);
+	-moz-transform: translate(30px,20px);
+	-ms-transform: translate(30px,20px);
+	-o-transform: translate(30px,20px);
+	
+	
+}
+
+.demo2,.demo3,.demo4{
+	margin-left: 100px;
+	margin-top:50px;
+}
+.demo2:hover{
+	/* 2. 旋转一个角度*/
+	
+	/* 正值:顺时针旋转,负值:逆时针 */
+	/*transform: rotate(30deg);*/
+	transform: rotate(-30deg);
+	-webkit-transform: rotate(-30deg);
+	-ms-transform: rotate(-30deg);
+	-moz-transform: rotate(-30deg);
+	-o-transform: rotate(-30deg);
+}
+
+.demo3:hover{
+	
+	/*3. 缩放*/
+	
+	/*一个值:x和y轴缩放的倍数相同*/
+	/*transform: scale(2);*/
+	
+	/*transform:scale(0.5);*/
+	
+	/* 值1:x轴上的缩放的倍数,值2:y轴上缩放的倍数 */
+	transform: scale(0.5,2);
+}
+
+.demo4:hover{
+	
+	/* 4. 倾斜*/
+	
+	/* 向x轴倾斜的角度,y轴默认是0 */
+	/*transform: skew(-20deg);*/
+	
+	/* 向x轴倾斜 */
+	/*transform: skewX(20deg);*/
+	
+	/* 向y轴倾斜 */
+	/*transform: skewY(30deg);*/
+	
+	/* 值1:x轴倾斜的角度,值2:y轴倾斜的角度 */
+	/*transform: skew(30deg,30deg);*/
+	
+	/* 混合使用多个变形 */
+	transform: rotate(30deg) scale(0.6,0.6) skew(20deg);
+}
+
+.goods{
+	width: 200px;
+	height: 230px;
+	border: 2px solid #000;
+	margin-left: 20px;
+	overflow: hidden;
+}
+
+.goods div{
+	border:1px solid #999;
+	text-align: center;
+	line-height: 30px;
+	color:#666;
+	transform: rotate(40deg) translate(56px,-10px);
+}
+
+/* 转换的基点,默认以元素的中心点为基点 */
+.demo2,.demo3{
+	/*transform-origin: left top;*/
+	
+	/* 基点的位置:相对于元素的左上角进行偏移 */
+	transform-origin: 100% 0;
+}
+

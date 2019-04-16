@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			body{
+				background-color: lightblue;
+			}
+		</style>
+		<script>
+			function hideMenu(){
+				// 浏览器版本低的ff不支持
+//				window.parent.frames['main'].cols = "0,*";
+
+				//推荐写法
+				window.parent.document.getElementById("main").cols = "0,*";
+			}
+			
+			function showMenu(){
+				window.parent.document.getElementById("main").cols = "200,*";
+			}
+		</script>
+	</head>
+	<body>
+		<button onclick="hideMenu()">隐藏菜单</button>
+		<button onclick="showMenu()">显示菜单</button>
+	</body>
+</html>

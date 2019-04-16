@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<table border="1" cellspacing="0" cellpadding="0" id="mytable" width="50%">
+			<tr id="row1">
+				<td>书名</td>
+				<td>价格</td>
+			</tr>
+			<tr id="row2">
+				<td>看得见风景的房间</td>
+				<td align="center">&yen;30.00</td>
+			</tr>
+			<tr id="row3">
+				<td>60个瞬间</td>
+				<td align="center">&yen;32.00</td>
+			</tr>
+		</table>
+		<input name="b1" type="button" value="第三列前增加一行" onclick="addRow()"/>
+		<input name="b2" type="button" value="删除第二行" onclick="delRow()"/>
+		<input name="b3" type="button" value="修改标题样式" onclick="updateRow()"/>
+		<input name="b4" type="button" value="复制最后一行" onclick="copyRow()"/>
+		<input name="s" type="button" value="删除表格" onclick="delTable()"/>
+		<input name="s" type="button" value="删除表格" onclick="del()"/>
+		
+		<script type="text/javascript">
+			function addRow(){
+				var fRow = document.getElementById("row3");
+				var neweRow=document.createElement("tr"); 
+				var col1=document.createElement("td");
+				col1.innerHTML="幸福从天而降";
+				var col2=document.createElement("td");
+				col2.innerHTML="&yen;18.50";
+				col2.setAttribute("align","center");
+				neweRow.appendChild(col1);//把列添加到行
+				neweRow.appendChild(col2);
+				//行节点添加到row3
+				//document.getElementById("row2").parentNode.appendChild(neweRow);
+				document.getElementById("row3").parentNode.insertBefore(neweRow,fRow);
+				//document.getElementById("mytable").appendChild(neweRow);
+			}
+			function delRow(){
+				var dRow = document.getElementById("row2");
+				dRow.parentNode.removeChild(dRow);
+			}
+			function updateRow(){
+				var uRow = document.getElementById("row1");
+				uRow.setAttribute("style","font-weight: bolder;text-align: center;background-color: #CCCCCC;");
+			}
+			function copyRow(){
+				var oldRow = document.getElementById("row3");
+				var newRow = oldRow.cloneNode(true);
+				document.getElementById("mytable").appendChild(newRow);
+			}
+			function delTable(){
+				var mytable = document.getElementById("mytable");
+				mytable.parentNode.removeChild(mytable);
+				//document.body.removeChild(mytable);
+			}
+			function del(){
+				var tabs = document.getElementById("mytable");
+				var len = tabs.rows.length; 
+				for(var i=0; i<len; i++){
+					tabs.setAttribute("border","0");
+				  	tabs.deleteRow(0); 
+				}
+			}
+		</script>
+	</body>
+</html>

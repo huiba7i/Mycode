@@ -1,0 +1,1 @@
+exports.wel = "hello webpack";

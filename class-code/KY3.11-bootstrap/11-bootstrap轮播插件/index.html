@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <style>
+  #play img{
+    width: 400px;
+    margin: auto;
+  }
+  /* #play .item{
+    text-align: center;
+  } */
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div id="play" class="carousel slide" data-ride="carousel">
+      <!-- 轮播的指标(小圆点) .carousel-indicators-->
+      <ul class="carousel-indicators">
+        <li data-target="#play" data-slide-to="0" class="active"></li>
+        <li data-target="#play" data-slide-to="1"></li>
+        <li data-target="#play" data-slide-to="2"></li>
+        <li data-target="#play" data-slide-to="3"></li>
+      </ul>
+      <!-- 轮播的项目 .carousel-inner -->
+      <div class="carousel-inner">
+        <!-- 每个子项目 .item -->
+        <div class="item active">
+          <img src="img/slide1.jpg" alt="">
+        </div>
+        <div class="item">
+          <img src="img/slide2.jpg" alt="">
+        </div>
+        <div class="item">
+          <img src="img/slide3.jpg" alt="">
+        </div>
+        <div class="item">
+          <img src="img/slide4.jpg" alt="">
+        </div>
+   
+      </div>
+      <!-- <a class="carousel-control left" href="#play" data-slide="prev">&lsaquo;</a>
+      <a class="carousel-control right" href="#play" data-slide="next">&rsaquo;</a> -->
+    </div>
+  </div>
+
+  <script src="js/jquery-3.1.1.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+</body>
+</html>

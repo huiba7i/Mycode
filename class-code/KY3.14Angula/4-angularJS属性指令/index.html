@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>属性指令</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+
+  <style>
+  .item{
+    background-color: blue;color: #fff;
+  }
+  .order{
+    padding: 10px;
+    height: 200px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+  }
+  </style>
+</head>
+<body>
+  <div ng-app="app" ng-controller="ctrl" class="container">
+    <!-- ng-style 操作元素的style属性
+      ng-class 操作元素的class属性
+    -->
+    <p ng-style="style">hello angular</p>
+    <p ng-class="test">hello world</p>
+    <button ng-click="goCart()">我的购物车(<span>{{count}}</span>)</button>
+    <!-- 点餐 -->
+    <div class="order" ng-show="orderShow">
+      <button>加入购物车</button>
+
+    </div>
+
+    <!-- 购物车 -->
+    <div class="cart" ng-show="cartShow">
+      <table class="table table-bordered">
+        <tr>
+          <th><input type="checkbox">全选</th>
+          <th>菜品名称</th>
+          <th>价格</th>
+          <th>数量</th>
+          <th>操作</th>
+        </tr>
+      </table>
+
+      <button ng-click="goOrder()">继续任性点餐</button>
+    </div>
+    <!-- ng-href 覆盖了a的href属性 -->
+    <a ng-href="{{url}}" target="_blank">百度一下</a>
+    <img ng-src="{{image}}" alt="">
+    <img src="{{image}}" alt="">
+
+  </div>
+
+  <script src="js/angular-1.7.0.js"></script>
+  <script src="js/attribute.directive.js"></script>
+</body>
+</html>

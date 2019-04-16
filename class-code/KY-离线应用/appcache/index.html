@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!--
+	在<html>标记添加manifest属性,告诉浏览器下载manifest中列出的文件,供离线浏览
+-->
+<html manifest="manifest.appcache">
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" href="css/test.css" />
+	</head>
+	<body>
+		<h1><img src="img/bd_logo1.png" width="200" /></h1>
+		<h2>html5的应用缓存 - 在没有联网的情况下,用户也可以浏览网页(将网页的内容缓存在客户端浏览器中)</h2>
+		
+		<button onclick="test()">检测当前用户是否连接因特网</button>
+		<p>
+			通过manifest进行离线缓存数据,只需将要缓存的内容列出来<br/>
+			manifest 文件是简单的文本文件，它告知浏览器被缓存的内容（以及不缓存的内容）。<br/>
+			创建一个普通文件,将扩展名改为.manifest或.appcache(建议)<br/>
+			manifest 文件可分为三个部分：		
+			<ul>
+				<li>CACHE MANIFEST - 在此标题下列出的文件将在首次下载后进行缓存 </li>
+				<li>NETWORK - 在此标题下列出的文件需要与服务器的连接，且不会被缓存 </li>
+				<li>FALLBACK - 在此标题下列出的文件规定当页面无法访问时的回退页面（比如 404 页面） </li>
+			</ul>
+			<br />
+		</p>
+		
+		<script type="text/javascript" src="js/test.js" ></script>
+		
+		
+	</body>
+</html>

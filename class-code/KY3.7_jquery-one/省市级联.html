@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="js/jquery-3.1.1.js"></script>
+	</head>
+	<body>
+	    <script >
+	        var p=["黑龙江","吉林","山东"];
+	        var c=[["哈尔滨","齐齐哈尔","大庆"],["长春","吉林","四平"],["济南","烟台","青岛","威海"]];
+	        $(function(){
+	            for(var i=0;i< p.length;i++){
+	                $("#province").append($("<option>").val(i).html(p[i]));
+	            }
+	            $("#province").change(function(){
+	                $("#city").empty();
+	                for(var i=0;i<c[$(this).val()].length;i++) {
+	                    $("#city").append($("<option>").html(c[$(this).val()][i]));
+	                }
+	            })
+	            $("#province").change();
+	        })
+	    </script>
+	</head>
+	<body>
+		<select id="province" style="width:100px"></select>省
+		<select id="city" style="width:100px"></select>市
+	</body>
+</html>

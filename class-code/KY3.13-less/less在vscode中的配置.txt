@@ -1,0 +1,5 @@
+1. 下载easy less这个插件,会将.less文件自动编译成.css文件
+2. 在用户设置中配置less,设置编译路径, ${workspaceRoog}当前项目所在的目录
+"less.compile": {
+    "out": "${workspaceRoot}\\css\\"
+}

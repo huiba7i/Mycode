@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>事件传播</title>
+</head>
+<body onclick="testBody(event)">
+    <div onclick="testParent()">
+        <button onclick="testChild(event)">点击按钮</button>
+    </div>
+
+    <div id="catch">
+        <button id="btn1">点击按钮事件捕获</button>
+        <button id="btn2">点击按钮事件2</button>
+    </div>
+
+    <ul>
+        <li>one</li>
+        <li>two</li>
+        <li>three</li>
+    </ul>
+
+    <form action="success.html" method="get">
+        <input type="submit" value="提交" onclick="subForm(event)">
+    </form>
+
+    <script src="js/test.js"></script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body onload="init()">
+		<select id="city">
+			<option>请选择市</option>
+		</select>
+		<select id="sec">
+			<option>请选择区</option>
+		</select>
+	</body>
+	
+	<script>
+		function $(id){
+			return document.getElementById(id);
+		}
+		function init(){
+//			var obj = {"name":"zhs","age":10,"sex":"男"};
+//			console.log(obj.name);
+//			console.log(obj["name"]);
+			
+			var city = new Array();
+			city['杭州市'] = ["上城区","下城区","江干区","西湖区","拱墅区"];
+			city['宁波市'] = ["1区","2区","3区","4区","5区"];
+			city['金华市'] = ["多1区","多2区","多3区","多4区","多5区"];
+//			alert(city.length);//0
+			alert(city['杭州市']);
+			var citySelect = $("city");
+			// 通过for in循环遍历数组的字符串索引
+			for(var pro in city){
+//				alert(pro+"  "+city[pro]);
+				var op = new Option(pro);
+				citySelect.add(op);
+			}
+			
+			citySelect.onchange = function(){
+				var cityValue = this.value;
+				var secArray = city[cityValue];
+//				alert(secArray);
+				$('sec').options.length = 1;
+				for(var i=0;i<secArray.length;i++){
+					var op = new Option(secArray[i]);
+					$('sec').add(op);
+				}
+			};
+		}
+		
+		
+	</script>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="js/event.js" ></script>
+	</head>
+	<!-- onload(仅用body标签) - 当整个html文档在浏览器中被完全加载完成时触发 -->
+	<body onload="init()">
+		<!-- onclick - 鼠标单击事件 -->
+		<input type="button" onclick="test()" value="领取红包">
+		<hr />
+		
+		<!-- onmouseover - 鼠标悬浮在标签上时触发,onmouseout - 鼠标离开标签时触发 -->
+		<img src="img/bulboff.jpg" onmouseover="light(this)" onmouseout="lightOff(this)" />
+		
+		<hr />
+		<!-- onkeyup - 当键盘上的键被松开时触发,this表示当前触发事件的标签  -->
+		<input type="text" onkeyup="up(this)" placeholder="输入的内容会变成大写" />
+		
+		<!-- onchange(仅针对于表单元素有效) - 当标签的内容发生变化,并失去焦点时触发 -->
+		<input type="text" onchange="textChanged(this)"/>
+	</body>
+</html>

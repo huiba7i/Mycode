@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			.pOne{
+				background: yellow;
+			}
+			.pSize{
+				font-size: 30px;
+			}
+		</style>
+		<script src="js/jquery-3.1.1.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="d">
+			div
+		</div>
+		<script type="text/javascript">
+			//document.getElementById("d")
+			var d = $("#d");
+			
+			//标签.css("样式","样式值");
+			d.html("div标签")
+//			.css("font-size","25px");
+			.css("fontSize","25px");
+			
+			$(document.getElementById("d")).css("border","1px solid red");
+			
+			//append追加内容
+			$("div").append("追加内容");
+			
+			
+			
+			//Dom对象变成jquery对象
+			//1、$("#d");
+			//2、$(document.getElementById("d"))
+			//3、$("div")
+			//标签对象.css("样式","样式值");
+			
+			
+			
+		</script>
+		
+		
+		<p class="pOne">
+			第一个p
+			<span>第一个p第一个span</span>
+			<span>第一个p第二个span</span>
+			<span>第一个p第三个span</span>
+		</p>
+		<p id="pTwo">第二个p</p>
+		<p>第三个p</p>
+		<p>第四个p</p>
+		<script>
+//			$("p").css("color","red");
+			//对象.attr("标签属性","属性值");
+			$("p").attr("style","color:red;");
+			
+//			$("#pTwo").addClass("pOne");
+			$("#pTwo").addClass("pOne").addClass("pSize");
+			
+//			$("#pTwo").removeClass("pSize");
+			$("#pTwo").removeClass();
+			
+			
+			
+			//jquery操作css
+			//1、标签对象.css("样式","样式值");
+			//2、标签对象.attr("标签属性","属性值");
+			//3、标签对象.addClass("class样式名称");
+			//3、标签对象.addClass("class样式名称").addClass("class样式名称");
+			//3、移除addClass样式使用removeClass
+				//移除某一个样式removeClass("pSize");
+				//移除全部removeClass();
+				
+				
+			
+			$("p > span:first").css("color","aqua");
+			//n从0开始        
+			$("p:nth-child(n+1)").css("color","aqua");
+		</script>
+		
+		
+		
+		<script type="text/javascript">
+			$('<input type="button" value="按钮" />').appendTo(document.body);
+			
+			$('<input/>',{
+				type:'button',
+				value:'按钮2'
+			}).appendTo(document.body);
+			
+			//清空对应对象
+//			$("p").remove();
+			$("p").empty();
+		</script>
+	</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <!-- ng-controller 向应用程序定义一个控制器 -->
+  <div ng-app="app" ng-controller="ctrl" >
+    <h2>hello, {{name}}</h2>
+    <p>价格为: {{price}}</p>
+    <p>{{obj.name}}, {{obj.age}}</p>
+  </div>
+
+
+<!-- 引入angularJS文件 -->
+<script src="js/angular-1.7.0.js"></script>
+<script>
+  // (1)调用angular对象的方法module('模块名称',[]依赖的模块)来创建一个模块
+  var app = angular.module('app', []);
+  console.log(app);
+  // (2)向模块中添加控制器
+  // 调用模块controller('控制器名称', 构造函数)
+  // 创建控制器时,传递了一个Scope对象, 对象中可以定义属性和方法(在视图和控制器中都可使用)
+  app.controller('ctrl', function($scope){
+    // 定义应用程序的变量 - 作为scope对象的属性
+    $scope.name = 'aowin';
+    $scope.price = 16.5;
+    $scope.obj = {'name':'zhs', 'age':10};
+  });
+</script>
+
+</body>
+</html>

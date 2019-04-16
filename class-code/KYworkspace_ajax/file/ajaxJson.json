@@ -1,0 +1,17 @@
+[
+	{
+		'name':'zhangsan',
+		'age':18,
+		'address':'杭州'
+	},
+	{
+		'name':'lisi',
+		'age':19,
+		'address':'上海'
+	},
+	{
+		'name':'wangwu',
+		'age':20,
+		'address':'北京'
+	}
+]

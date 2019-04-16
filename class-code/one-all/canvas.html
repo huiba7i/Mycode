@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body onload="init()">
+		<canvas width="400px" height="300px" id="can"></canvas>
+		<script type="text/javascript">
+			function init(){
+				//获取画布标签
+				var can = document.getElementById("can");
+				//得到画布的绘图上下文
+				var c = can.getContext("2d");
+				
+				//缩放  宽度2倍   高度0.5倍
+				//c.scale(2,0.5);
+				//画布原点变换
+				//c.translate(100,100);
+				//c.strokeRect(0,0,100,200);
+				
+//				//绘制线条颜色
+//				c.strokeStyle = "blue";
+//				//绘制图形的颜色
+//				c.fillStyle ="red";
+				
+//				//颜色渐变
+//				var grad = c.createLinearGradient(100,100,200,200);
+//				grad.addColorStop(0.5,"red");
+//				grad.addColorStop(1,"blue");
+//				c.fillStyle = grad;
+//				
+//				//lineWidth  线条宽度
+//				c.lineWidth = "5";
+//				//两条线之间的形状
+//				c.lineJoin = "round";
+//				
+//				//strokeRect 绘制空心矩形(坐上角的x，左上角y，矩形的宽，矩形的高)
+//				c.strokeRect(100,100,120,120);
+//				//fillRect 绘制实心矩形(坐上角的x，左上角y，矩形的宽，矩形的高)
+//				c.fillRect(110,110,100,100);
+//				//clearRect   矩形擦除器(坐上角的x，左上角y，矩形的宽，矩形的高)
+////				c.clearRect(120,120,80,80);
+
+				
+				//开始路径
+//				c.beginPath();
+//				
+////				//moveTo 笔触开始的位置
+////				c.moveTo(40,80);
+////				//lineTo  和笔触的位置形成一条线
+////				c.lineTo(100,100);
+////				c.lineTo(120,200);
+////				//上色
+////				c.fillStyle = "red";
+////				//绘制形状
+////				c.fill();
+//				
+//				//圆
+////				c.arc(100,100,50,0,Math.PI*2,false);
+//				//下半圆
+////				c.arc(100,100,50,0,Math.PI,false);
+//				//上半圆
+//				c.arc(100,100,50,0,Math.PI,true);
+//				c.fillStyle = "blue";
+//				c.fill();
+//				
+//				//结束路径
+//				c.closePath();
+
+				
+//				//shadowColor   阴影的颜色
+//				c.shadowColor = "black";
+//				//shadowOffsetX   阴影的水平偏移量
+//				c.shadowOffsetX = 5;
+//				//shadowOffsetY   阴影的垂直偏移量
+//				c.shadowOffsetY  = 5;
+//				//shadowBlur   阴影的模糊效果
+//				c.shadowBlur = 5;
+//				//字体的样式设置
+//				c.font = "bold 50px Verdana, sans-serif";
+//				//水平对其方式
+//				c.textAlign = "start";
+//				//垂直对其方式
+//				c.textBaseline = "bottom";
+//				//实心
+////				c.fillText("web",100,110);
+//				//轮廓
+//				c.strokeText("web",100,110);
+//				//文字的大小信息
+//				var w = c.measureText("web");
+//				//绘画
+//				c.strokeRect(100,90,w.width,30);
+
+				images = new Image();
+				images.src = "img/read.gif";
+				images.onload = function(){
+					//绘制图像(图像，x，y，宽度，高度)
+//					c.drawImage(images,0,0,50,50);
+//					c.drawImage(images,10,10,50,50);
+//					c.drawImage(images,20,20,50,50);
+//					var patt = c.createPattern(images,'repeat');
+					//createPattern （图像，是否平铺）
+					var patt = c.createPattern(images,'no-repeat');
+					c.fillStyle = patt;
+					c.fillRect(0,0,200,200);
+				}
+			}
+		</script>
+	</body>
+</html>

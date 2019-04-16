@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>vue_computed</title>
+  </head>
+  <body>
+    <div id="app">
+      <h3>购买的食品如下:</h3>
+      <p>名称: {{food.name}},单价: {{food.price}}, 数量: {{food.count}}</p>
+      <p>总价: {{totalPrice}}</p>
+
+      <input type="text" v-model="msg">
+      <input type="text" v-model="food.count">
+    </div>
+  </body>
+</html>

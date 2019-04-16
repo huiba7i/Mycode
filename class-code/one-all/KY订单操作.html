@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			body {
+				font-size: 13px;
+				line-height: 25px;
+			}
+			table {
+				border-top: 1px solid #333;
+				border-left: 1px solid #333;
+				width: 400px;
+			}
+			td {
+				border-right: 1px solid #333;
+				border-bottom: 1px solid #333;
+				text-align: center;
+			}
+			.title {
+				font-weight: bold;
+				background-color: #cccccc;
+			}
+		</style>
+	</head>
+	<body>
+		<table border="0" cellspacing="0" cellpadding="0" id="order">
+			<tr class="title">
+				<td>商品名称</td>
+				<td>数量</td>
+				<td>价格</td>
+				<td>操作</td>
+			</tr>
+			<tr id="del1">
+				<td>防滑真皮休闲鞋</td>
+				<!--<input type="text" value="1002"/>-->
+				<td>12</td>
+				<td>&yen;568.50</td>
+				<td>
+					<input type="button" value="删除" onclick="delRow('del1')"/>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="4" style="height:30px;">
+					<input type="button" value="增加订单" onclick="addRow()" />
+				</td>
+			</tr>
+		</table>
+		
+		<script type="text/javascript">
+			function delRow(rowId){
+				//获取行索引
+				var rowI = document.getElementById(rowId).rowIndex;
+				document.getElementById("order").deleteRow(rowI);
+			}
+			function addRow(){
+				var tableOrder = document.getElementById("order");
+				var rowIn = tableOrder.rows.length - 1;
+				var newRow = tableOrder.insertRow(rowIn);
+				newRow.id = "del" + rowIn;
+				var cell0 = newRow.insertCell(0);
+				cell0.innerHTML = "新行" + rowIn;
+				var cell1 = newRow.insertCell(1);
+				cell1.innerHTML = "100" + rowIn;
+				var cell2 = newRow.insertCell(2);
+				cell2.innerHTML = "￥" + rowIn;
+				var cell3 = newRow.insertCell(3);
+				
+//				var w = "world";
+//				document.write("helloworldhello");
+//				document.write("hello"+w+"hello");
+//				document.write("hello "+w);
+				
+				//\   转义符
+				cell3.innerHTML = "<input type='button' value='删除' onclick=\"delRow('"+newRow.id+"')\"/>";
+				cell3.innerHTML += "<input type='button' value='修改' onclick=\"editRow('"+newRow.id+"')\"/>";
+			}
+			function editRow(id){
+				var cells = document.getElementById(id).cells;
+				var cellsText = cells[1].innerHTML;
+				cells[1].innerHTML = "<input type='text' value='"+cellsText+"'/>";
+				cells[3].lastChild.value = "确定";
+				cells[3].lastChild.setAttribute("onclick","ok('"+id+"')");
+			}
+			function ok(id){
+				var cells = document.getElementById(id).cells;
+//				alert(cells[1].firstChild.value);
+				cells[1].innerHTML = cells[1].lastChild.value;
+				if(isNaN(cells[1].innerHTML)){
+					alert("操作错误，请重试!");
+					cells[1].innerHTML = "<input type='text' value='"+cells[1].innerHTML+"'/>";
+				}else{
+					if(cells[1].innerHTML < 0){
+						alert("数量不能小于0");
+						cells[1].innerHTML = "<input type='text' value='"+cells[1].innerHTML+"'/>";
+					}else{
+						cells[3].lastChild.value = "修改";
+						cells[3].lastChild.setAttribute("onclick","editRow('"+id+"')");
+					}
+				}
+			}
+		</script>
+	</body>
+</html>

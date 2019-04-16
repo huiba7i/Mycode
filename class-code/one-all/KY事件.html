@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<!--
+			onclick    单击事件
+			onchange   改变内容
+			onmouseover   悬停事件
+		-->	
+		<input type="button" name="" id="" value="点击" onclick="btnFun()"/>
+		<script type="text/javascript">
+			function btnFun(){
+				console.log("button的点击事件");
+			}
+		</script>
+		
+		
+		<div id="divTest">
+			<input type="button" value="按钮" id="btnTest"/>
+		</div>
+		<script type="text/javascript">
+			function test(event){
+//				console.log("按钮的点击事件");
+				console.log(event.currentTarget);
+			}
+			//document.getElementById("btnTest")   事件目标
+			//addEventListener  标准事件
+				//事件类型     on去掉
+				//事件处理函数
+				//监听传播阶段       true捕获[顶级DOM对象到子级DOM对象]   false冒泡[子级DOM对象到顶级DOM对象]
+			document.getElementById("divTest").addEventListener("click",test,true);
+			document.getElementById("btnTest").addEventListener("click",test,true);
+			document.getElementById("divTest").addEventListener("click",test,false);
+			document.getElementById("btnTest").addEventListener("click",test,false);
+		</script>
+		
+		
+		<ul id="ulTest">
+			<li>111</li>
+			<li>222</li>
+			<li>333</li>
+			<li>444</li>
+			<li>555</li>
+		</ul>
+		<script type="text/javascript">
+			document.getElementById("ulTest").onclick = function(event){
+				//event.target   事件的点击对象
+				console.log(event.target.innerHTML);
+				//currentTarget  当前对象  ul
+				console.log(event.currentTarget.innerHTML);
+			}
+		</script>
+		
+		
+		<div id="aDivTest">
+			<a href="index.html" id="aTest">跳转</a>
+		</div>
+		<script type="text/javascript">
+			function aFun(ev){
+				//取消事件的默认行为    ev = event
+				ev.preventDefault();
+				//阻止事件传播
+				ev.stopPropagation();
+//				console.log("a标签");
+				console.log(ev.currentTarget);
+			}
+//			document.getElementById("aDivTest").addEventListener("click",aFun,true);
+//			document.getElementById("aTest").addEventListener("click",aFun,true);
+			document.getElementById("aDivTest").addEventListener("click",aFun,false);
+			document.getElementById("aTest").addEventListener("click",aFun,false);
+		</script>
+		
+		<input type="button" id="btn1" value="按钮1" />
+		<input type="button" id="btn2" value="按钮2" />
+		<script type="text/javascript">
+			function btn1Fun(){
+				console.log("按钮1");
+			}
+			function btn2Fun(){
+				console.log("按钮2");
+				//创建一个事件对象
+				var e = document.createEvent("Events");
+				//初始化普通事件
+				e.initEvent("click",true,false);
+				document.getElementById("btn1").dispatchEvent(e);
+			}
+			document.getElementById("btn1").addEventListener("click",btn1Fun,false);
+			document.getElementById("btn2").addEventListener("click",btn2Fun,false);
+		</script>
+	</body>
+</html>

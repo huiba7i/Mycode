@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style>
+			.submitBtn{
+				width: 91px;
+				height: 33px;
+				background: url(img/reg_submit.jpg) no-repeat;
+				border-width: 0;
+			}
+		</style>
+		
+		<script>
+			function $(id){
+				return document.getElementById(id);
+			}
+			function checkReg(){
+				// 校验
+				var flag = true;
+				// 手动提交表单,调用表单的submit()方法
+				if(flag){
+					$('regForm').submit();
+//					document.regForm.submit();
+//					document.forms['regForm'].submit();
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<form action="regSuccess.html" id="regForm" name="regForm">
+			账号:<input type="text" /><br />
+			密码:<input type="password" /><br />
+			确认密码:<input type="password" /><br />
+			<input type="button" class="submitBtn" onclick="checkReg()"/> 
+		</form>
+	</body>
+</html>

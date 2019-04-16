@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		
+		<style>
+			.one,.two{
+				width:200px;height: 150px;
+				border:1px solid red;
+				float:left;
+				margin-right:100px;
+			}
+		</style>
+		
+		<script type="text/javascript" src="js/drag.js" ></script>
+	</head>
+	<body>
+		<input type="button" value="点击按钮触发事件" onclick="clickBtn(event)" />
+		
+		<div class="one" ondragover="allowDrag(event)" ondrop="drop(event)">
+			<img src="img/smile.jpg" width="100" id="drag" ondragstart="startDrag(event)"/>
+		</div>
+		
+		<div class="two" ondrop="drop(event)" ondragover="allowDrag(event)"></div>
+	</body>
+</html>

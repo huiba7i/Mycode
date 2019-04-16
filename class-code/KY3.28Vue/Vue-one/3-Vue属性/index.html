@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>v-bind设置html元素的属性</title>
+  <style>
+    .active{
+      background-color: green;
+      color: #fff;
+    }
+    .indent{
+      text-indent: 2em;
+    }
+  </style>
+</head>
+<body>
+  <div id="app">
+    <img v-bind:src="imgUrl" alt="">
+    <img v-bind:src="'./img/'+imgName" alt="">
+
+    <a :href="aowinUrl" target="_blank">和盈</a>
+
+    <!-- 设置标记的class属性 v-bind可省 -->
+    <!-- (1)使用对象: 当isActive为真时应用class属性active -->
+    <p v-bind:class="{active:isActive, indent:isIndent}">This is paragraph</p>
+    <!-- (2)使用数组: class属性值为数据模型中变量 -->
+    <p :class="activeClass">p1p1p1pp11p1pp1p11pp1p1</p>
+    <p :class="[activeClass, indentClass]">p2p2pp2p22pp2pp22p2p22</p>
+
+    <!-- 设置标记的style属性 -->
+    <!-- (1)使用对象:给style属性传递一个对象,css属性名称使用驼峰命名或短横线 -->
+    <p :style="{color:redColor, 'font-size':font+'px'}">修改标记的style属性</p>
+    <p :style="{color:redColor, fontSize:font+'px'}">修改标记的style属性</p>
+    <p :style="styleObj">修改标记的style属性</p>
+    <!-- (2)使用数组:将多个对象应用到一个元素 -->
+    <p :style="[styleObj, fontObj]">修改标记的style属性</p>
+  </div>
+  <script src="js/vue2.5.17.js"></script>
+  <script>
+  let vm = new Vue({
+    el: '#app',
+    data: {
+      imgUrl: './img/hc.png',
+      imgName: 'hc.png',
+      isActive: true,
+      isIndent: true,
+      activeClass: 'active',
+      indentClass: 'indent',
+      redColor: '#f00',
+      font: 20,
+      styleObj: {
+        color: '#f00',
+        'font-size': '20px'
+      },
+      fontObj:{
+        fontFamily: '华文彩云'
+      },
+      aowinUrl: '//www.aowin.com'
+    }
+  });
+  </script>
+</body>
+</html>

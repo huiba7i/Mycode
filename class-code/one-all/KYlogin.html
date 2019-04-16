@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			function check(){
+				// 获得用户输入的账号和密码
+				var accInput = document.getElementById("account");
+				var acc = accInput.value;
+				var errMsg = document.getElementById("errors");
+				if(acc==''){
+//					alert("账号不能为空");
+					accInput.className = 'err';
+					errMsg.innerHTML = '账号不能为空';
+					return false;
+				}
+				
+				var pwdInput = document.getElementById("password");
+				var pwd = pwdInput.value;
+				if(pwd==''){
+					errMsg.innerHTML = '密码不能为空';
+					pwdInput.className = 'err';
+					return false;
+				}
+				return true;
+			}
+			
+			function getFocus(input){
+				input.className = '';
+			}
+		</script>
+		<style>
+			dl{
+				margin:0px;
+				width:400px;
+				height: 40px;
+				line-height: 40px;
+			}
+			dt{
+				width: 100px;
+				text-align: right;
+			}
+			dd{
+				width:200px;
+				height: 35px;
+				margin-left:10px;
+			}
+			dt,dd{
+				float:left;
+			}
+			.msg-error{
+				font-size: 13px;
+				color:red;
+			}
+			.err{
+				border:2px solid red;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- 给表单添加onsubmit事件,如果返回为true,则提交表单;否则不提交 -->
+		<form action="success.html" onsubmit="return check()">
+			<dl>
+				<dt>Email账号:</dt>
+				<dd>
+					<input type="text" id="account" onfocus="getFocus(this)" />
+				</dd>
+			</dl>
+			<dl>
+				<dt>密码:</dt>
+				<dd><input type="password" id="password" onfocus="getFocus(this)"  /></dd>
+			</dl>
+			<div class="msg-error" id="errors">
+				
+			</div>
+			<input type="submit" value="登录" />
+		</form>
+	</body>
+</html>

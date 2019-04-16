@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="css/registe.css" />
+		<script type="text/javascript" src="js/regi.js" ></script>
+	</head>
+	<body>
+		<h2>注册</h2>
+		<form action="regSuccess.html" onsubmit="return checkRegiste()">
+			<dl>
+				<dt><span class="require">*</span>Email账号:</dt>
+				<dd>
+					<input type="text" id="account" onblur="checkAccount()" onfocus="getFocus(this)"/>
+					<span id="accSpan"></span>
+					<div class="promp">
+						以字母开头,由数字,字母,下划线组成,必须包含@和.,长度为3~18位
+					</div>
+				</dd>
+			</dl>
+			<dl>
+				<dt><span class="require">*</span>密码:</dt>
+				<dd>
+					<input type="password" id="password" onblur="checkPassword()" onfocus="getFocus(this)" />
+					<span id="pwdSpan"></span>
+					<div class="promp">
+						由数字,字母,特殊符号组成,不能是纯数字,长度至少为6位
+					</div>
+				</dd>
+			</dl>
+			<dl>
+				<dt><span class="require">*</span>确认密码:</dt>
+				<dd><input type="password" id="confirmPwd" onblur="checkConfirmPwd()" onfocus="getFocus(this)" />
+				<span id="conPwdSpan"></span>
+				</dd>
+			</dl>
+			<dl>
+				<dt><span class="require">*</span>您的姓名:</dt>
+				<dd>
+					<input type="text" id="name" onfocus="getFocus(this)" />
+					<div class="promp">只能是字母</div>
+				</dd>
+			</dl>
+			<dl>
+				<dt><span class="require">*</span>性别:</dt>
+				<dd>
+					<input type="radio" id="man" name="sex" checked="checked"/>男
+					<input type="radio" id="woman" name="sex" />女
+				</dd>
+			</dl>
+			<dl>
+				<dt>&nbsp;</dt>
+				<dd><input type="submit" value="注册"/></dd>
+			</dl>
+			
+		</form>
+	</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			.content{
+				width:600px;
+				height: 150px;
+				border:1px solid black;
+			}
+			.item{
+				width:80px;height: 50px;
+				background-color: #999;
+				color: #fff;
+				margin-right:10px;
+				float:left;
+				text-align: center;
+				line-height: 50px;
+			}
+			.collect{
+				width:500px;
+				height: 300px;
+				border: 1px solid black;
+				float: left;
+			}
+			.rabbish{
+				width:100px;
+				height: 100px;
+				border: 1px solid black;
+				float: left;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="content">
+			<h2>可将你喜欢的项目拖进收藏夹</h2>
+			<div class="text">
+				<div class="item" id="item1" draggable="true" ondragstart="dragStart(event)" ondragover="allowDrag(event)">项目1</div>
+				<div class="item" id="item2" draggable="true" ondragstart="dragStart(event)" ondragover="allowDrag(event)">项目2</div>
+				<div class="item" id="item3" draggable="true" ondragstart="dragStart(event)" ondragover="allowDrag(event)">项目3</div>
+				<div class="item" id="item4" draggable="true" ondragstart="dragStart(event)" ondragover="allowDrag(event)">项目4</div>
+				<div class="item" id="item5" draggable="true" ondragstart="dragStart(event)" ondragover="allowDrag(event)" >项目5</div>
+			</div>
+		</div>
+		<div class="collect" ondragover="allowDrag(event)" ondrop="drop(event)" id="collectDiv">
+			<h2>收藏夹</h2>
+		</div>
+		<div class="rabbish" ondragover="allowDrag(event)" ondrop="delItem(event)">
+			<span>垃圾桶</span>
+		</div>
+		
+		<script type="text/javascript" src="work.js" ></script>
+	</body>
+</html>

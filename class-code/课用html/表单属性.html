@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<!--novalidate 提交表单时不验证表单元素-->
+		<!--<form action="table.html" method="get" name="myform" novalidate="novalidate">-->
+		<form action="table.html" method="get" name="myform">
+			<!--
+			autocomplete   on默认会有自动完成的功能    off不会
+			autofocus  自动获取焦点
+			-->
+			<input type="text" autocomplete="on" autofocus="autofocus"/>
+			<!--placeholder 输入提示性值-->
+			<input type="text" placeholder="请输入用户名"/>
+			<input type="text" value="请输入用户名"/>
+			<!--required  要求字段不能为空-->
+			<input type="text" required="" placeholder="username"/>
+			<!--multiple 文件域中可选多个值-->
+			<input type="file" multiple="multiple"/>
+			<input type="email" />
+			
+			<input type="submit" value="提交"/>
+			<!--formaction  重写提交的页面-->
+			<input type="submit" value="提交" formaction="top.html" formtarget="_blank"/>
+		</form>
+		<form action="" method="post">
+			<input type="text" />
+			<input type="submit" value="提交"/>
+		</form>
+	</body>
+</html>

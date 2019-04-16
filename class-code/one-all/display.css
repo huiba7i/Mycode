@@ -1,0 +1,27 @@
+.top{
+	width: 200px;
+	height: 100px;
+	background-color: red;
+	/* 以行级元素显示,前后不折行 */
+	/*display: inline;*/
+	
+	/* 以块元素显示,但不折行 */
+	display: inline-block;
+	
+	/* 只针对inline元素有效,控制周围的兄弟元素与该元素垂直方向的对齐方式middle,top,bottom */
+	/*vertical-align: middle;*/
+	
+	/* 元素隐藏,不占用页面空间 */
+	/*display: none;*/
+	
+	/* 元素可见 */
+	/*visibility: visible;*/
+	/* 元素不可见,但占用页面空间 */
+	/*visibility: hidden;*/
+}
+.art{
+	width: 300px;
+	height: 200px;
+	background-color: blue;
+	display:inline-block;
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<!--
+		video 视频
+		controls  显示视频的所有控件-->
+		<video width="400px" controls>
+			<!--
+			source  视频资源加载   src 加载的url
+			type  播放视频的格式
+			-->
+			<source src="1.mp4" type="video/mp4"></source>
+		</video>
+		
+		<script>
+			//获取video标签
+			var v = document.getElementsByTagName("video")[0];
+			function funA(){
+				//是否静音
+				v.muted = !v.muted;
+			}
+		</script>
+		
+		<!--对标签进行播放操作-->
+		<a href="javascript:v.play()">播放</a>
+		<!--视频暂停操作-->
+		<a href="javascript:v.pause()">暂停</a>
+		<!--视频是否静音-->
+		<a href="javascript:funA()">是否静音</a>
+		
+		<!--audio音频-->
+		<audio width="200px" height="30px" controls="controls">
+			<!--<source></source>-->
+			<source src="bgg.mp3" type="audio/mp3"/>
+		</audio>
+	</body>
+</html>

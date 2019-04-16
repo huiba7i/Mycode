@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <table border="1" width="600" cellspacing="0">
+    <!-- 表头 -->
+    <thead>
+      <tr>
+        <th>姓名</th>
+        <th>基础1</th>
+        <th>基础2</th>
+        <th>函数</th>
+        <th>对象</th>
+      </tr>
+    </thead>
+    <!-- 表格的主体内容 -->
+    <tbody>
+      <tr>
+        <td>张三</td>
+        <td>100</td>
+        <td>100</td>
+        <td>90</td>
+        <td>80</td>
+      </tr>
+      <tr>
+        <td>李四</td>
+        <td>100</td>
+        <td>100</td>
+        <td>90</td>
+        <td>80</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <hr>
+  <table border="1" width="600" cellspacing="0" id="homeworkTab">
+    <tr>
+      <th>姓名</th>
+      <th>基础1</th>
+      <th>基础2</th>
+      <th>函数</th>
+      <th>对象</th>
+    </tr>
+    <tr>
+      <td>张三</td>
+      <td>100</td>
+      <td>100</td>
+      <td>90</td>
+      <td>80</td>
+    </tr>
+    <tr>
+      <td>李四</td>
+      <td>100</td>
+      <td>100</td>
+      <td>90</td>
+      <td>80</td>
+    </tr>
+  </table>
+  <button onclick="addTr()">添加行</button>
+  <button onclick="deleteTr()">删除行</button>
+  <button onclick="getTdText()">获得单元格的内容</button>
+  <button onclick="updateTdText()">修改单元格的内容</button>
+
+  <script src="js/table.js"></script>
+</body>
+
+</html>
