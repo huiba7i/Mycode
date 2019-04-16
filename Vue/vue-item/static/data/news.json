@@ -1,0 +1,29 @@
+{
+	"date": "2019年04月09日",
+	"stories": [
+		{
+			"images": "v2-6d524c337d7e002fadec9ea2bbc0ae90.jpg",
+			"type": 0,
+			"id": 9710047,
+			"ga_prefix": "040909",
+			"title": "为什么如今越来越多的人喜欢独处？",
+			"num":1
+		},
+		{
+			"images": "v2-01fe9f4a8a441708da0e1d54c3654e7d.jpg",
+			"type": 0,
+			"id": 9709933,
+			"ga_prefix": "040907",
+			"title": "年轻人在被学校和公司压榨上，为什么看起来会如此相似？",
+			"num":2
+		},
+		{
+			"images": "v2-ecde27b4bfde8bd59d554bf8647334ce.jpg",
+			"type": 0,
+			"id": 9709987,
+			"ga_prefix": "040906",
+			"title": "瞎扯 · 如何正确地吐槽",
+			"num":3
+		}
+	]
+}
