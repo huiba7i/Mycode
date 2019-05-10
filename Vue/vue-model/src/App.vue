@@ -1,8 +1,8 @@
 <template>
   <div id="app">
+    <img src="./assets/logo.png">
+    <Button type="button">组件</Button>
     <router-view/>
-    <router-link to="Car">Carousel</router-link>
-    <router-link to="/">homepage</router-link>
   </div>
 </template>
 
