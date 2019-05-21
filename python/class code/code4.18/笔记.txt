@@ -1,0 +1,24 @@
+1.python版本
+
+    python编程模式
+        交互式编程
+            打开命令行窗口 直接输入python回车 即进入交互式编程模式
+        脚本式编程
+            新建文本文件以.py结尾
+            运行时 打开命令行窗口 进入到python脚本文件所在的目录 python *.py
+        IDE 集成开发工具
+
+2.基本语法结构
+3.基本数据类型
+    Number 数字类型
+        int整数、float浮点数、bool（True 1 /False 0）、complex复数 a+bj(j=-1的平方根)
+    String 字符串类型 
+        '' 或者 ""
+    List 有序列表
+    Tuple 元组
+    Set 无序集合
+    Directionary 字典（json）
+    
+
+4.运算符
+5.简单的输入输出的方法

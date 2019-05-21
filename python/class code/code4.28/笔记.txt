@@ -1,0 +1,20 @@
+复习
+    mysql
+    
+    create table
+    
+    insert
+    update 
+    delete 
+    
+    select
+    from
+    
+    where
+    group by
+    having
+    order by
+    limit
+    
+    
+python mysql

@@ -1,0 +1,29 @@
+复习
+    多线程
+        _thread 
+        
+        threading模块 Thread类
+        直接创建Thread对象 传入需要在多线程中执行的函数对象 和参数
+        自定义类 继承 Thread 重写run方法 将需要在多线程中运行的程序 写在run方法中
+        
+        启动线程 .start()
+        
+        
+        线程同步
+            Lock对象
+            Condition对象
+            
+            
+MySQL 数据库
+
+    mysql数据库 默认用户名root 密码 安装时候指定的密码
+    
+    mysql中 又分为很多个库database的 database -> table
+    
+    
+
+    
+    SQL语句
+    建表
+    表的操作 insert delete update select
+    

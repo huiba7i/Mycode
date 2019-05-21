@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>register</title>
+    <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+<div class="container" style="width: 50%;">
+    <h2 class="text-center">注册中心</h2>
+    <form class="form-horizontal">
+        <div class="form-group">
+            <label for="username" class="col-sm-2 control-label">用户名</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="username" placeholder="请输入用户名">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="userpwd" class="col-sm-2 control-label">密码</label>
+            <div class="col-sm-10">
+                <input type="password" class="form-control" id="userpwd" placeholder="请输入密码">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label">性别</label>
+            <div class="col-sm-10">
+                <!--<input type="text" class="form-control" id="usersex" placeholder="请输入性别">-->
+                <label class="sex">男</label> <input type="radio" class="usersex" name="usersex">
+                <label class="sex">女</label> <input type="radio" class="usersex" name="usersex">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="usertel" class="col-sm-2 control-label">电话</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="usertel" placeholder="请输入电话">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <button id="reg_btn" type="button" class="btn btn-primary btn-block">注册</button>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <a href="login.html" class="btn btn-success btn-block">已有账号？前往登录</a>
+            </div>
+        </div>
+    </form>
+</div>
+</body>
+<script src="js/jquery-3.2.1.min.js"></script>
+<script>
+    $(function () {
+        $("#reg_btn").click(function () {
+
+            for(var i = 0;i< $(".sex").length;i++){
+                if ($(".usersex")[i].checked == true){
+                    var usersex = $(".sex")[i].innerText
+                }
+            }
+            var username = $("#username").val();
+            var userpwd = $("#userpwd").val();
+            var usertel = $("#usertel").val();
+            var params = {
+                "username": username,
+                "userpwd": userpwd,
+                "usersex": usersex,
+                "usertel": usertel
+            };
+            if (username == "" || userpwd == "" || usersex == "" || usertel == "") {
+                alert("请将信息填写完整");
+            } else if (!(/^[a-zA-Z\d_\u4e00-\u9fa5]{3,10}$/).test(username)) {
+                alert("用户名必须3-10个中文字符、英文字母、数字及下划线");
+            } else if (!(/^[a-zA-Z_[0-9]{6,10}$/).test(userpwd)) {
+                alert("密码必须不能含有非法字符，长度在6-10之间");
+            } else if (!(/^[1]\d{10}$/).test(usertel)) {
+                alert("手机号只能是数字11位,且首位必须为1");
+            } else {
+                $.post("cgi-bin/register.py", params, function (data) {
+                    if (data == "success") {
+                        alert("注册成功")
+                        $(":input[type='text']").val("")
+                        $(":input[type='password']").val("")
+                        for(var i = 0;i< $(".sex").length;i++){
+                            $(".usersex")[i].checked = false
+                        }
+                    } else if (data == "fail") {
+                        alert("注册失败,用户已存在！")
+                    } else if (data == "error") {
+
+                    }
+                })
+            }
+        })
+    })
+</script>
+</html>

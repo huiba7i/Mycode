@@ -1,0 +1,152 @@
+.login-content{
+	width: 960px;
+	height: 456px;
+	margin: 0 auto;
+	position: relative;
+}
+.top{
+	height: 70px;
+}
+.top-imgs{
+	float: left;
+	width: 300px;
+	padding: 22px 0px 0px 50px
+}
+.fast-nav{
+	float: right;
+	padding: 40px 20px 0 0;
+}
+.fast-nav a {
+    color: #1B65B1;
+}
+.big-bg{
+	height: 226px;
+}
+.right-img{
+	float: right;
+}
+.login{
+	width: 320px;
+	height: 350px;
+	padding-top: 10px;
+	border: 1px solid #656565;
+	position: absolute;
+	top:70px;
+	right: 73px;
+	background-color: #fff;
+}
+.login h3{
+	height: 31px;
+	border-bottom: 5px solid #FEEACA;
+}
+.login h3 span{
+	display: inline-block;
+	width:31px;
+	height:31px;
+	margin-left: 10px;
+	background: url(../images/login_icon_bg_01.gif) no-repeat -302px -28px;
+}
+.login h3 p{
+	display: inline-block;
+	position: relative;
+	top: -6px;
+    left: 5px;
+}
+dl{
+	width: 100%;
+	height: 50px;
+}
+dl:nth-child(2){
+	margin-top: 25px;
+}
+dt,dd{
+	float:left;
+}
+dt{
+	width: 110px;
+	height: 20px;
+	line-height: 20px;
+	text-align: right;
+	font-size: 13px;
+}
+
+dd span{
+	display: inline-block;
+	width: 15px;
+	height: 15px;
+}
+.addBg{
+	background: url(../images/register_write_ok.gif) no-repeat center center;
+}
+#username,
+#password{
+	height: 20px;
+}
+.tips{
+	padding-top: 2px;
+	height: 23px;
+	color: red;
+}
+.erro-border{
+	border:1px solid red;
+}
+.login_btn{
+	width: 79px;
+	height: 29px;
+	background: url(../images/login_icon_bg_01.gif) no-repeat -78px -30px;
+}
+.login_btn:hover{
+	cursor: pointer;
+}
+.fast_register{
+	width: 280px;
+    height: 115px;
+    line-height: 23px;
+    margin-left: 5px;
+    padding: 15px 15px 0 15px;
+    border-top: 1px dotted #CCCCCC;
+    background: linear-gradient(#FDF6DD,#fff);
+}
+.fast_register span{
+	font-weight: bold;
+}
+.register_btn{
+	padding: 10px 0 0 126px;
+}
+.register_btn img:hover{
+	cursor: pointer;
+}
+.information{
+	margin-top: 20px;
+	width: 580px;
+	height: 140px;
+}
+.information h4{
+	padding: 2px 0 3px 10px
+}
+.information .one{
+	float: left;
+	width: 180px;
+	height: 100px;
+	border-right: 1px dotted #000;
+}
+.information .one p,
+.information .last p{
+	padding: 0 10px;
+	height: 25px;
+	line-height: 25px;
+	text-align: justify;
+}
+.information .last{
+	float: left;
+	width: 180px;
+	height: 100px;
+}
+.footer{
+	width: 960px;
+	height: 60px;
+	margin: 0 auto;
+}
+.footer p{
+	padding: 5px 0px 5px 170px
+}

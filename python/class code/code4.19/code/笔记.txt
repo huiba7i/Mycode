@@ -1,0 +1,25 @@
+复习
+    基本语法
+    基本数据类型
+        Number（int float bool complex）
+        String "" ''
+        List [1, 2]
+        Set {1, 2} Number String Tuple
+        Tuple (1, 2)
+        Directionary {"key": "value",....}
+    运算符
+        算术运算符
+        关系运算符 
+        位运算符
+        逻辑运算符 and or not
+        
+结构控制语句
+    分支
+        if : elif : else:
+    循环
+        while
+        
+    函数
+    模块
+        
+    

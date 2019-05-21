@@ -1,0 +1,33 @@
+body,
+ul,
+ol,
+li,
+p,
+div,
+h2,
+h3,
+h4,
+dl,
+dd,
+dt,
+input,
+span,
+form,
+img{
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-size: 12px;
+}
+
+a {
+	color: #000;
+	text-decoration: none;
+}
+
+ul,
+ol {
+	list-style-type: none;
+}

@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>index</title>
+    <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet"/>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script>
+        function goPage(current_page) {
+            var name = $.trim($("#name").val());
+            var province = $.trim($("#province").val());
+            var city = $.trim($("#city").val());
+            var address = $.trim($("#address").val());
+            var zip = $.trim($("#zip").val());
+            var startDay = $.trim($("#startDay").val());
+            var endDay = $.trim($("#endDay").val());
+            var params = {
+                "name": name,
+                "province": province,
+                "city": city,
+                "address": address,
+                "zip": zip,
+                "startDay": startDay,
+                "endDay": endDay,
+                "pageNum": current_page
+            }
+            $.post("cgi-bin/list.py", params,function(data){
+                if(data == "error"){
+                    alert("服务端异常");
+                }else{
+                    //将后端响应过来的数据中的单引号都换成双引号
+                    data = data.replace(/'/g, '"');
+                    console.log(data);
+                    data = JSON.parse(data);
+                    var users = data.list;
+                    var table = $("#users").get(0);
+                    var pageNum = data.current_page;
+                    var total_page = data.total_page;
+                    $("#current_page").text(current_page);
+                    $("#total_page").text(data.total_page);
+
+                    if(current_page == 1){
+                        $("#firstPage").attr("disabled", true);
+                        $("#prePage").attr("disabled", true);
+                    }else{
+                        $("#firstPage").attr("disabled", false);
+                        $("#prePage").attr("disabled", false);
+                        $("#prePage").attr("onclick","goPage("+(current_page-1)+")")
+                    }
+
+                    if(current_page == total_page || total_page == 0){
+                        $("#lastPage").attr("disabled", true);
+                        $("#nextPage").attr("disabled", true);
+                    }else{
+                        $("#lastPage").attr("disabled", false);
+                        $("#nextPage").attr("disabled", false);
+                        $("#lastPage").attr("onclick", "goPage("+total_page+")");
+                        $("#nextPage").attr("onclick","goPage("+(parseInt(current_page)+1)+")")
+                    }
+                    for(var i=table.rows.length-1;i>=1;i--){
+                        table.deleteRow(i);
+                    }
+                    for(var i=0;i<users.length;i++){
+                        var tr = table.insertRow(-1);
+                        $(tr).attr("id",users[i].id)
+                        tr.insertCell(0).innerHTML = users[i].id;
+                        tr.insertCell(1).innerHTML = users[i].name;
+                        tr.insertCell(2).innerHTML = users[i].province;
+                        tr.insertCell(3).innerHTML = users[i].city;
+                        tr.insertCell(4).innerHTML = users[i].address;
+                        tr.insertCell(5).innerHTML = users[i].zip;
+                        tr.insertCell(6).innerHTML = users[i].date;
+                        tr.insertCell(7).innerHTML = "<input class='btn btn-info' type='button' onclick='editUser("+ users[i].id +")' value='修改'/>" +
+                            "<input style='margin-left: 10px' class='btn btn-danger' type='button' onclick='delUser("+ users[i].id +")' value='删除'/>";
+                    }
+                }
+            })
+        }
+        /**
+         * 点击新增用户
+         */
+        function addUser(){
+            $("#opt :input[type!=button]").val("");
+            $("#title").text("新增用户");
+            $("#opt").show();
+        }
+    </script>
+    <style>
+        #opt{
+            border:1px solid #cccccc;
+            padding: 20px;
+            display: none;
+        }
+        @media (min-width: 768px){
+             .line{
+                 float: left;
+            }
+        }
+        #opt label{
+            width: 90px;
+        }
+        #query label{
+            height: 29px;
+            line-height: 29px;
+        }
+        .form-group{
+            width: 250px;
+            text-align: left;
+        }
+        .col-sm-1,.col-sm-pull-2,.col-sm-2{
+            padding-left: 0;
+        }
+    </style>
+</head>
+<body onload="goPage(1)">
+    <div class="container">
+        <h2 class="text-center">登录成功！</h2>
+        <div id="test" style="margin-top: 35px"></div>
+        <div id="query">
+            <div class="row">
+                <div class="col-sm-2 col-sm-push-9">
+                    <input type="button" class="btn btn-success" value="查询" onclick="goPage(1)" />
+                    <input class="btn btn-warning" type="button" value="添加用户" onclick="addUser()"/>
+                </div>
+                <div class="col-sm-1 col-sm-pull-2 text-right">
+                    <label for="name">username:</label>
+                </div>
+                <div class="col-sm-2 col-sm-pull-2">
+                    <input type="text" id="name" class="form-control">
+                </div>
+                <div class="col-sm-1 col-sm-pull-2 text-right">
+                    <label for="province">province:</label>
+                </div>
+                <div class="col-sm-2 col-sm-pull-2">
+                    <input type="text" id="province" class="form-control">
+                </div>
+                <div class="col-sm-1 col-sm-pull-2 text-right">
+                    <label for="city">city:</label>
+                </div>
+                <div class="col-sm-2 col-sm-pull-2">
+                    <input type="text" id="city" class="form-control">
+                </div>
+            </div>
+            <div class="row" style="margin-top:30px;">
+                <div class="col-sm-1 text-right">
+                    <label for="address">address:</label>
+                </div>
+                <div class="col-sm-2">
+                    <input type="text" id="address" class="form-control">
+                </div>
+                <div class="col-sm-1 text-right">
+                    <label for="zip">zip:</label>
+                </div>
+                <div class="col-sm-2">
+                    <input type="text" id="zip" class="form-control">
+                </div>
+                <div class="col-sm-1 text-right">
+                    <label for="name">datestart:</label>
+                </div>
+                <div class="col-sm-2">
+                    <input type="date" id="startDay" class="form-control">
+                </div>
+                <div class="line text-right">
+                    <label>to：</label>
+                </div>
+                <div class="col-sm-2">
+                    <input type="date" id="endDay" class="form-control">
+                </div>
+            </div>
+        </div>
+        <hr style="margin: 50px 0">
+
+        <div id="opt" style="margin-bottom: 20px">
+            <h2 id="title" class="text-center">添加新用户</h2>
+            <input type="hidden" id="id"/>
+            <form class="form-inline text-center">
+              <div class="form-group">
+                <label for="name_">username</label>
+                <input type="text" class="form-control" id="name_" placeholder="请输入用户名">
+              </div>
+              <div class="form-group">
+                <label for="province_">province</label>
+                <input type="text" class="form-control" id="province_" placeholder="请输入省份">
+              </div>
+              <div class="form-group">
+                <label for="city_">city</label>
+                <input type="text" class="form-control" id="city_" placeholder="请输入城市">
+              </div>
+            </form>
+            <p></p>
+            <form class="form-inline text-center">
+              <div class="form-group">
+                <label for="address_">address</label>
+                <input type="text" class="form-control" id="address_" placeholder="请输入地址">
+              </div>
+              <div class="form-group">
+                <label for="zip_">zip</label>
+                <input type="text" class="form-control" id="zip_" placeholder="请输入邮编">
+              </div>
+              <div class="form-group">
+                <label for="date">birthday</label>
+                <input type="date" class="form-control" id="date" placeholder="请选择出生日期">
+              </div>
+            </form>
+            <br/>
+            <div class="text-center" style="padding-bottom: 10px">
+                <input class="btn btn-info" type="button" value="保存" id="save"/>
+                <input class="btn btn-danger" type="button" value="关闭" id="closed"/>
+            </div>
+        </div>
+
+        <div class="main">
+            <h3 class="text-center">用户列表</h3>
+            <p class="text-right">
+
+            </p>
+            <div class="table-responsive">
+                <table id="users" class="table table-bordered text-center">
+                    <tr class="t_title success">
+                        <th class="text-center">id</th>
+                        <th class="text-center">username</th>
+                        <th class="text-center">province</th>
+                        <th class="text-center">city</th>
+                        <th class="text-center">address</th>
+                        <th class="text-center">zip</th>
+                        <th class="text-center">birthday</th>
+                        <th class="text-center">operate</th>
+                    </tr>
+                </table>
+            </div>
+            <div class="text-center">
+                当前第<span id="current_page"></span>页
+                <input class="btn btn-default btn-sm" type="button" value="首页" id="firstPage" onclick="goPage(1)"/>
+                <input class="btn btn-default btn-sm" type="button" value="上一页" id="prePage"/>
+                <input class="btn btn-default btn-sm" type="button" value="下一页" id="nextPage"/>
+                <input class="btn btn-default btn-sm" type="button" value="末页" id="lastPage"/>
+                共<span id="total_page"></span>页
+            </div>
+        </div>
+        <p></p>
+
+    </div>
+
+</body>
+<script>
+    $(function () {
+        $("#save").click(function () {
+            var name = $.trim($("#name_").val());
+            var province = $.trim($("#province_").val());
+            var city = $.trim($("#city_").val());
+            var address = $.trim($("#address_").val());
+            var zip = $.trim($("#zip_").val());
+            var date = $.trim($("#date").val());
+            var params = {
+                    "name": name,
+                    "province": province,
+                    "city": city,
+                    "address": address,
+                    "zip": zip,
+                    "date": date
+            };
+
+            var patt = /^[a-zA-Z\d_\u4e00-\u9fa5]{2,10}$/;
+            if(name=="" || province==""||city=="" || address=="" || zip=="" || date==""){
+                alert("请将信息填写完整！！！")
+            }else if(!patt.test(name)){
+                alert("用户名格式错误")
+            }else if(!(/^\d{6}$/).test(zip)){
+                alert("邮编格式错误，只能是6位数字！！！")
+            }
+            else {
+                $.post("cgi-bin/insert.py", params, function (data) {
+                    if (data == "success") {
+                        alert("添加成功");
+                        window.location.reload()
+                        $(":input[type='text']").val("")
+                        $("#date").val("")
+
+
+                    } else if (data == "fail") {
+                        alert("添加失败");
+                    } else if (data == "error") {
+                        alert("服务器发生错误");
+                    }
+                });
+            }
+        });
+        // 关闭新增窗口
+        $("#closed").click(function () {
+            $(this).parent().parent().slideUp()
+        })
+    })
+</script>
+<script>
+    function delUser(id) {
+            var params = {
+                "id": id
+            };
+            if(confirm("确定删除吗？")){
+                $.post("cgi-bin/delete.py", params, function (data) {
+                    if(data == "fail"){
+                        alert("该用户不存在，删除失败")
+                    }else if(data == "error"){
+                        alert("服务器发生错误")
+                    }
+                    else if(data == "success"){
+                        alert("删除成功")
+                        window.location.reload()
+                    }
+                })
+            }
+        }
+    function editUser(id) {
+        var col = document.getElementById(id).cells;
+        var text = col[1].innerHTML;
+        col[1].innerHTML = "<input type='text' value='" + text + "' style='width: 80px' />";
+        col[2].innerHTML = "<input type='text' value='" + col[2].innerHTML + "' style='width: 80px' />";
+        col[3].innerHTML = "<input type='text' value='" + col[3].innerHTML + "' style='width: 80px'/>";
+        col[4].innerHTML = "<input type='text' value='" + col[4].innerHTML + "' style='width: 80px'/>";
+        col[5].innerHTML = "<input type='text' value='" + col[5].innerHTML + "' style='width: 80px'/>";
+        col[6].innerHTML = "<input type='text' value='" + col[6].innerHTML + "' style='width: 80px'/>";
+        col[7].firstChild.value = "确定";
+        col[7].firstChild.setAttribute("onclick", "confirmRow('" + id + "')");
+    }
+    function confirmRow(rowid) {
+        var col = document.getElementById(rowid).cells;
+            var name = col[1].firstChild.value;
+            var province = col[2].firstChild.value
+            var city = col[3].firstChild.value
+            var address = col[4].firstChild.value
+            var zip = col[5].firstChild.value
+            var date = col[6].firstChild.value
+            var params = {
+                "id":rowid,
+                "name": name,
+                "province": province,
+                "city": city,
+                "address": address,
+                "zip": zip,
+                "date": date
+            };
+            var patt = /^[a-zA-Z\d_\u4e00-\u9fa5]{2,10}$/;
+            var patt2 = /^\d{6}$/;
+            var patt3 = /^(\d{4})-(\d{2})-(\d{2})$/
+            if(name=="" || province==""||city=="" || address=="" || zip=="" || date==""){
+                alert("请将信息填写完整！！！")
+            }else if(!patt.test(name)){
+                alert("修改后用户名格式错误！！！")
+            }else if(!patt2.test(zip)){
+                alert("邮编格式错误，只能是6位数字！！！")
+            }
+            else if(!patt3.test(date)){
+                alert("日期格式错误！！！")
+            }
+            else{
+               $.post("cgi-bin/update.py", params, function (data) {
+                  if(data == "success"){
+                      alert("修改成功");
+                      col[1].innerHTML=name
+                      col[2].innerHTML=province
+                      col[3].innerHTML=city
+                      col[4].innerHTML=address
+                      col[5].innerHTML=zip
+                      col[6].innerHTML=date
+                      col[7].firstChild.value = "修改";
+                      col[7].firstChild.setAttribute("onclick", "editUser('" + rowid + "')");
+                  }else if(data == "fail"){
+                      alert("不存在用户编号，更新失败");
+                  }else if(data == "error"){
+                      alert("服务器发生错误");
+                  }
+               })
+            }
+    }
+</script>
+</html>

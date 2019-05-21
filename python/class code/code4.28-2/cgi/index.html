@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>学生信息</title>
+    <link rel="stylesheet" href="/css/style.css"/>
+    <script src="/js/jquery-3.2.1.min.js"></script>
+    <script>
+        function goPage(pageNum){
+            var stuname = $("#stuname").val();
+            var startDay = $("#startDay").val();
+            var endDay = $("#endDay").val();
+
+            params = {
+                "pageNum": pageNum,
+                "stuname": stuname,
+                "startDay": startDay,
+                "endDay": endDay
+
+            }
+            $.post("/cgi-bin/student_list.py",params,function(data){
+                if(data.status){
+                    location.href = "/login.html";
+                    return;
+
+                }
+                var status = data.status
+                var stus = data.data;
+                var students = $("#students").get(0);  //获得表格的dom对象
+
+                //先清空表格中原有数据
+                for(var i = students.rows.length-1;i>0;i--){
+                    students.rows[i].remove();
+                }
+
+                for(var i=0;i<stus.length;i++){
+                    var s = stus[i];
+                    var tr = students.insertRow(-1);
+                    tr.insertCell(0).innerHTML = s.stuid;
+                    tr.insertCell(1).innerHTML = s.stuname;
+                    tr.insertCell(2).innerHTML = s.sex;
+                    tr.insertCell(3).innerHTML = s.birthday;
+                    tr.insertCell(4).innerHTML = s.height;
+                    tr.insertCell(5).innerHTML = "<input type='button' value='删除' onclick='del("+s.stuid+")'/>";
+                }
+
+                //按钮处理
+                var pageTotal = data.pageTotal;//总页数
+                if(pageNum == 1){
+                    $("#first").attr("disabled",true);
+                    $("#prePage").attr("disabled",true);
+                }else{
+                    $("#first").attr("disabled",false);
+                    $("#prePage").attr("disabled",false);
+                    $("#prePage").attr("onclick", "goPage("+(pageNum-1)+")")
+                }
+
+                if(pageNum == pageTotal){
+                    $("#last").attr("disabled",true);
+                    $("#nextPage").attr("disabled",true);
+                }else{
+                    $("#last").attr("disabled",false);
+                    $("#nextPage").attr("disabled",false);
+                    $("#nextPage").attr("onclick", "goPage("+(parseInt(pageNum)+1)+")")
+                    $("#last").attr("onclick", "goPage("+pageTotal+")")
+
+                }
+
+                $("#pageNum").text(pageNum);
+                $("#pageTotal").text(pageTotal);
+
+
+
+            },"json")
+        }
+
+    </script>
+</head>
+
+<body onload="goPage(1)">
+<h1>学生信息</h1>
+<div>
+    姓名:<input type="text" id="stuname"/>
+    生日：<input type="date" id="startDay"/>-<input type="date" id="endDay"/>
+    <input type="button" value="查询" onclick="goPage(1)"/>
+
+</div>
+<table id="students">
+    <tr>
+        <td>学生id</td>
+        <td>姓名</td>
+        <td>性别</td>
+        <td>生日</td>
+        <td>身高（米）</td>
+        <td>操作</td>
+    </tr>
+
+</table>
+<div>
+    当前第<span id="pageNum"></span>页
+    <input id="first" type="button" value="首页" onclick="goPage(1)"/>
+    <input id="prePage" type="button" value="上一页"/>
+    <input id="nextPage" type="button" value="下一页"/>
+    <input id="last" type="button" value="末页"/>
+    共<span id="pageTotal"></span>页
+
+
+</div>
+</body>
+</html>

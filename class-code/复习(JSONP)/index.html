@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .par {
+            width: 100%;
+            height: 500px;
+            background-color: #ccc;
+            /* display: flex;
+            align-items: center;
+            justify-content: center; */
+            position: relative;
+            /* overflow: hidden; */
+        }
+
+        .demo {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            /* position: absolute;
+            top:50%;
+            left: 50%;
+            transform: translate(-50%,-50%) */
+            /* margin: auto;
+            margin-top:150px; */
+
+            margin: auto;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <img src="http://k.zol-img.com.cn/sjbbs/7692/a7691515_s.jpg" alt="">
+
+    <section>
+        <img class="lazy" data-original="img/spring.jpg" width="640" height="480" alt="测试懒加载图片" />
+        <img class="lazy" data-original="img/summer.jpg" width="640" height="480" alt="测试懒加载图片" />
+        <img class="lazy" data-original="img/autumn.jpg" width="640" height="480" alt="测试懒加载图片" />
+        <img src="img/winter.jpg" alt="">
+    </section>
+    <div class="par">
+
+        <div class="demo"></div>
+    </div>
+
+    <!-- <iframe src="//www.baidu.com" frameborder="0" width="100%" height="300"></iframe> -->
+    <button onclick="test()">不同域名ajax请求</button>
+    <button onclick="ajax()">相同域名ajax请求</button>
+
+    <script>
+        var arr = [34, 6, 7, 8, 9, 6, 6, 34, 7];
+        var s = new Set(arr);
+        console.log(s)
+
+        var newArr = [...s];
+        console.log(newArr);
+    </script>
+
+    <!-- 图片懒加载 -->
+    <script src="js/jquery-3.1.1.js"></script>
+    <!-- <script src="js/jquery.lazyload.min.js"></script> -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js"></script>
+
+    <script>
+        $(function () {
+            $('img.lazy').lazyload();
+        })
+
+        function test() {
+
+            /* var script = document.createElement('script');
+            script.type = "text/javascript";
+            script.src = "http://192.168.1.254:8888/sys/user/select/jsonp?id=283&callback=jsonp"
+
+            document.body.appendChild(script); */
+
+            $.ajax({
+                type: 'GET',
+                url: 'http://192.168.1.254:8888/sys/user/select/jsonp',
+                data: { id: 283 },
+                dataType: 'jsonp', // 使用jsonp跨域，回调函数的参数名称,默认是callback
+                // jsonp: 'jsonCallback', // 设置回调函数的参数名称
+                jsonpCallback: 'jsonp' // 响应后的回调函数的名称
+            })
+        }
+        function jsonp(result) {
+            console.log(result);
+        }
+
+        function ajax() {
+            $.get('data/1.json', { id: 283 }, function (data) {
+                console.log("响应的数据：", data);
+            });
+        }
+    </script>
+    <!-- <script src="http://192.168.1.254:8888/sys/user/select/jsonp?id=283&callback=jsonp"></script> -->
+</body>
+
+</html>

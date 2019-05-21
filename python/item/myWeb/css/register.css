@@ -1,0 +1,134 @@
+.top{
+	width: 958px;
+	height: 70px;
+	border: 1px solid #CBCBCB;
+	margin: 0 auto;
+	background: linear-gradient(#FDF0CE,#fff);
+}
+.top-imgs{
+	float: left;
+	width: 300px;
+	padding: 22px 0px 0px 50px
+}
+.fast-nav{
+	float: right;
+	padding: 40px 20px 0 0;
+}
+.fast-nav a{
+	color: #1B65B1;
+}
+/**注意**/
+.register-content{
+	width: 950px;
+	height: 460px;
+	margin: 0 auto;
+}
+.process{
+	margin-top: 10px;
+	height:37px;
+	box-shadow: 0px 6px 1px rgba(0,0,0,0.3);
+}
+.process span{
+	display: block;
+	height: 5px;
+	background: url(../images/register_top_bg.gif) no-repeat center bottom;
+}
+.process ul{
+	height: 32px;
+	background-color: #FDEFD6;
+}
+.process ul li{
+	float: left;
+}
+.process ul li:nth-child(1){
+	width: 313px;
+	height: 32px;
+	line-height: 32px;
+	text-align: center;
+	background:url(../images/register_tag_left.gif) no-repeat center center;
+}
+.process ul li:nth-child(2){
+	width: 319px;
+	height: 32px;
+	line-height: 32px;
+	text-align: center;
+	background:url(../images/register_tag_mid.gif) no-repeat center center;
+}
+.process ul li:nth-child(3){
+	width: 316px;
+	height: 32px;
+	line-height: 32px;
+	text-align: center;
+	background:url(../images/register_tag_right.gif) no-repeat center center;
+}
+.logo{
+	width: 908px;
+	height: 85px;
+	margin: 0 20px;
+	border-bottom: 1px dashed #CCCCCC;
+	overflow: hidden;  /*清除浮动*/
+}
+.logo span{
+	float: left;
+	display:block;
+	width: 80px;
+	padding: 30px 0 0 100px;
+}
+.logo .anxin{
+	float: left;
+	padding-top: 42px;
+}
+.logo .anxin p{
+	color: #CB3202;
+}
+dl{
+	width: 100%;
+	height: 30px;
+}
+dt,dd{
+	float: left;
+}
+dt{
+	width: 195px;
+	padding-right: 5px;
+	text-align: right;
+}
+form dl:nth-child(2){
+	margin-top: 20px;
+}
+.tips{
+	display: inline-block;
+	height: 15px;
+	color: #989898;
+}
+.erro{
+	color: red;
+}
+.erro-border{
+	border:1px solid red;
+}
+.footer{
+	width: 960px;
+	height: 60px;
+	margin: 0 auto;
+}
+.footer p{
+	padding: 5px 0px 5px 170px
+}
+form{
+	float: left;
+	width: 948px;
+	height: 383px;
+}
+.regiter_left_border{
+	float: left;
+	width:1px;
+	height: 406px;
+	background:url(../images/register_cont.gif);
+}
+.regiter_right_border{
+	float: right;
+	width:1px;
+	height: 406px;
+	background:url(../images/register_cont.gif);
+}

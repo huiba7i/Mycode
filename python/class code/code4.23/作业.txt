@@ -1,0 +1,41 @@
+1.设计类
+    设计一个银行账户的类 Account
+        对象的属性：
+            卡号 card
+            密码 password
+            开户人 name
+            账户金额 money 默认值参数0
+        
+        
+        方法：
+            存钱方法 参数:存入金额
+            def in_money(self, money):
+            
+            取钱方法 参数：取钱金额
+            def out_money(self, money):
+    
+    
+    设计一个银行类 Bank
+        对象属性：
+            list 所有的该银行的账户对象
+            
+         
+        方法:
+            新增银行卡功能
+                def add_account(self, account):
+                    list.append(account)
+            删除银行卡功能
+                def remove_account(self, account):  如果卡里有钱存在不能删除的 做一个验证 验证该卡存在
+            查询功能
+                def select(self, card, password): 根据卡号和密码一起查询 返回account对象 如果找不到返回None
+            查询功能
+                def select_card(self, card): 根据卡号查询 返回account对象 如果找不到返回None
+                
+        
+            根据卡号和密码查询账户功能
+           
+    
+            
+2.开发应用
+    1.开户 2.存钱 3.取钱 4.查询 5.销户 6.退出
+            
