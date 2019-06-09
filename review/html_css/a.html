@@ -1,12 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>a</title>
 </head>
+
 <body>
-    <a href="index.html#index" name="a">A</a>
+    <a href="index.html">A</a>
+    <!-- <iframe src="https://www.baidu.com" frameborder="0" width="100%" height="550px" noresize="noresize" scrolling="no"></iframe> -->
+    <!-- accesskey --绑定快捷键 alt+x  for--绑定对应id的元素  -->
+    <label for="name" accesskey="x">label</label>
+    <input type="text" id="name" autofocus="true" placeholder="name" >
+    <input type="number" max="100" min="-8" step="7">
+    -7<input type="range" max="77" min="-7" step="7" value="0" id="range">77 当前<span id="rangevalue">0</span>
+    <input type="date">
+    <input type="week">
+    <input type="month">
+    <input type="time">
+    <input type="datetime-local">
+    <input type="color">
+
+    <input type="text" list="name_lisi" name="link" />
+    <datalist id="name_lisi">
+        <option label="123" value="张三">
+        <option label="456" value="李四">
+        <option label="789" value="王二麻子">
+    </datalist>
+
+    <fieldset>
+                <legend>选择喜欢的课程</legend>
+                <label> <input type="radio" name="coursetype"> HTML5</label>
+                <label> <input type="radio" name="coursetype"> CSS3</label>
+                <label> <input type="radio" name="coursetype"> jQuery</label>
+            </fieldset>
+    <form oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+        <input type="text" id="a" value="50">
+        +<input type="number" id="b" value="50">
+        =<output name="x" for="a b"></output>
+    </form>
+    <input type="file" multiple="multiple">
+
+    <script>
+        let range = document.getElementById("range")
+        let rangevalue = document.getElementById("rangevalue")
+        range.onchange = function () {
+            rangevalue.innerText = range.value
+        }
+    </script>
 </body>
+
 </html>
