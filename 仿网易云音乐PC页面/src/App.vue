@@ -94,8 +94,8 @@
         </div>
       </div>
     </div>
-    <div class="foot_play">
-      <div ref="playdiv" class="playdiv" @mouseenter="playerShow" @mouseleave="playerHide">
+    <div class="foot_play" @mouseenter="playerShow" @mouseleave="playerHide">
+      <div ref="playdiv" class="playdiv">
         <div class="musicplay">
           <div class="showplay"></div>
           <div
@@ -107,11 +107,10 @@
           ></div>
         </div>
         <audio id="audio" ref="audio" controls="controls">
-          <source src="/static/musics/mtdl.mp3" type="audio/mp3" />
+          <source type="audio/mp3" />
         </audio>
       </div>
     </div>
-    <!-- <span @click="play">播放</span> -->
   </div>
 </template>
 
@@ -418,7 +417,7 @@ ul {
 .foot_play {
   position: sticky;
   bottom: 0;
-  height: 75px;
+  height: 71px;
   overflow: hidden;
   z-index: 9527;
 }
@@ -448,7 +447,7 @@ ul {
   right: 32px;
   width: 18px;
   height: 18px;
-  z-index: 1;
+  z-index: 9526;
 }
 .onhoverbtn {
   background-position: -82px -380px;
@@ -470,7 +469,7 @@ audio {
   position: absolute;
   left: 0;
   bottom: -50px;
-  border-top: 2px solid #4d4d4d;
+  box-shadow: 0px -1px 13px #707070;
 }
 /* audio:hover {
   position: absolute;

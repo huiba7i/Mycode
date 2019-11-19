@@ -37,7 +37,7 @@
                 <div class="paly_quantity">
                   <i class="el-icon-headset"></i>
                   <span>{{hotmain.quantity}}</span>
-                  <i class="el-icon-video-play"></i>
+                  <i class="el-icon-video-play" @click="playMusic(0)"></i>
                 </div>
               </div>
               <span class="diantai" v-show="hotmain.type">{{hotmain.type}}</span>
@@ -71,6 +71,7 @@
                       <i
                         class="el-icon-video-play"
                         ref="play"
+                        @click="playMusic(1)"
                         @mouseenter="djPlayshow"
                         @mouseleave="djPlayhide"
                       ></i>
@@ -96,7 +97,7 @@
                   <div class="rise">
                     <img :src="`${listurl+(index+1)+'.PNG'}`" />
                     <b>{{key}}</b>
-                    <i class="el-icon-video-play"></i>
+                    <i class="el-icon-video-play" @click="playMusic(2)"></i>
                     <i class="el-icon-folder-add"></i>
                   </div>
                 </dt>
@@ -111,7 +112,7 @@
                       <span class="index">{{index+1}}</span>
                       <span class="song">{{song}}</span>
                       <div class="play" v-show="showplay">
-                        <i class="el-icon-video-play"></i>
+                        <i class="el-icon-video-play" @click="playMusic(3)"></i>
                         <i class="el-icon-plus"></i>
                         <i class="el-icon-folder-add"></i>
                       </div>
@@ -283,12 +284,10 @@ export default {
         console.log(error);
       });
   },
-  mounted(){
-    document.getElementById("audio").play()
-  },
+  mounted() {},
   methods: {
-    goDetails(){
-      this.$router.push({path:'/details',query:{info:"info"}})
+    goDetails() {
+      this.$router.push({ path: "/details", query: { info: "info" } });
     },
     // 改变轮播图周围背景
     reviseBg(event) {
@@ -307,6 +306,28 @@ export default {
     },
     djPlayhide() {
       event.path[1].lastChild.style.display = "none";
+    },
+    playMusic(index) {
+      switch (index) {
+        case 0:
+          document.querySelector("source").src =
+            "/static/musics/许嵩 - 拆东墙.mp3";
+          break;
+        case 1:
+          document.querySelector("source").src =
+            "/static/musics/毛不易 - 春边.mp3";
+          break;
+        case 2:
+          document.querySelector("source").src =
+            "/static/musics/朴树 - 平凡之路 (Live版).mp3";
+          break;
+        default:
+          document.querySelector("source").src =
+            "/static/musics/赵雷 - 理想.mp3";
+          break;
+      }
+      document.querySelector("#audio").load();
+      document.querySelector("#audio").play();
     }
   }
 };
