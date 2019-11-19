@@ -11,7 +11,7 @@
 }
 
 @keyframes run2{
-	0{
+	0%{
 		background-color: red;
 	}
 	25%{

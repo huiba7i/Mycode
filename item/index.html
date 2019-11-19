@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/echarts.min.js"></script>
+    <script src="js/mock.js"></script>
+</head>
+
+<body>
+    <div id="all">
+        <div id="maincont" style="transform: translate(-50%,-50%);">
+            <div class="header">
+                <div id="dates">
+                    <span id="date"></span>
+                    <span id="time"></span>
+                </div>
+                <div>
+                    <span id="title">Echarts图表</span>
+                </div>
+                <div id="weathers">
+                    <span class="weather">天气: <span id="weather"></span></span>
+                    <span class="temperature">气温：<span id="temperature"></span>℃</span>
+                </div>
+            </div>
+            <p id="pandect">总览</p>
+            <div>
+                <ul class="nav">
+                    <li id="nav_highlightli">总览</li>
+                    <li>生产计划与执行</li>
+                    <li>能源监控</li>
+                    <li>安全管理</li>
+                    <li>环保监测</li>
+                    <li>设备管理</li>
+                </ul>
+            </div>
+            <div class="chart_one">
+                <div class="one_item">
+                    <dl>
+                        <dt>矿山处理量</dt>
+                        <dd>实时: <span class="actual_time"></span> 吨/小时</dd>
+                        <dd>计划: 688.88 吨/小时</dd>
+                        <dd>最高:<span class="actual_max"></span> 吨/小时</dd>
+                    </dl>
+                    <div class="one_echart"></div>
+                </div>
+                <div class="one_item">
+                    <dl>
+                        <dt>冶炼投料量</dt>
+                        <dd>实时: <span class="actual_time"></span> 吨/小时</dd>
+                        <dd>计划: 688.88 吨/小时</dd>
+                        <dd>最高: <span class="actual_max"></span> 吨/小时</dd>
+                    </dl>
+                    <div class="one_echart"></div>
+                </div>
+                <div class="one_item">
+                    <dl>
+                        <dt>总用电负荷</dt>
+                        <dd>实时: <span class="actual_time"></span> 千瓦</dd>
+                        <dd>计划: 688.88 千瓦</dd>
+                        <dd>最高: <span class="actual_max"></span> 千瓦</dd>
+                    </dl>
+                    <div class="one_echart"></div>
+                </div>
+                <div class="one_item">
+                    <dl>
+                        <dt>总用电量</dt>
+                        <dd>实时: <span class="actual_time"></span> 千瓦/时</dd>
+                        <dd>计划: 688.8 8千瓦/时</dd>
+                        <dd>最高: <span class="actual_max"></span> 千瓦/时</dd>
+                    </dl>
+                    <div class="one_echart"></div>
+                </div>
+            </div>
+            <div class="chart_two">
+                <div class="two_left">
+                    <div class="top">
+                        <span class="title">年度计划完成率</span>
+                        <span class="date"><span class="year">2019</span>年<span class="month">8</span>月</span>
+                        <span class="qh">前一月</span>
+                        <span id="now">当前</span>
+                        <span class="qh">后一月</span>
+                    </div>
+                    <div id="two_echart">
+                    </div>
+                </div>
+                <div class="two_center">
+                    <div class="center_top">
+                        <ul>
+                            <li>阴极铜</li>
+                            <li>硫酸</li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="two_right"></div>
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery-3.1.1.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>

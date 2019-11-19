@@ -1,0 +1,192 @@
+body {
+    margin: 0;
+    zoom: 1;
+}
+
+.qh:hover,
+#now:hover {
+    cursor: pointer;
+}
+
+#all {
+    /* width: 100vw; */
+    height: 100vh;
+    position: relative;
+    background: #b3a9a9;
+    font-size: 22px;
+}
+
+#maincont {
+    /* width: 40em;
+    height: 22.47em; */
+    width: 50em;
+    height: 28em;
+    padding: 0.3em 1.5em;
+    background: #101436;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+#title,
+#pandect,
+.nav {
+    color: white;
+}
+
+#date,
+#time,
+.weather,
+.temperature {
+    color: #bbbbbb;
+    font-size: 0.8em;
+}
+
+.header {
+    text-align: center;
+    display: flex;
+    flex-flow: row nowrap;
+    font-size: 0.6em;
+    justify-content: space-between;
+}
+
+.header div {
+    width: 33.3%
+}
+
+#dates {
+    text-align: left
+}
+
+#date {
+    margin-right: 1em;
+}
+
+#weathers {
+    text-align: right
+}
+
+#title {
+    font-family: Microsoft YaHei;
+    font-size: 1.6em;
+    font-weight: bold;
+}
+
+#weather {
+    margin-right: 1.5em
+}
+
+#pandect {
+    font-size: 0.6em;
+    margin: 0 0 0.4em 0;
+    text-align: center;
+}
+
+.nav {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    font-size: 0.6em;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+
+.nav li {
+    width: 7em;
+    height: 1.5em;
+    line-height: 1.5em;
+    padding: 0.4em 0.2em;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.363);
+}
+
+.nav li:hover {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.61);
+}
+
+#nav_highlightli {
+    background-color: rgb(7, 46, 163);
+}
+
+.chart_one {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+
+.one_item {
+    width: 20%;
+    color: white;
+}
+
+.one_item dl {
+    margin: 0.6em 0 0.5em 1.5em;
+}
+
+.one_item dl dt {
+    font-size: 0.6em;
+    margin-bottom: 0.3em;
+}
+
+.one_item dl dd {
+    font-size: 0.5em;
+    margin-left: 2em;
+    margin-bottom: 0.3em;
+}
+
+.one_echart {
+    height: 60px;
+}
+
+.chart_two {
+    height: 150px;
+    margin-top: 15px;
+    display: flex;
+    flex-flow: row nowrap;
+    color: white
+}
+
+.two_left,
+.two_right {
+    width: 28.5%;
+    /* background: #777575 */
+}
+
+.chart_two div:nth-of-type(2) {
+    width: 43%;
+    margin: 0 1.4em;
+    /* background: #3f3e3e */
+}
+
+.top {
+    width: 100%;
+    font-size: 0.8em
+}
+
+.title {
+    font-size: 0.8em
+}
+
+.date {
+    font-size: 0.7em
+}
+
+.qh {
+    color: #cccccc;
+    font-size: 0.5em
+}
+
+#now {
+    font-size: 0.5em
+}
+
+#two_echart {
+    height:120px;
+    width: 100%;
+    margin: 0;
+}
+ll{
+    color: #d8d8d8;
+}

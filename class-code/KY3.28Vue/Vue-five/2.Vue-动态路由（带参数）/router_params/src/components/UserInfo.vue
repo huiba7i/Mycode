@@ -12,18 +12,19 @@ export default {
   data() {
     return {
       user: {}
-    }
+    };
   },
   beforeMount() {
     console.log(this.$route);
-    this.$axios.get(`/static/${this.$route.params.id}.json`).then((resp)=>{
-      this.user = resp.data;
-    }).catch((error)=>{
-      console.log(error);
-    })
-    
+    this.$axios
+      .get(`/static/${this.$route.params.id}.json`)
+      .then(resp => {
+        this.user = resp.data;
+      })
+      .catch(error => {
+        console.log(error);
+      });
   },
-  mounted() {
-  },
-}
+  mounted() {}
+};
 </script>

@@ -1,0 +1,581 @@
+/* 覆盖element-ui原来样式 */
+
+#main_head .el-carousel__arrow {
+  width: 40px;
+  height: 70px;
+  border-radius: 0;
+}
+
+/* #main_head .el-carousel__arrow:hover {
+  background: #4d4a4a;
+} */
+
+#main_head .el-carousel__arrow i {
+  width: 40px;
+}
+
+#main_head .el-carousel__button {
+  width: 7px;
+  height: 7px;
+  background-color: red;
+  border-radius: 50%;
+  margin: 0 10px;
+}
+
+.new_main .el-carousel__container,
+.new_main .el-carousel--horizontal {
+  height: 100%;
+  width: 100%;
+}
+
+.new_main .el-carousel__indicators--horizontal {
+  display: none;
+}
+
+.new_main .el-carousel__arrow--left i,
+.new_main .el-carousel__arrow--right i {
+  color: #4d4a4a;
+  font-size: 15px;
+  font-weight: 900;
+}
+
+.new_main .el-carousel__arrow {
+  background: none;
+}
+
+.more:hover,
+.content_left_head li:hover,
+.hot_main_title:hover,
+.hot_main_data img:hover,
+.newDj p:hover,
+.rise img:hover,
+.rise b:hover,
+.song:hover,
+.all:hover,
+.anchorname:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+#homepage {
+  min-width: 1380px;
+  height: 1615px;
+  background: #f5f5f5;
+  border-bottom: 1px solid #cccccc;
+}
+
+#main_head {
+  width: 100%;
+  height: 320px;
+}
+
+.lbImg {
+  margin-right: 225px;
+}
+
+.download {
+  height: 320px;
+  position: absolute;
+  right: 270px;
+  z-index: 3;
+}
+
+#main_content {
+  background: white;
+  width: 980px;
+  height: 1293px;
+  margin: 0 auto;
+  border-left: 1px solid #cccccc;
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.content_left {
+  width: 698px;
+  height: 250px;
+  padding: 20px 22px;
+  text-align: left;
+}
+
+.content_left_head {
+  border-bottom: 3px solid red;
+}
+
+.content_left_head h3 {
+  display: inline-block;
+  margin: 0 0 5px 0;
+}
+
+.content_left_head ul {
+  width: 300px;
+  display: flex;
+  justify-items: center;
+  position: absolute;
+  top: 25px;
+  left: 150px;
+  font-size: 13px;
+  color: #b1acac;
+}
+
+.more {
+  font-size: 12px;
+  position: relative;
+  right: -540px;
+  top: -5px;
+  color: #b1acac;
+}
+
+.el-icon-right {
+  color: red;
+  font-weight: bold;
+  margin-left: 5px;
+}
+
+.content_left_head ul li {
+  width: 45px;
+  text-align: center;
+  height: 12px;
+  line-height: 12px;
+}
+
+.content_left_head ul li :hover {
+  cursor: pointer;
+}
+
+.content_left_head ul li:nth-child(n + 2) {
+  border-left: 2px solid #b1acac;
+}
+
+.hot_main {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.hot_main_data {
+  width: 137px;
+  height: 204px;
+  margin: 13px 23px;
+  position: relative;
+}
+
+.hot_main_data:nth-child(1),
+.hot_main_data:nth-of-type(5) {
+  margin-left: 0;
+}
+
+.hot_main_data:nth-child(4),
+.hot_main_data:nth-of-type(8) {
+  margin-right: 0;
+}
+
+.hot_main_title {
+  margin: 0;
+  font-size: 13px;
+  text-align: left;
+}
+
+.diantai {
+  font-style: normal;
+  font-size: 9px;
+  color: red;
+  border: 1.5px solid red;
+  border-radius: 3px;
+}
+
+.quantity {
+  width: 102%;
+  height: 25px;
+  background: url("/static/img/20190705044859 (2).png");
+  position: absolute;
+  top: 115px;
+  font-size: 13px;
+  justify-items: center;
+  opacity: 0.8;
+  color: #cccccc;
+}
+
+.paly_quantity {
+  position: relative;
+  top: 5px;
+}
+
+.play_quantity span {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.paly_quantity i:last-child {
+  font-size: 15px;
+  margin-left: 58px;
+}
+
+.paly_quantity i:last-child:hover {
+  cursor: pointer;
+  color: white;
+}
+
+/* 新碟 */
+
+.new_main {
+  width: 100%;
+  height: 190px;
+  background: #f5f5f5;
+  border: 1px solid #cccccc;
+  margin: 20px 0;
+}
+
+.new_main .el-carousel,
+.new_main .el-carousel.el-carousel-item,
+#newproduct {
+  width: 689px;
+}
+
+#newproduct {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0px 10px 0px;
+  font-size: 12px;
+  line-height: 15px;
+}
+
+.newDj {
+  width: 120px;
+  white-space: nowrap;
+  margin-left: 7px;
+  position: relative;
+}
+
+.newDj i {
+  font-size: 21px;
+  color: white;
+  position: absolute;
+  top: 75px;
+  right: 23px;
+  display: none;
+}
+
+.newDj i:hover {
+  color: #dddddd;
+  cursor: pointer;
+}
+
+.newDj p {
+  margin: 5px 0;
+}
+
+.newDj p:nth-of-type(2) {
+  color: #868080;
+}
+
+.newdimg {
+  width: 100px;
+  box-shadow: 0px 7px 5px #6b6969;
+  margin-bottom: 5px;
+}
+
+.newdimg:hover {
+  cursor: pointer;
+}
+
+.side {
+  height: 100px;
+  position: relative;
+  left: -2px;
+  top: -6px;
+}
+
+/* 榜单 */
+
+.listall {
+  margin-bottom: 50px;
+}
+
+.list {
+  display: flex;
+  flex-flow: row;
+  border: 1px solid #cccccc;
+  margin: 20px 0;
+}
+
+.list dl {
+  margin: 0;
+  width: 210px;
+}
+
+.list dt {
+  padding: 20px 0 0 15px;
+}
+
+.rise {
+  height: 123px;
+}
+
+.listclass {
+  background: #f4f4f4;
+  flex-grow: 1;
+}
+
+.listclass:nth-of-type(2) {
+  border-right: 1px solid #cccccc;
+  border-left: 1px solid #cccccc;
+}
+
+.listclass b {
+  position: relative;
+  top: -80px;
+  left: 10px;
+}
+
+.rise i {
+  font-size: 25px;
+  color: #979090;
+  font-weight: bold;
+  position: relative;
+  top: -70px;
+  left: 113px;
+  margin-right: 5px;
+}
+
+.listclass i:hover {
+  cursor: pointer;
+  color: #4d4a4a;
+}
+
+.rise img {
+  box-shadow: 0px 5px 5px #6b6969;
+}
+
+.listclass ul,
+.listclass dd {
+  margin: 0;
+  padding: 0;
+}
+
+.listclass li {
+  line-height: 25px;
+}
+
+.index {
+  display: inline-block;
+  width: 20px;
+  margin: 0 5px 0 20px;
+}
+
+.songrise {
+  position: relative;
+}
+
+.songrise:nth-last-of-type(n+8) .index {
+  color: rgb(206, 2, 2);
+}
+
+.songrise:nth-of-type(n+4) .index {
+  color: #979090;
+}
+
+.song {
+  display: inline-block;
+  width: 144px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  vertical-align: middle;
+}
+
+.hoversong {
+  display: inline-block;
+  width: 95px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  vertical-align: middle;
+}
+
+.song,
+.all,
+.hoversong {
+  font-size: 12px;
+}
+
+.songrise:hover .hoversong {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.songrise:nth-last-of-type(2n) {
+  background: #e6e5e5;
+}
+
+.songrise i {
+  font-weight: bold;
+  font-size: 20px;
+  color: #868080;
+}
+
+.songrise i:hover {
+  color: #4d4a4a;
+}
+
+.songrise i:nth-of-type(1) {
+  position: absolute;
+  top: 4px;
+  left: 140px;
+}
+
+.songrise i:nth-of-type(2) {
+  position: absolute;
+  top: 4px;
+  left: 170px;
+}
+
+.songrise i:nth-of-type(3) {
+  position: absolute;
+  top: 4px;
+  left: 200px;
+}
+
+.listclass .all {
+  background: #e6e5e5;
+}
+
+.listall .all {
+  height: 30px;
+  line-height: 30px;
+  text-align: right;
+  padding-right: 12px;
+}
+
+/* 主内容右侧 */
+
+.content_right {
+  margin-left: 4px;
+  font-size: 12px;
+  border-right: 1px solid #cccccc;
+  border-left: 1px solid #cccccc;
+}
+
+.login {
+  padding: 20px 25px;
+  background: url("/static/img/20190706184851.png");
+  background-size: 100%;
+  color: #746f6f;
+  box-shadow: 0px 3px 3px #cccccc;
+  margin-bottom: 1px;
+}
+
+.login span {
+  display: block;
+  text-align: left;
+  margin-bottom: 15px;
+}
+
+.login .el-button--small {
+  background: #c70b12;
+  height: 30px;
+}
+
+.anchor,
+.singer {
+  padding: 15px 10px;
+}
+
+.ruzhu,
+.hotanc {
+  height: 23px;
+  border-bottom: 1px solid #cccccc;
+  margin-bottom: 15px;
+}
+
+.ruzhu span:first-child {
+  float: left;
+  font-weight: bold;
+}
+
+.ruzhu span:last-child {
+  float: right;
+}
+
+.singer_details {
+  background: #fafafa;
+  display: flex;
+  flex-flow: row nowrap;
+  margin: 15px 0;
+}
+
+.singer_data {
+  width: 100%;
+  height: 60px;
+  border: 1px solid #cccccc;
+  border-left: 0;
+  text-align: left;
+}
+
+.singer_data p {
+  margin: 0;
+  line-height: 30px;
+  text-indent: 1em;
+}
+
+.singer_data p:first-child {
+  font-weight: 900;
+}
+
+.singer_data:hover {
+  background: #f0eeee;
+  cursor: pointer;
+}
+
+.singer .el-button--info.is-plain {
+  width: 100%;
+  height: 30px;
+  line-height: 5px;
+  background: #f7f7f7;
+  color: #4d4a4a;
+  font-size: 13px;
+  font-weight: bold;
+  border: 1px solid #cccccc;
+}
+
+.singer .el-button--info.is-plain:hover {
+  background: rgb(238, 238, 238);
+}
+
+.hotanc {
+  text-align: left;
+  font-weight: bold;
+}
+
+.suggest {
+  text-align: left;
+}
+
+.anchor_data {
+  margin: 5px 0;
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.suggest p {
+  margin: 0;
+  text-indent: 1em;
+}
+
+.suggest p:first-child {
+  font-weight: 600;
+  position: relative;
+}
+
+.suggest p:nth-of-type(2) {
+  margin-top: 7px;
+}
+
+.renzheng {
+  width: 22px;
+  position: absolute;
+  top: -4px;
+}
+
+.musicname {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
